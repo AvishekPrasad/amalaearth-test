@@ -1,0 +1,239 @@
+  <section class="my-account" data-section-id="account" data-section-type="account">
+    	<div class="my-account__header">
+          <a href="/account/" class="back_link">
+            <img src="{{ 'back_arrow.svg' | asset_url }}" alt="back">
+          </a>
+          <h2 class="heading h2">My Orders</h2>
+    	</div>    
+    	<div class="container container--narrow">
+            <div class="my-account__content">
+                <div class="my-orders__item-list">
+                   {%- if customer.orders.size == 0 -%}
+                        <div class="my-orders__empty-item">
+                            <div class="empty-state__message-container">
+                                <div class="empty-state__icon" style="background: url({{ 'empty-cart-bg.png' | asset_url }})">
+                                  {%- render 'icon', icon: 'empty-cart' -%}
+                                </div>
+                            	<p class="empty-state__icon-description">{{ 'customer.general.no_orders' | t }}</p>
+                            </div>
+                            <div class="empty-state__button-container">
+                              <a href="{{ routes.all_products_collection_url }}" class="empty-state__button button button--primary">{{ 'customer.general.no_orders_button' | t }}</a>
+                            </div>
+                        </div>
+          	{%- else -%}
+            {%- paginate customer.orders by 8 -%}
+                  
+                    {%- for order in customer.orders -%}
+                    <div data-id="{{order.id}}" data-tracking="{{order.line_items.first.fulfillment.tracking_number}}" class="my-orders__item {% if order.cancelled %} {% else %} order-item {% endif %}" data-id="{{order.id}}">
+                        <div class="my-orders__header-wrapper">
+                            <div><a href="{{ order.customer_url }}">Order ID {{order.name}}</a></div>
+                          	{% capture staus_label %}
+                              {% case order.fulfillment_status_label %}
+                                {% when 'Unfulfilled' %}
+                                  status-Confirmed
+                                {% when 'partial' %}
+                                  status-OutForDelivery
+                                {% when 'fulfilled' %}
+                                  status-Delivered
+                                {% when 'restocked' %}
+                                  status-Expired
+                                {% else %}
+                                  status-Confirmed
+                              {% endcase %}
+                          	{% endcapture %}
+                            <div class="status-label text-right"><span class="{{staus_label}}" id="status_{{order.id}}">{% if order.cancelled %}Cancelled {% else %} calculating.. {% endif %}</span></div>
+                            <div>Ordered on {{ order.created_at | date: format: 'month_day_year' }}</div>
+                          <div class="text-right hide arrival-label_{{order.id}}"> Estimated Arrival </div>
+                            <div class="text-right"id="edt-estimation_{{order.id}}">{% if order.cancelled %}On {{ order.cancelled_at | date: format: 'month_day_year' }} {% else %} calculating.. {% endif %}</div>
+                        </div>
+                     
+                          
+                           {%- for line_item in order.line_items -%}
+     
+                         <div class="my-orders__content-wrapper">
+                            <div class="my-orders__image-wrapper">
+                                <a href="javascript:void(0);">
+                                    <div class="aspect-ratio" style="padding-bottom: 100.0%">
+                                        <img src="{{ line_item.image | img_url: '75x75', scale: 1 }}" alt="{{ line_item.image.alt | escape }}">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="my-orders__item-wrapper">
+                                <table class="my-orders__product-info">
+                                    <tr>
+                                        <td colspan="2"><a href="{{ line_item.url }}" class="my-orders__product-title ">{{ line_item.title }}</a></td>
+                                    </tr>
+                                  
+                                   {%- unless line_item.properties == blank -%}
+                           
+                              {%- for property in line_item.properties -%}
+                                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                                {%- if property.last == blank or first_character_in_key == '_' -%}
+                                  {%- continue -%}
+                                {%- endif -%}
+
+                                  <tr>
+                                        <td class="product-info_label">{{ property.first }}</td>
+                                        <td> {{ property.last }}</td>
+                                    </tr>
+                              {%- endfor -%}
+                      
+                          {%- endunless -%}
+                                   
+                                    
+                                    <tr>
+                                        <td class="product-info_label">Qty. </td>
+                                        <td> {{line_item.quantity}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-info_label">Amount</td>
+                                        <td><span class="price price--highlight">&nbsp;{{ order.total_price | money }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                      {% break %}
+                          {% endfor %}
+                      
+                      
+                      {% assign itemCount = 0 %}
+
+						{% for item in order.line_items %}
+							  {% assign itemCount = itemCount | plus: 1 %}
+						{% endfor %}
+                        <div class="my-orders__item-actions">
+                            <a href="{{order.customer_url}}" class="my-orders__item-actions-link">
+                              {% if itemCount > 1 %}
+                               Order Details ( {{itemCount}} items ) 
+                              {% else %}
+								View Order Details
+                              {% endif %}
+                                <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                            </a>
+                            
+                        </div>
+                    </div>
+                 
+                  
+                {% endfor %}
+                  
+                  {%- render 'pagination', paginate: paginate -%}
+            {% endpaginate %}
+          {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+    
+elements = document.querySelectorAll('.order-item');
+
+  for(i=0;i<elements.length;i++){
+  
+  order_id = elements[i].getAttribute('data-id');
+var http = new XMLHttpRequest();
+  var url = 'https://otp.amala.earth/webetd.php';
+  var params = 'order_id='+order_id+'&code=D0A8M2A1L5A*';
+http.open('POST', url, true);
+
+//Send the proper header information along with the request
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+       response =  JSON.parse(http.responseText);
+      if(response.status) {
+        $('.arrival-label_'+order_id).removeClass('hide');
+      	$('#edt-estimation_'+order_id).text('On '+response.message);
+      }
+      else {
+        $('#edt-estimation_'+order_id).text('response awaited');
+      }
+  	
+   }
+  else {
+            $('#edt-estimation_'+order_id).text('response awaited');
+  }
+  
+}
+http.send(params);
+}
+</script>
+
+<script>
+
+  /*elements = document.querySelectorAll('.order-item');
+  var http_new;
+  for(var i=0;i<elements.length;i++){
+
+    
+    var order_id = elements[i].getAttribute('order_id');
+    var tracking = elements[i].getAttribute('data-tracking');
+    http_new = new XMLHttpRequest();
+  var url = 'https://otp.amala.earth/wngevents.php';
+  var params = 'tracking_number='+tracking+'&code=D0A8M2A1L5A*';
+http_new.open('POST', url, true);
+
+//Send the proper header information along with the request
+http_new.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http_new.onreadystatechange = function() {//Call a function when the state changes.
+  console.log(http_new);
+    if( http_new.status == 200) {
+       response =  JSON.parse(http_new.responseText);
+      console.log(response);
+      if(response.status) {
+        events = response.timeline;
+        last_status = events.slice(-1)[0];
+        console.log('#status_'+order_id);
+        $('#status_'+order_id).text(last_status.status);
+        $('.status-Confirmed_'+order_id).text(last_status.status);
+        if(last_status.status == 'Delivered') {
+          $('#edt-estimation_'+order_id).addClass('hide');
+        }
+      }
+      else {
+        $('#edt-estimation_'+order_id).text('response awaited');
+      }
+  	
+   }
+  else {
+            $('#edt-estimation_'+order_id).text('response awaited');
+  }
+  
+}
+http_new.send(params);
+
+}*/
+  
+  	var allorders = document.querySelectorAll('.order-item');
+  	for(var i = 0; i < allorders.length; i++) {
+        $.ajax({
+            url: 'https://otp.amala.earth/fetchorderstatus.php',
+            type: 'POST',
+            dataType: 'JSON',
+            data: {
+	            order_id: allorders[i].getAttribute('data-id'),
+                code: 'D0A8M2A1L5A*'
+            },
+            success: function(response) {
+                order_id = response.order_id;
+                $('#status_'+order_id).text(response.message);
+                $('.status-Confirmed_'+order_id).text(response.message);
+                if(response.message == 'Delivered') {
+                  	$('#edt-estimation_'+order_id).addClass('hide');
+                    $('.arrival-label_'+order_id).remove();
+                }
+            }, error: function(xhr) {
+                 response = JSON.parse(xhr.responseText);
+                 order_id = response.order_id;
+                 $('#status_'+order_id).text('In-preparation');
+            }
+        });
+    }
+</script>
+
+
+ <script src="{{ 'account.js' | asset_url }}" defer></script>

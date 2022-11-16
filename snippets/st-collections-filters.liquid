@@ -1,0 +1,132 @@
+<script>
+  /* collections filter will be hidden when its collection handle contains empty array  */
+  /* if collection handle is missing from st_collections, all possible values will be shown */
+  /* Sorting of the individual filter are on the basis of number of results (products) in descending order*/
+  /* add values in lowercase */
+  
+  var st_collections = {
+    "mindful-eating" : ["grains, rice and pulses","oils, ghee and butter","salts, spices and herbs","healthy snacks","nuts, seeds and dryfruits","superfoods and protein","tea, coffee and beverages","honey, jaggery and natural sugars","quinoa, pasta, and gluten-free foods","breakfast cereals, premixes and others","natural supplements and digestives","condiments, pickles, vinegars and jams","fasting food"],
+    "ethical-beauty" : ["natural skincare", "hair care", "oral care", "makeup and nails", "men's grooming", "essential oils", "serums, skin oils and supplements", "fragrances", "beauty and bath essentials"],
+    "joyful-home" : ["bedding, cushions and throws", "crockery, napkins and cutlery", "candles and aromatherapy", "home decor and accessories", "garden and outdoors", "bath towels, trays and accessories", "cookware", "household cleaning and essentials", "disposables and party essentials"],
+    "responsible-fashion" : ["women","men"],
+    "women" : ["ethnic wear", "western wear","laungewear and sleepwear","yoga and workout wear","designer wear","shoes and others","jewellery","bags and accessories","intimatewear and others","winter wear"],
+    "mens-wear" : ["men's casual wear","men's office wear","men's loungewear and sleepwear","men's activewear","men's ethnic wear","men's footwear","men's accessories","men's innerwear","men's winter wear"],
+    "conscious-family" : ["baby (0-2 years)", "children's (2-15 years)"],
+    "feel-good-others" : ["pooja essentials", "yoga and meditation", "travel essentials", "stationery", "insect repellents", "pet care", "books"],
+    "holistic-wellness" : ["stress, sleep and anxiety relief", "cold, sinus and immunity", "medicinal, herbs and supplements", "lungs, asthama and anti pollution", "pcod and women wellness", "covid care", "anti ageing and skin problems", "ayurvedic food and self-care"],
+    "gifts" : ["birthday gifts", "anniversary hampers", "gifts for women", "gifts for men", "baby shower hampers", "children's gifts and returns", "housewarming hampers", "gifts for plant lovers", "corporate hampers", "health hampers", "beauty hampers", "wedding gifts and returns"],
+    "festivals" : ["diwali", "bhai dooj", "children's day", "fasting food", "from the loom"]
+    
+  }
+</script>
+
+<script>
+  
+  /* order defined in the array will be shown on the collection page. If a filter is missing fron the array, that filter will be hidden from that collection page */
+  /* if collection handle is not in the keys of st_filter_order object, all possible filters will be shown. */
+  /* The filter has to be in the exact case as production*/
+
+  var st_filter_order = {
+    "mindful-eating" : ["Shop By Concern", "Category","Brand", "Price", "Discount"],
+    "grains-and-pulses" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "cold-pressed-oils-and-ghee" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "natural-salts-and-spices" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "healthy-snacks" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "superfoods-and-nuts" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "superfoods-and-protein" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "tea-and-beverages" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "honey-jaggery-and-natural-sugars" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "quinoa-pasta-and-gluten-free-foods" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "baking-premixes" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "natural-supplements-and-digestive" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "condiments-pickles-and-jams" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    "fasting-food" : ["Shop By Concern", "Type", "Brand", "Price", "Weight", "Pack size", "Discount"],
+    
+    "ethical-beauty" : ["Skin Concern", "Hair Concern", "Shop By Concern", "Category", "Brand", "Price",  "Discount"],
+    "natural-skincare" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "hair-care" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "oral-care" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "makeup-and-nails" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "mens-grooming" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "essential-oils" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "serums-skin-oils-and-supplements" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "fragrances" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    "beauty-and-bath-essentials" : ["Type", "Skin Concern", "Shop By Concern", "Brand", "Price", "Discount", "Weight"],
+    
+    "joyful-home" : ["Category", "Material", "Brand", "Price", "Color", "Discount"],
+    "bedding-cushions-and-throws" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "crockery-and-cutlery" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "candles-and-aromatherapy" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "home-decor-and-accessories" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "garden-and-outdoors" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "bath-towels-trays-and-accessories" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "cookware" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "household-cleaning-and-essentials" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    "disposables-and-party-essentials" : ["Type", "Brand", "Material", "Price", "Size", "Discount", "Color"],
+    
+    "responsible-fashion" : ["Category", "Brand", "Size", "Material", "Color", "Price","Discount","Colour"],
+    "women" : ["Type","Material","Size","Color","Brand","Price","Discount"],
+    "mens-wear" : ["Type","Material","Size","Color","Brand","Price","Discount"],
+    
+    "conscious-family" : ["Shop by Age", "Category", "Gender", "Age", "Material", "Brand", "Price","Colour"],
+    "baby-0-2-years" : ["Type", "Gender", "Age", "Material", "Brand", "Price", "Color", "Discount"],
+    "childrens-2-15-years" : ["Type", "Gender", "Age", "Material", "Brand", "Price", "Color", "Discount"],
+
+    "feel-good-others" : ["Category", "Brand", "Color", "Material", "Price", "Discount"],
+    "pooja-essentials" : ["Brand", "Color", "Material", "Price", "Discount"],
+    "yoga-essentials" : ["Brand", "Color", "Material", "Price", "Discount"],
+    "travel" : ["Brand", "Color", "Material", "Price", "Discount"],
+    "stationery" : ["Brand", "Color", "Material", "Price", "Discount"],
+    "insect-repellants" : ["Brand", "Color", "Material", "Price", "Discount"],
+    "pet-care" : ["Type", "Brand", "Color", "Material", "Price", "Discount"],
+    "books" : ["Brand", "Color", "Material", "Price", "Discount"],
+
+    "gifts" : ["Category", "Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "birthday-gifts" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "anniversary-hampers" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "gifts-for-women" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "gifts-for-men" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "baby-shower-hampers" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "childrens-gifts-and-returns" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "housewarming-hampers" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "gifts-for-plant-lovers" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "corporate-hampers" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "health-hampers" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "beauty-hampers-and-bundles" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "wedding-gifts-and-returns" : ["Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    
+    "baby-clothing" : ["Type", "Brand", "Colour", "Material", "Age", "Gender", "Price", "Discount"],
+    "baby-toys-and-games" : ["Type", "Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "baby-bedding-sleepwear" : ["Type", "Brand", "Colour", "Material", "Age", "Size", "Dimension", "Price", "Discount"],
+    "baby-food" : ["Type", "Brand", "Weight", "Pack Size", "Price", "Discount"],
+    "baby-skin-care" : ["Type", "Brand", "Weight", "Pack Size", "Age", "Price", "Discount"],
+    "baby-bundles-hampers" : ["Type", "Brand", "Weight", "Colour", "Material", "Age", "Price", "Discount"],
+    "baby-feeding-and-essentials" : ["Type", "Brand", "Colour", "Material", "Age", "Price", "Discount"],
+    "childrens-ethnic-wear" : ["Type", "Brand", "Colour", "Material", "Age", "Gender", "Price", "Discount"],
+    "childrens-western-wear" : ["Type", "Brand", "Colour", "Material", "Age", "Gender", "Price", "Discount"],
+    "childrens-bedding-sleepwear" : ["Type", "Brand", "Colour", "Material", "Age", "Size", "Dimension", "Price", "Discount"],
+    "childrens-books-toys-and-stationery" : ["Type", "Brand", "Weight", "Color", "Material", "Age", "Price", "Discount"],
+    "childrens-food-and-essentials" : ["Type", "Brand", "Weight", "Material", "Pack size", "Size", "Price", "Discount"],
+    "childrens-skin-care" : ["Type", "Brand", "Weight", "Pack size", "Age", "Price", "Discount"],
+    "childrens-accessories-essentials" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Gender", "Price", "Discount"],
+
+    
+    "festivals" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "bhai-dooj" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "childrens-day" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "fasting-food" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "from-the-loom" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+
+    "women-festive-wear" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "men-festive-wear" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "kids-festive-wear" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "diwali-gift-hampers" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "dhanteras-kitchen-essentials" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "diwali-home-decors" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "diyas-candles" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "diwali-cleaning-essentials" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "diwali-bulk-gifting" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"],
+    "pooja-essentials" : ["Type", "Brand", "Weight", "Color", "Material", "Pack size", "Age", "Size", "Price", "Discount"]
+        
+  }
+</script>

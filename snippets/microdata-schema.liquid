@@ -1,0 +1,1049 @@
+{%- comment -%}
+This snippet structures the micro-data using JSON-LD specification. Please note that for Product especially,
+the schema often changes. We try to output as much info as possible, but Google may add new requirements over time,
+or change the format of some info
+{%- endcomment -%}
+
+{%- if request.page_type == 'product' -%}
+  {%- assign days_product_price_valid_until = 10 | times: 86400 -%}
+
+  {%- assign gtin_option = 'gtin' -%}
+  {%- if product.selected_or_first_available_variant.barcode != blank -%}
+    {%- assign is_barcode_available = true -%}
+    {%- assign gtin_string_length = product.selected_or_first_available_variant.barcode | size -%}
+
+    {%- if gtin_string_length == 8 or gtin_string_length == 12 or gtin_string_length == 13 or gtin_string_length == 14 -%}
+      {%- assign is_valid_gtin_length = true -%}
+      {%- assign gtin_option = gtin_option | append: gtin_string_length -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- capture main_entity_microdata -%}
+    "@type": "Product",
+    "offers": [
+      {%- for variant in product.variants -%}
+        {
+          "@type": "Offer",
+          "name": {{ variant.title | json }},
+          "availability": {%- if variant.available -%}"https://schema.org/InStock"{%- else -%}"https://schema.org/OutOfStock"{%- endif -%},
+          "price": {{ variant.price | divided_by: 100.0 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d'}}",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          "url": "{{ product.url }}?variant={{ variant.id }}"
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ],
+    {%- if is_barcode_available and is_valid_gtin_length %}
+      "{{gtin_option}}": {{ product.selected_or_first_available_variant.barcode | json }},
+      "productId": {{ product.selected_or_first_available_variant.barcode | json }},
+    {%- elsif is_barcode_available %}
+      "mpn": {{ product.selected_or_first_available_variant.barcode | json }},
+      "productId": {{ product.selected_or_first_available_variant.barcode | json }},
+    {%- endif %}
+    "brand": {
+      "name": {{ product.vendor | json }}
+    },
+    "name": {{ product.title | json }},
+    "description": {{ product.description | strip_html | json }},
+    "category": {{ product.type | json }},
+    "url": "{{ product.url }}",
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:{{ product.featured_media | img_url: '1024x' }}",
+      "image": "https:{{ product.featured_media | img_url: '1024x' }}",
+      "name": {{ product.featured_media.alt | json }},
+      "width": "1024",
+      "height": "1024"
+    }
+  {%- endcapture -%}
+{%- elsif request.page_type == 'article' -%}
+  {%- capture main_entity_microdata -%}
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "{{ article.url }}",
+    "articleSection": {{ blog.title | json }},
+    "keywords": "{{ article.tags | join: ', ' }}",
+    "headline": {{ article.title | json }},
+    "description": {{ article.excerpt_or_content | strip_html | truncatewords: 25 | json }},
+    "dateCreated": "{{ article.created_at | date: '%Y-%m-%dT%T' }}",
+    "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
+    "dateModified": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:{{ article.image | img_url: '1024x' }}",
+      "image": "https:{{ article.image | img_url: '1024x' }}",
+      "name": {{ article.image.alt | json }},
+      "width": "1024",
+      "height": "1024"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{ article.user.first_name | escape }} {{ article.user.last_name | escape }}",
+      "givenName": {{ article.user.first_name | json }},
+      "familyName": {{ article.user.last_name | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ shop.name | json }}
+    },
+    "commentCount": {{ article.comments_count }},
+    "comment": [
+      {%- for comment in article.comments limit: 5 -%}
+        {
+          "@type": "Comment",
+          "author": {{ comment.author | json }},
+          "datePublished": "{{ comment.created_at | date: '%Y-%m-%dT%T' }}",
+          "text": {{ comment.content | json }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- capture breadcrumb_entity_microdata -%}
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ 'general.breadcrumb.home' | t | json }},
+      "item": "{{ shop.url }}"
+    }
+
+    {%- if request.page_type == 'product' -%}
+      {%- if collection -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}{{ product.url | within: collection }}"
+        }
+      {%- else -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}{{ product.url }}"
+        }
+      {%- endif -%}
+    {%- elsif request.page_type == 'collection' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }
+    {%- elsif request.page_type == 'blog' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ blog.url }}"
+        }
+    {%- elsif request.page_type == 'article' -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ blog.url }}"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ blog.title | json }},
+          "item": "{{ shop.url }}{{ article.url }}"
+        }
+    {%- elsif request.page_type == 'page' -%}
+       ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | json }},
+          "item": "{{ shop.url }}{{ page.url }}"
+        }
+    {%- endif -%}
+  ]
+{%- endcapture -%}
+
+{%- capture seo_microdata -%}
+
+  "@type": "WebSite",
+  "name": "Amala Earth",
+  "description": "{{page_description}}",
+  "url": "{{ shop.url }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{shop.url}}/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+
+{%- endcapture -%}
+
+{%- capture org_microdata -%}
+{
+  "@type": "Organization",
+  "name": "Amala Earth",
+  "url": "{{ shop.url }}",
+  "logo": "{{ page_image | img_url}}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91 8800703122",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": "en"
+  },
+  "sameAs": [
+    "https://www.facebook.com/Amala.Earth/",
+    "https://www.instagram.com/amala.earth/",
+    "https://www.youtube.com/channel/UCsOUCPJYqGa4-lfPwOq8gEA",
+    "https://in.pinterest.com/amalaearth/"
+  ]
+}
+{%- endcapture -%}
+
+
+{% if main_entity_microdata != blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    {{ main_entity_microdata }}
+  }
+  </script>
+{% endif %}
+
+{% if breadcrumb_entity_microdata != blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    {{ breadcrumb_entity_microdata }}
+  }
+  </script>
+{% endif %}
+
+{% if seo_microdata != blank %}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    {{ seo_microdata }}
+  }
+  </script>
+{% endif %}
+
+{% if request.page_type == 'collection' %}
+  {% if collection.handle == 'mindful-eating' %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is mindful eating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mindful eating is a concept where a person pays attention to what they eat and how that affects their body. It is about enjoying the whole eating experience with all the senses."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are some benefits imparted by mindful eating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mindful eating has incredible benefits that lead to a healthier and happier life for a person. Eating mindfully can make a person aware of when they are full or hungry. It helps reduce stress levels, improves digestion, reduces weight, and drives them towards healthier food choices."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are some healthy food choices which can be adopted for mindful eating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some healthy food options available online are superfoods, plant-based protein foods, organic oil and ghee, natural supplements and digestives, and healthy snacks."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are superfoods different from other normal food items?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The term superfood is sometimes misleading. People think of it as some powerful food with special abilities. However, any food item can be referred to as a superfood which offers high levels of vitamins, minerals and antioxidants or provides several health benefits. Most of the people already consume superfood without even knowing. Some examples include eggs, yoghurt, tomatoes, spinach, green tea, apples, and legumes."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are some healthy options in snacks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"People often mindlessly munch on snacks. This is why it becomes important to choose healthy snacks which can satiate the taste buds as well. Amala Earth offers such healthy and tasty snacks online. The most popular ones are crunchy sabudana khakhra, vegan dark chocolate coconut chips, organic coconut oats, gluten free fruit and nut mix, and jowar snacks."
+       }
+      },
+          {
+         "@type": "Question",
+        "name": "What are the health benefits of consuming organic salts and spices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"Organic salts and spices are chemical free and cultivated without using any fertilisers and pesticides. They have no synthetic additives, hormones or antibiotics added to them to enhance their taste. This makes them healthy to consume and offer long-term health benefits like improving digestion and boosting immunity."
+}
+        }]
+    }
+    </script>
+    {% endif %}
+{% if collection.handle == 'ethical-beauty' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is meant by ethical beauty?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ethical beauty refers to the production of beauty products in a responsible manner. Ethical and sustainable beauty brands take into account what a product is made of and also how it is being made."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What does greenwashing mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The term, greenwashing, refers to a marketing strategy of companies wherein they make false or exaggerated claims about how their products are sustainably and ethically produced. This is done to mislead customers into believing that the company is eco-friendly."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the main components of ethical beauty?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ethical beauty comprises three basic aspects: Ethical sourcing of ingredients, cruelty-free methods and zero-waste production. This makes ethical beauty products good for both consumers and the environment."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the different ayurvedic skincare products available online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Consumers can easily purchase ethically sourced skincare products online from such sites as Amala Earth. There are plenty of product choices, ranging from ayurvedic oils, body lotions, organic sunscreen, face serums to aloe vera gels, organic face washes and natural creams to control dark circles. These products nourish the skin, keep it hydrated and acne-free and restore the natural glow."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How are organic cosmetic products prepared?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"Organic beauty products are prepared from natural or ayurvedic ingredients, such as almond oil, castor oil, etc. They are not tested on animals and do not contain petroleum, lead or other synthetic chemicals."
+       }
+       }, {
+         "@type": "Question",
+        "name": "What are the different types of organic oils one can use for hair care?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"There are many natural ingredients useful for hair. These are used to make organic oils, which can rejuvenate and nourish the hair when applied. Such oils include castor and black onion oil, ayurvedic bhringraj oil, apple seed oil, olive oil and coconut oil."
+}
+        }]
+    }
+    </script>
+      {% endif %}
+  {% if collection.handle == 'joyful-home' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How can one become eco-friendly??",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Everyone should do their bit to choose a lifestyle that is environmentally-friendly. Small steps that can be taken for an eco-friendly life are : <ul><li>Being aware of how lifestyle and product choices affect the environment</li><li>Consuming items that cause minimal environmental harm</li><li>Discovering the extent of one’s carbon footprint and acting to reduce that</li><li>Being part of communities that promote and create awareness on eco-friendly living</li></ul>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can an individual make a difference?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eco-friendly living has now become an important priority. Small steps taken in this direction by individuals can make a big difference, especially when eco-conscious and environmental choices become a habit. The best thing about choosing eco-friendly living is that it not just benefits the environment, it is good for one’s quality of life too. To adopt an eco-friendly lifestyle, an individual can take small steps like shopping from eco-friendly brands such as Amala Earth, reducing the amount of trash they produce, and repurposing stuff rather than throwing it away."
+        }
+      }]
+    }
+    </script>
+      {% endif %}
+  {% if collection.handle == 'responsible-fashion' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is sustainable fashion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sustainable fashion is an approach where clothes and other fashion accessories are created and consumed in a way that causes minimum environmental and social damage."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can consumers contribute to sustainable fashion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The first step can be buying sustainable clothing. Along with that, consumers can try secondhand products, avoid brands indulging in greenwashing and be responsible enough to understand the impact of their purchases on the planet."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are sustainable fashion products more expensive than regular ones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sustainable products are made from eco-friendly, organic and natural products. This does not mean they are expensive. Consumers can find an amazing collection at the best prices at Amala Earth online."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How is organic cotton better than traditional cotton fibre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One should use organic cotton clothes rather than regular cotton ones as organic cotton is eco-friendly and healthier for the skin. Organic cotton cultivation requires less water and emits less carbon dioxide than regular cotton cultivation. Since no chemicals or pesticides are added to organic cotton, it has no adverse effects on the skin."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the responsible and sustainable choices in footwear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"One can buy upcycled footwear to promote sustainable products. Other than that, there are sandals or shoes made from vegan leather. No animals are harmed in producing such footwear, and the waste generated is biodegradable."
+       }
+       }, {
+         "@type": "Question",
+        "name": "How do sarees and dresses made of linen contribute to responsible fashion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"Linen is derived from the flax plant's fibres, making it a natural product. It is incredibly lightweight and completely biodegradable. It does not require chemicals, making it a truly eco-friendly and sustainable option."
+}
+        }]
+    }
+    </script>
+      {% endif %}
+    {% if collection.handle == 'gifts' %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are some really thoughtful gifts? ",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Thoughtful gifts are the ones that show a person’s concern for the other individual. It shows that an individual cares about the comfort of the other person. Such gifts help in easing the life of the recipient. Some thoughtful gifts are wooden coasters, book holders, gift boxes, and health hampers."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the best gift to gift a girl? ",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Girls and women of all ages appreciate gifts like handbags, accessories, jewellery, aromatherapy candles, and potted plants. These could be the best gifts for them."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What do you get for someone with everything? ",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A person who has everything would appreciate a gift that carries some meaning or has a story attached to it. People can select an eco-friendly gift product from Amala Earth that saves the planet and helps the receiver in making a contribution to the betterment of the earth."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What to get a woman who wants nothing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sentimental gifts carry great value for a woman who wants nothing. People can gift products that carry some meaning to the other person, like fragrant and mind-soothing essential oil and eco-friendly gift hampers. "
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are birthday presents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"Amala Earth has a collection of the best birthday presents for children and adults. People can select from a wide range of miniature spreads, customized gift boxes, essential oils, and scented candles."
+       }
+       }, {
+         "@type": "Question",
+        "name": "What is the traditional gift for a 70th birthday?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"70th birthday is celebrated as a Platinum birthday. Any gift item that represents platinum or is made of that element will serve as a good gift for that occasion."
+}
+        }]
+    }
+    </script>
+      {% endif %}
+
+{% if collection.handle == 'conscious-family' %}
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are some newborn baby essential products found online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Essential products for newborn babies easily found online on platforms such as Amala Earth are organic kids wear, bedding products made from organic cotton, reusable cloth diapers, diaper bags and highly nutritious baby food."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can baby products be made sustainable and eco-friendly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "People can adopt sustainable choices in baby products. They can do so by using organic cotton clothes and reusable cotton diapers. The food choice can also be made sustainable by making their toddlers eat organically grown food items rich in nutrients."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the healthy food choices for babies of 0-2 years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parents have to be very particular about food choices for such small babies. They are mostly given liquid or semi-liquid diets. The best food options for them could be organic porridge made from sprouted ragi, banana, mango, cinnamon or almonds, cereals made from barley, banana or wheat and simply organic baby food made in the form of a puree from natural ingredients like bananas, sweet potato, apples or soya."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What kind of games should children between 2-15 years of age be made to play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The age group of 2-15 years is crucial for the physical and mental development of children. This is why they should play games which can help in the development of their cognitive capacity. There are many wooden games, board games and puzzles which they should be indulged in. This will make learning fun for them. Many such fun and useful games are available at Amala Earth. Check out our collection here. "
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the benefits of using a reusable cloth diaper instead of the conventional disposable one?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"There are several benefits of using a reusable cloth diaper instead of the conventional ones. The reusable diaper is more cost effective in comparison to the disposable one. Since a baby’s diaper has to be changed many times in a day, using a new diaper each time would be costly. Moreover, the reusable diapers are made from organic cotton which is soft and good for the baby’s delicate skin. It also has high absorbency. Most importantly, organic cotton is biodegradable which reduces the amount of waste to a great extent."
+       }
+       }, {
+         "@type": "Question",
+        "name": "What are some organic baby products used for baby’s skincare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"Organic skincare products for new born babies include baby lotion made from almond oil, aloe vera and neem, natural coconut hair oil, moringa baby gel and calendula massage oil."
+}
+        }]
+    }
+    </script>
+      {% endif %}
+  {% if collection.handle == 'feel-good-others' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are the organic materials used in Pooja essentials?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Marble, brass, and wood are the organic materials used in preparing items, such as diyas, tealight holder diyas, incense holders, and Akhand Diya. Flower-based essential oils, Vanilla natural oil, Lotus natural oil, and Citronella essential oil are some organic ingredients used in preparing incense sticks. "
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are organic pet care products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Organic pet care products are cruelty-free, eco-friendly, safe, and efficient. These use natural ingredients to create grooming essentials, treats, bowls, beddings, pillows, sweatshirts, and anti-tick oils for a healthy and happy pet."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the difference between organic insect repellents and regular insect repellents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The active ingredients used in organic insect repellents are essential oils. Besides essential oils, organic repellents use natural elements, such as lemongrass, citronella, peppermint, etc. Traditional insect repellents use synthetic ingredients, such as DEET, a toxic material of questionable safety."
+        } 
+        }]
+    }
+    </script>
+      {% endif %}
+ {% if collection.handle == 'holistic-wellness' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why is holistic health important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Holistic health helps one achieve harmony between all the aspects of being - the mind, the body, and the spirit. This can help a person live a more fulfilled and healthy life."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can I boost my immunity at home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Introducing Ayurveda-tested and proven immunity boosters like giloy, moringa, turmeric, ashwagandha, etc., can easily help boost immunity at home."
+        }
+        }]
+    }
+    </script>
+      {% endif %} 
+
+  {% if collection.handle == 'ethnic-clothing' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are dhoti pants for women?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you love the Indo-western clothing style, you will love dhoti pants. Fashionable and comfortable, these trousers are suitable for casual and festive occasions. You can match these with kurtas, tops, and tunics and get a trendy ethnic look. Amala Earth has a wide array of dhoti pants available in multiple colours, patterns, and styles."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are saree skirts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A beautiful blend of old-world charm and modern style, saree skirts are ready-to-wear new-age ethnic wear. Upgrade your ethnic clothing collection by adding these playful six-yard drapes. You can choose from ruffled, tiered, sequinned, and pleated, and there are many styles available."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are a few tips to look after valuable ethnic wear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Below are a few tips for maintaining the charm of your expensive ethnic clothing:
+<ul><li>Follow the washing and cleaning instructions carefully.</li>
+<li>Never leave stains. Clean them immediately.</li>
+<li>Store the clothes appropriately.</li>
+<li>Unfold and refold them at regular intervals to prevent permanent creases.</li>
+<li>Avoid putting perfumes directly on such outfits.</li></ul>"
+        }
+      
+        }]
+    }
+    </script>
+      {% endif %} 
+    {% if collection.handle == 'bedding-cushions-and-throws' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is 100% cotton and pure cotton the same thing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, 100% cotton means the cotton has not been blended with any other fibre. Pure cotton means the amount of cotton used is pure, but the entire fabric need not be made only of cotton. Look for a 100% cotton tag if you want bed linen or fabric that is not blended. Your 100% cotton fabric is a natural product consisting only of cellulosic fibres. It is biodegradable."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is 100% cotton and organic cotton the same thing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Organic cotton is made from natural seeds, and there is no usage of pesticides or other harmful chemicals. Conventional cotton, on the other hand, is made from GMO (genetically modified) seeds to build resistance to bugs. Conventional cotton is machine-picked, whereas organic cotton is mainly handpicked. Machine picking damages the fibres. Handpicked organic cotton is stronger and softer."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the best sustainable bedding material today?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Organic linen is one of the most sustainable fibres on the market today. Its weave allows even more air, making it more breathable than cotton, and thus regulates body temperature better. As it's a higher-quality fibre, it will feel softer, wash better, and ensure a more comfortable sleep."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are hypoallergenic fabrics? Why are they more suited for bedding products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fabric made out of natural fibre, such as cotton, linen, silk, and wool are hypoallergenic. As they have a tighter weave, fewer allergens are trapped within the fibre, as compared to synthetic fibre. They particularly repel dust mites, a key allergen. Also, they are more resistant to saliva and sweat. 
+
+So all fabric is not the same. Some are better for one’s health than others."
+        }
+     
+
+        }]
+    }
+    </script>
+      {% endif %} 
+  {% if collection.handle == 'baby-clothing' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What do you mean by GOTS certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GOTS stands for Global Organic Textile Standard. This certification means that the product is 100% environmentally friendly. From the raw materials to the output, every step is evaluated."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why is Amala Earth better than other websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amala Earth has the most comfortable baby clothing range for your little one. It believes in making babies wear 100% organic and environment-friendly clothing. Now you can order newborn clothes online without any hassle."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are colored clothes safe for babies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most of our baby clothes have azo-free colors. This means that the clothes are safe for your baby's soft and sensitive skin."
+        }
+      
+        }]
+    }
+    </script>
+      {% endif %}
+    {% if collection.handle == 'crockery-and-cutlery' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are other eco-friendly materials available at Amala Earth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Upholding its promise of sustainable living, Amala Earth also has a curated collection of home decor items in eco-friendly materials. Such items include marble bowls, urlis, tea light holders, and cake stands; upcycled plastic storage boxes and trunks; cotton paper bags, ottomans, and curtain tiebacks; jute storage boxes and dhurries and other rare items like lamps made of banana paper. These materials have been around for centuries, and they are again rising to prominence due to the amalgamation of modern designs and eco-friendly properties."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are other product categories available at Amala Earth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can browse a plethora of categories hosting hundreds of items spanning food items, beauty, fragrances, bath essentials, garden products, beddings, fashion apparel, baby wear, wellness products and hand-picked gift baskets curated by experts, in addition to crockery, cutlery and napkins. All these products have been designed keeping two factors in mind - aesthetics and sustainability. Style with sustainability is the key differentiating factor at Amala Earth."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why must one invest in sustainable products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By practising sustainability, we are moving towards a better future and an improved quality of living. It is also the key to protecting our ecosystem and preserving natural resources for generations to come. At a time when holistic, sustainable and mindful living is not just a luxury but the need of the hour due to environmental degradation, one must do their bit in conserving natural resources."
+        }
+      
+        }]
+    }
+    </script>
+      {% endif %}
+      {% if collection.handle == 'home-decor-and-accessories' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are eco-friendly products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In general, eco-friendly products do not harm our environment in any way, for example, at the time of their production, usage, or even after their disposal."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are eco-friendly products composed of?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eco-friendly products are generally made up of recycled materials. Materials that can be easily recycled or harvested from a natural resource, such as coconut choir, bamboo, etc. These are easily replicable and very little damaging to harvest."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which are some eco-friendly home decor ideas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A list of a few eco-friendly home decor ideas are:
+          <ul><li>Use of indoor plants or plant wall arts as home decor to add a calming vibe</li> <li>Use of second-hand furniture and remodelling them to give them a contemporary look</li>
+ <li>Use of non-toxic wall paint</li> <li>Buy home decor items from local sustainable artisans </li> <li>Use of sustainable wallpapers</li> <li>Use of curtains and rugs made up of eco-friendly products like pure cotton</li></ul>"
+        }
+      
+        }]
+    }
+    </script>
+      {% endif %}
+        {% if collection.handle == 'tea-and-beverages' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is organic tea good for the body?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Organic tea has numerous benefits. Green tea is rich in antioxidants, has anti-inflammatory properties, and aids in lowering one’s calorie intake. It also lowers the risk of certain types of cancer. Herbal teas help insomnia, maintain blood pressure levels, and aid weight management. Thus, organic tea is an excellent beverage to ensure overall wellness."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is organic coffee good for health?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Organic coffee not only tastes better than regular coffee but is also chemical-free and grown using natural processes. Organic coffee is rich in nutrients and has higher antioxidant levels, helping with stress relief, enhancing mood, and boosting metabolism. It also helps prevent chronic diseases. Organic green coffee contains chlorogenic acid, a phenolic compound and antioxidant, which promotes weight loss."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which beverages can keep one hydrated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fruit-based crushes like kiwi crush and apple crush and squash can ensure hydration and refreshment. Sharbat, nutty and spiced Thandai are traditional beverages that can help one stay hydrated."
+        }
+      
+        }]
+    }
+    </script>
+      {% endif %}
+  {% if collection.handle == 'candles-and-aromatherapy' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are aromatherapy candles good for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aromatherapy candles are good for psychological, spiritual, physical, and mental well-being."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can candles be therapeutic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, candles have a history of being therapeutic. Naturally scented candles, made with soy wax or beeswax, can help reduce stress, lift mood, and energise the soul."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are candles part of aromatherapy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, there are specific candles available called aromatherapy candles. Aromatherapy candles are manufactured with pure essential oils, high-quality wax and wicks."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can candles help with anxiety?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, candles with certain essential oils can help with anxiety."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can candles improve sleeping patterns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"Yes, candles can help people fall asleep and improve their sleep quality. Aromatherapy candles have meditative power. They enhance concentration levels, calm minds, and relieve the nervous system."
+       }
+       
+        }]
+    }
+    </script>
+      {% endif %}
+{% if collection.handle == 'beauty-hampers-and-bundles' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can I give someone body lotion gift baskets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gifting someone a body lotion gift set is a fantastic idea. It is also great for their skin. Look for ayurvedic or natural products as they enrich the skin from within."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What to look at while giving skincare gift hampers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Giving skincare gifts can be a bit tricky. It involves a great risk as a lot of people have personal preferences. However, if you are giving ayurvedic or natural products, you are in the safe zone. These products are sans any chemicals, making them a perfect pick for the skin as well as as a gift."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the different beauty product gift hampers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are a variety of skincare and body care products at Amala Earth, like Aloe vera face gel and rose face pack duo, anti-acne combo, anti-hairfall combo, body polishing trio set, and many more."
+        }
+      
+       
+        }]
+    }
+    </script>
+{% endif %}
+  {% if collection.handle == 'childrens-western-wear' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is the fabric authentic and organic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every item of clothing that you see displayed in the children's western wear collection is made from the purest and a hundred per cent organic products. The fabric undergoes various quality checks before being displayed on the site."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Where can I get more eco-friendly clothes for children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amla Earth has an eclectic range of clothes for children of all ages. Our products are consciously sourced and authenticated across various levels. Plus, these are in line with the current fashion trends, so your child gets the comfort of organic fabric and the traditional touch of artisanal handicrafts. Not to mention, the environment gets a respite from chemicals and other harmful products that affect longevity."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are the clothes artisanal made?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We have a vision of supporting the locals; therefore, our products are sourced locally and ethically. We also want to empower our communities by providing employment opportunities, which is why our children's western wear collections are made by local designers, which further gives them a unique style and identity."
+        }
+      
+       
+        }]
+    }
+    </script>
+{% endif %}
+  {% if collection.handle == 'toys-and-games' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are some eco-friendly children’s products available at Amala Earth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many eco-friendly books, toys, and stationery are designed especially for children. All the products available at Amala Earth are made keeping in mind your child’s safety. Eco-friendly books, toys, and stationery are also made to protect the environment. Some popular nature-friendly children’s products are plantable seed pencils, eco-friendly notebooks, and file folders. You can also find a wide range of handmade wooden toys that are excellent for your kid."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Where can I find the best eco-friendly children’s books, toys, and stationery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amala Earth is one of the best destinations to find a wide range of eco-friendly children’s books, toys, and stationery. In fact, it’s a one-stop destination where you can find various products like skincare and bath essentials, home décor items, cookware, home essentials like bedding and cushions, and a lot more."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are the paints used in eco-friendly products safe for my child?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all the materials and paints used to make our eco-friendly children’s products are non-toxic and safe."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Are crochet toys available at Amala Earth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Amala Earth has a wide variety of crochet toys for children. From crochet rattles to simple soft toys, you can find many crochet toys in various shapes and designs for your child. These toys are eco-friendly and gentle on the skin, making them a safe choice for your child."
+        }
+      
+       
+        }]
+    }
+    </script>
+{% endif %}
+  {% if collection.handle == 'superfoods-and-nuts' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What dry fruits can I buy online in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can buy various dry fruits online in India, such as organic almonds, organic cashews, organic black raisins, etc. You can also buy multiple varieties of dry fruits, like roasted almonds, honey roasted cashews, flavoured almonds, chocolate-coated dry fruits, etc., in excellent packaging that would make for fantastic snacking options. Along with dry fruits, lots of nuts and seeds are also available online at Amala Earth that are organic and without any preservatives."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How to store nuts and dry fruits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It's best to store nuts and dry fruits in airtight containers to keep them dry and free from moisture."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is eating nuts and dry fruits every day healthy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, eating nuts and dry fruits every day is healthy. In fact, eating nuts and dry fruits every day can improve your health in many ways. Nuts and dry fruits contain an excellent profile of nutrients, which can help reduce diabetes and heart disease risk. It can promote weight loss despite high-calorie content."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How many seeds should I eat in a day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seeds are nutrient-dense. Hence, you do not need to eat a lot of them in one go. As a rule of thumb, you can eat two spoons of seeds every day. Seeds are excellent sources of healthy fats, fibres and protein. Sunflower, flax, hemp, and pumpkin are some of the healthiest seeds you must include in your diet."
+        }
+                         
+       
+        }]
+    }
+    </script>
+{% endif %}
+  {% if collection.handle == 'birthday-gifts' %}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are eco-friendly products made of?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eco-friendly products are made of natural resources and depend on recycled raw materials. They use organic farm-grown cotton, hemp, bamboo, and various other natural fibres."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How are eco-friendly products better than traditionally made garments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eco-friendly products have a wide range of benefits. Here are the top advantages of having eco-friendly garments: <ul><li>They help reduce textile waste.</li>
+<li>They are healthier for your body.</li>
+<li>They contribute towards supporting ethical companies.</li>
+<li>They are highly customisable.</li>
+<li>They are recyclable.</li></ul>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "What kind of eco-friendly birthday gifts are available at Amala Earth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our excellent assortment of handcrafted birthday gifts includes perfume gift sets, perfume for gifts, scented wax tablets, soy candle gift sets and many more. Each piece is carefully crafted to put across a meaningful statement and add exuberance."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How are eco-friendly products better for the environment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "They leave the least amount of carbon footprint and help preserve the environment. With global warming increasing day by day, it is the duty of every individual to participate in reducing carbon emissions and preserving our environment."
+        }
+        }, {
+        "@type": "Question",
+        "name": "Are eco-friendly products costlier than traditionally made ones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best part about recycled products is that the raw materials used to create them are comparatively cheaper. As most of them are made with discarded raw materials or used items, it reduces the production costs, which invariably reduces the price of final products. "
+        }
+          }, {
+        "@type": "Question",
+        "name": "Is it healthier to use eco-friendly products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eco-friendly items are a more sustainable and healthy option for your delicate skin. As most of the raw materials are created without any pesticides and chemicals, they have a more luscious feel and acceptance by your skin. They make your garments more breathable and absorbent so that you can feel comfortable wearing them for extended durations."
+        }
+                 
+       
+        }]
+    }
+    </script>
+{% endif %}
+
+{% endif %}
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Amala Earth",
+  "url": "https://amala.earth/",
+  "logo": "https://cdn.shopify.com/s/files/1/0523/3252/7770/files/amala-square-image.jpg?v=1648037586",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91 8800703122",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": "en"
+  },
+  "sameAs": [
+    "https://www.facebook.com/Amala.Earth/",
+    "https://www.instagram.com/amala.earth/",
+    "https://www.youtube.com/channel/UCsOUCPJYqGa4-lfPwOq8gEA",
+    "https://in.pinterest.com/amalaearth/"
+  ]
+}
+</script>
+

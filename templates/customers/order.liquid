@@ -1,0 +1,437 @@
+{% assign order_cancellation_until = order.created_at | date: "%Y-%m-%d %H:%M" %}
+{% assign seconds = 1 | times: 24 | times: 60 | times: 60 %}
+{% assign order_cancellation_until = order_cancellation_until | date: "%s" | plus: seconds %}
+{% assign today_date = 'now' | date: '%s' | plus:0 %}
+{% assign order_return_until = order.created_at | date: "%Y-%m-%d %H:%M" %}
+{% assign seconds = 7 | times: 24 | times: 60 | times: 60 %}
+{% assign order_return_until = order_cancellation_until | date: "%s" | plus: seconds %}
+
+{% assign itemCount = 0 %}
+
+						{% for item in order.line_items %}
+							{% assign handle = item.product.handle %}
+{% assign product = item.product %}
+{% assign item_id = item.product.id %}
+{% assign item_name = item.product.title %}
+{% assign item_price = item.final_line_price | money_without_currency  %}
+							  {% assign itemCount = itemCount | plus: 1 %}
+						{% endfor %}
+
+<style type="text/css">
+    .custom-overlay {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background: #000;
+                opacity: 0.8;
+              	z-index: 1111;
+            }
+
+            .custom-overlay .overlay__inner {
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+
+            .custom-overlay .overlay__content {
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .custom-overlay .spinner {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                border-width: 2px;
+                border-color: rgba(255, 255, 255, 0.05);
+                border-top-color: #fff;
+                animation: spin 1s infinite linear;
+                border-radius: 100%;
+                border-style: solid;
+            }
+
+            @keyframes spin {
+              	100% {
+                	transform: rotate(360deg);
+              	}
+            }
+</style>
+
+<section class="my-account" data-section-id="account" data-section-type="account">
+  		<div class="my-account__header">
+          <a href="/account/?view=orders" class="back_link">
+            <img src="{{ 'back_arrow.svg' | asset_url }}" alt="back">
+          </a>
+          <h2 class="heading h2">My Orders </h2>
+        </div>
+        <div class="container container--narrow">
+            <div class="my-account__content">
+              <div class="my-orders__item-list" data-id="{{order.id}}">
+                <div class="my-order__single my-orders__item ">
+                    <div class="my-orders__header-wrapper">
+                        <div><a href="{{ order.customer_url }}">Order ID {{order.name}}</a></div>
+                        <!-- color of the order status depends on class of span as below
+                            status              class
+                            -------------------------------------------
+                            Confirmed:          status-Confirmed
+                            Out For Delivery:   status-OutForDelivery
+                            Delivered:          status-Delivered
+                            Expired:            status-Expired
+                         -->
+                        <div class="status-label text-right"><span class="status-Confirmed">{% if order.cancelled %}Cancelled {% else %} {{ order.fulfillment_status_label }} {% endif %}</span></div>
+                        <div id="ordered_on">Ordered on {{ order.created_at | date: format: 'month_day_year_time' }}</div>
+                      {% if order.cancelled %} {% else %}
+                        <div class="text-right hide arrival-label"> Estimated Arrival </div>
+                      
+                      <div class="text-right" id="edt-estimation">Calculating..</div>
+                      {% endif %}
+                    </div>
+                  
+                    {%- for line_item in order.line_items -%}
+                    <div data-tracking="{{line_item.fulfillment.tracking_number}}" class="{% if itemCount > 1 %} hide {% endif %} my-orders__content-wrapper line_item_{{line_item.id}}" item-id="{{line_item.id}}" handle="{{line_item.product.handle}}">
+                        <div class="my-orders__image-wrapper">
+                            <a href="javascript:void(0);">
+                                <div class="aspect-ratio" style="padding-bottom: 100.0%">
+                                    <img src="{{ line_item.image | img_url: '75x75', scale: 1 }}" alt="{{ line_item.image.alt | escape }}" width=75>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="my-orders__item-wrapper">
+                            <table class="my-orders__product-info">
+                                <tr>
+                                    <td colspan="2"><a href="{{ line_item.url }}" class="my-orders__product-title ">{{line_item.title}}</a></td>
+                                </tr>
+                                
+                              
+                              {%- unless line_item.properties == blank -%}
+     
+                              {%- for property in line_item.properties -%}
+                                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                                {%- if property.last == blank or first_character_in_key == '_' -%}
+                                  {%- continue -%}
+                                {%- endif -%}
+								<tr>
+                                    <td class="product-info_label">{{ property.first }} </td>
+                                    <td> {{ property.last }}</td>
+                                </tr>
+                               
+                              {%- endfor -%}
+                          {%- endunless -%}
+                                
+                                <tr>
+                                    <td class="product-info_label">Amount </td>
+                                    <td><span class="price price--highlight">{{ order.total_price | money }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                  {% endfor %}
+                    <div class="my-orders__price-line">
+                        <table class="my-orders__price-line-table">
+                            <tr>
+                                <td>Subtotal</td>
+                                <td class="text-right">{{ order.line_items_subtotal_price | money }}</td>
+                            </tr>
+                          {%- for shipping_method in order.shipping_methods -%}
+                            <tr>
+                                <td>Shipping</td>
+                                <td class="text-right">{{ shipping_method.price | money }}</td>
+                            </tr>
+                         {% endfor %}
+                          {%- for discount_application in order.cart_level_discount_applications -%}
+                            <tr>
+                                <td>Discount</td>
+                                <td class="text-right">{{ discount_application.total_allocated_amount | money }}</td>
+                            </tr>
+                           {% endfor %} 
+                            <tr class="my-orders__price-line_highlight">
+                                <td>TOTAL</td>
+                                <td class="text-right">{{ order.total_price | money }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="my-orders__item-actions hide" id="review_block">
+                        <a href="/a/review/write?product={{handle}}" class="my-orders__item-actions-link" id="review_href">
+                            <span class="stamped-starrating " aria-hidden="true">
+                                <i class="stamped-fa stamped-fa-star-o" aria-hidden="true"></i>
+                                <i class="stamped-fa stamped-fa-star-o" aria-hidden="true"></i>
+                                <i class="stamped-fa stamped-fa-star-o" aria-hidden="true"></i>
+                                <i class="stamped-fa stamped-fa-star-o" aria-hidden="true"></i>
+                                <i class="stamped-fa stamped-fa-star-o" aria-hidden="true"></i>
+                            </span>
+                            <span class="text-right review-link">Write a Review</span>
+                        </a>
+                    </div>
+                    <div class="my-orders__status-track">
+                        <h2 class="heading">Order Status</h2>
+                        <ul class="my-orders__track-list">
+                            <li class="my-orders__track-list-item">
+                                <label>In-preparation -
+                                  {{ order.created_at | date: format: 'month_day_year_time' }}</label>
+                            </li>
+                           
+                            
+                        </ul>
+                    </div>
+                    <div class="my-orders__address">
+                        <h2 class="heading">Delivery Address</h2>
+                        <label>{{ 'customer.order.shipping_address' | t }}</label>
+                        {%- if order.shipping_address -%}
+                  {{- order.shipping_address | format_address -}}
+                {%- else -%}
+                  <p>{{ 'customer.order.no_shipping_address' | t }}</p>
+                {%- endif -%}
+                    </div>
+                    
+                </div>
+                <div class="my-orders__item-actions">
+                        <button href="#!" class="my-orders__item-actions-link popup-trigger" traget="#selectable-order-details-model">
+                            Reorder
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </button>
+                 
+                  {% if order.cancelled %}
+                  
+                  {% else %}
+                  
+                        <button class="my-orders__item-actions-link popup-trigger return-cta hide" traget="#return-exchange-model">
+                          {% if product.metafields.AE_PROD_DTLS['Return Policy'] %}
+                          {{product.metafields.AE_PROD_DTLS['Return Policy']}}
+                          {% else %}
+                            Return/Exchange, only eligible for Exchange, within 7 days of delivery, in an unlikely event of damaged, defective, size issue, wrong item delivered to you.
+                          {% endif %}
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </button>
+                     
+                       <button href="#!" class="my-orders__item-actions-link my-orders__item-actions-link-disabled return-cta-na hide">
+                          {% if product.metafields.AE_PROD_DTLS['Return Policy'] %}
+                          {{product.metafields.AE_PROD_DTLS['Return Policy']}}
+                          {% else %}
+                          Return/Exchange, only eligible for Exchange, within 7 days of delivery, in an unlikely event of damaged, defective, size issue, wrong item delivered to you.
+                          {% endif %}
+                        </button>
+                 {% endif %}
+                    
+                 
+                  {% if order.cancelled %}
+                  
+                  {% else %}
+                     {% if today_date < order_cancellation_until %}
+                        <button  class="my-orders__item-actions-link popup-trigger cancellation-cta" traget="#cancle-order-model">
+                         
+                            Cancellation requests will be accepted strictly within 24 hours of placing the order only. Orders cannot be cancelled or returned once shipped or delivered.
+                  
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </button>
+                     {% else %}
+                      <button href="#!" class="my-orders__item-actions-link my-orders__item-actions-link-disabled cancellation-cta-na">
+                           
+                            Cancellation requests will be accepted strictly within 24 hours of placing the order only. Orders cannot be cancelled or returned once shipped or delivered.
+                         
+                        </button>
+                      {% endif %}
+                 {% endif %}
+                  
+                  
+                  {% if order.cancelled %}
+                  
+                  {% else %}
+                 
+                      <button onclick="javascript:process('invoice_form', event);" class="my-orders__item-actions-link">
+                            Download Invoice
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+	                  </button>
+                 	{% endif %}
+                        <button href="/pages/contact-us" class="my-orders__item-actions-link">
+                            Need Help
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </button>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </section>
+<form name="invoice_form" id="invoice_form">
+    <input type="hidden" value="invoice" name="action" id="action">
+    <input type="hidden" value="{{item_id}}" name="item_id" id="item_id">
+    <input type="hidden" value="{{handle}}" name="item_handle" id="handle">
+    <input type="hidden" value="{{item_name}}" name="item_name" id="item_name">
+    <input type="hidden" value="{{item_price}}" name="item_price" id="item_price">
+    <input type="hidden" name="order_id" value="{{order.order_number}}">
+    <input type="hidden" name="order_status" value="{{order.fulfillment_status_label}}">
+    <input type="hidden" name="customer_id" value="{{customer.id}}">
+    <input type="hidden" name="customer_name" value="{{customer.name}}">
+    <input type="hidden" name="customer_email" value="{{customer.email}}">
+</form>
+
+
+
+{% render 'popup-cancel' with order, item_id:item_id, item_name:item_name, handle:handle, item_price:item_price %} 
+{% render 'popup-reorder' with order, item_id:item_id, item_name:item_name, handle:handle, item_price:item_price %} 
+{% render 'popup-return' with order, item_id:item_id, item_name:item_name, handle:handle, item_price:item_price %} 
+{% render 'popup-successful-message.liquid' %}
+
+
+
+
+{% if itemCount > 1 %}
+
+ {% render 'popup-order-details',  order: order %} 
+
+<script>
+
+$('.my-orders__content-wrapper-popup').on('click', function(){
+    item_id = $(this).attr('item-id');
+    handle = $(this).attr('handle');
+    item_name = $(this).attr('item_name');
+    item_price = $(this).attr('item_price');
+    item_product_id = $(this).attr('product-id');
+  
+    $('#item_id').val(item_id);
+    $('#handle').val(handle);
+    $('#item_name').val(item_name);
+    $('#item_price').val(item_price);
+    $('#review_href').attr('href', '/a/review/write?product='+handle)
+    $('.line_item_'+item_id).removeClass('hide');
+  
+    var timelinekey = 'prod_'+item_product_id;
+    if(finaltimeline[timelinekey]) {
+        for(i = 0; i < finaltimeline[timelinekey].length; i++) {
+            $('.my-orders__track-list').append('<li class="my-orders__track-list-item"><label>'+finaltimeline[timelinekey][i].status+' - '+finaltimeline[timelinekey][i].date +'</label></li>');
+        }
+    }
+
+    if(finaltimeline[timelinekey] && finaltimeline[timelinekey].length > 0) {
+        events = finaltimeline[timelinekey];
+        last_status = events.slice(-1)[0];
+        $('.status-Confirmed').text(last_status.status);
+        if(last_status.status == 'Delivered') {
+            $('#review_block').removeClass('hide');
+            $('#edt-estimation').addClass('hide');
+            $('.arrival-label').addClass('hide');
+            delived_date = last_status.date;
+            var date = new Date(delived_date)
+            return_date = date.setDate(date.getDate() + 7);
+          
+            if(Date.now() > return_date) {
+                $('.return-cta-na').removeClass('hide');
+            } else {
+                $('.return-cta').removeClass('hide');
+           }
+        }
+    } else {
+        $('.status-Confirmed').text('In-preparation');
+    }
+  
+    $('#order-details-model').removeClass('show-pop-up');
+});
+</script>
+
+{% endif %}
+
+ <script src="{{ 'account.js' | asset_url }}"></script>
+
+
+
+<script>
+    function addoverlay() {
+                $('<div class="custom-overlay"><div class="overlay__inner"><div class="overlay__content"><span class="spinner"></span></div></div></div>').appendTo(document.body);
+            };
+
+            function removeoverlay() {
+                $('.custom-overlay').remove();
+            };
+  
+    addoverlay();
+ 	let process = (formid, event) => {
+      	event.preventDefault();
+    	$.ajax({
+            url: 'https://otp.amala.earth/sendemails.php',
+            type: 'POST',
+            dataType: 'JSON',
+            data: new FormData($('#'+formid)[0]),
+          	processData: false,
+            contentType: false,
+            success: function(response) {
+              	if(response.status == true) {
+                	$('#successful-message').addClass('show-pop-up');
+                } else {
+                 	alert(response.message);
+                }
+            }, error: function(xhr) {
+                alert('something went wrong, please try again.');
+              	window.location.reload();
+            }
+        });
+  	};
+</script>
+
+{% if order.cancelled %}
+
+{% else %}
+
+<script>
+
+  order_id = $('.my-orders__item-list').attr('data-id');
+var http_new = new XMLHttpRequest();
+  var url = 'https://otp.amala.earth/webetd.php';
+  var params = 'order_id='+order_id+'&code=D0A8M2A1L5A*';
+http_new.open('POST', url, true);
+
+//Send the proper header information along with the request
+http_new.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http_new.onreadystatechange = function() {//Call a function when the state changes.
+  console.log(http_new);
+    if(http_new.readyState == 4 && http_new.status == 200) {
+       response =  JSON.parse(http_new.responseText);
+      console.log(response.status);
+      if(response.status) {
+    
+        $('.arrival-label').removeClass('hide');
+      	$('#edt-estimation').text('On '+response.message);
+   
+      }
+      else {
+        $('#edt-estimation').text('response awaited');
+      }
+  	
+   }
+  else {
+          //  $('#edt-estimation').text('response awaited');
+  }
+  
+}
+http_new.send(params);
+</script>
+<script>
+var finaltimeline = '';
+var http = new XMLHttpRequest();
+var url = 'https://otp.amala.earth/orderfetchstatus.php';
+var params = 'order_id='+$('.my-orders__item-list').attr('data-id')+'&code=D0A8M2A1L5A*';
+http.open('POST', url, true);
+
+//Send the proper header information along with the request
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+         response =  JSON.parse(http.responseText);
+         if(response.status) {
+             finaltimeline = response.timeline;
+         }
+         removeoverlay();
+         $('#order-details-model').addClass('show-pop-up');
+    }
+}
+http.send(params);
+ 
+</script>
+{% endif %}

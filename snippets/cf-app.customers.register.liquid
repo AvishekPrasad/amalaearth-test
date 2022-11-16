@@ -1,0 +1,32 @@
+{%- render 'my-account-breadcrumbs' -%}
+<div class="page__content  layout editprofile-page">
+  {%- render 'my-account-sidebar' -%}
+  <div class="layout__section">
+    <div class="card">
+      <div class="card__section card__section--tight">
+        <h1 class="heading h1">Edit Account</h1>
+      </div>
+      {%- form 'create_customer', name: 'create', class: 'form form--main', id: 'create_customer' -%}
+      <div id="cf-app-customer-fields">
+        <!-- Fields will be dynamically included here. -->
+      </div>
+    </div>  
+  </div>
+</div>
+<script src="https://cdn.apps.bonify.io/customer_fields/public/live/CustomerFieldsApp-min.js"></script>
+<br><script>
+  if (typeof CustomerFieldsApp !== 'undefined') {
+    CustomerFieldsApp.initFields("#cf-app-customer-fields", {
+      base_url: "https://apps.bonify.io/",
+      styles_url: "https://cdn.apps.bonify.io/customer_fields/public/live/cf-app-form.css",
+      site_id: "{{ shop.metafields.cf_app.internal_site_id }}",
+      shop_domain: "{{ shop.permanent_domain }}",
+      {% if customer %}
+      customer_id: "{{ customer.id }}",
+      customer_token: "{{ customer.metafields.cf_app.api_token }}",
+      {% endif %}
+    });
+  }
+</script>
+
+{% endform %}

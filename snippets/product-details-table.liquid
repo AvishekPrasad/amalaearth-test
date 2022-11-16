@@ -1,0 +1,79 @@
+<style>
+  tr.Benefits,
+  tr.Material{
+    display:none
+  }
+</style>
+                {% assign product_usp = 'false' %}
+                {% assign wk_metafields = product.metafields.AE_PROD_DTLS %}
+                {% unless wk_metafields == empty %}
+                   {% for wk_metafield in wk_metafields %} 
+                      {% assign wk_temp_mf = wk_metafield | split : '", "' %}
+                      {% assign key = wk_temp_mf[0] | size | minus: 2 %} 
+                      {% assign value = wk_temp_mf[1] | size | minus:2 %}
+                      {% assign wk_check_mf = wk_temp_mf[1] | slice: 0,value | split : ':' %}
+                      {% assign meta_key = wk_temp_mf[0] | slice: 2,key %}
+                      {% if meta_key != 'Space for Detail1' and meta_key != 'Package preparation days' and meta_key != 'usp' and meta_key != 'Additional Information' and meta_key != 'USP(label:info;label:info)' and  meta_key != 'Short Description(150 char)'  %}
+                          {% assign product_usp = 'true' %}
+                          {% break %}
+                      {% endif %}
+                     
+                   {% endfor %}
+                {% endunless %}
+                {% if section.settings.show_usp_description and product_usp == 'true' %}
+                  <div class="product-info__block product-usp__col">
+                    <table class="product-ups__col table table-sm small">
+                      {% assign ing = product.metafields.AE_PRODUCT_DTLS.ingredients %}
+                     
+                  
+                      {% if ing != blank %}
+                        <tr>
+                          <th>Ingredients</td>
+                          <td>{{ ing }}</td>
+                        </tr>
+                      {% endif %}
+                      {% if product.metafields.AE_PROD_DTLS['Material'] != blank %}
+                        <tr>
+                          <th>Material</td>
+                          <td>{{ product.metafields.AE_PROD_DTLS['Material'] }}</td>
+                        </tr>
+                      {% endif %}
+                  
+                      {% unless wk_metafields == empty %}
+                        {% for wk_metafield in wk_metafields %}
+                          {% assign wk_temp_mf = wk_metafield | split : '", "' %}
+                          {% assign key = wk_temp_mf[0] | size | minus: 2 %} 
+                          {% assign value = wk_temp_mf[1] | size | minus:2 %}
+                          {% assign wk_check_mf = wk_temp_mf[1] | slice: 0,value | split : ':' %}
+                          {% assign meta_key = wk_temp_mf[0] | slice: 2,key %}
+                          {% if meta_key != 'Space for Detail1' and meta_key != 'usp' and meta_key != 'Additional Information' and meta_key != 'USP(label:info;label:info)' and meta_key != 'Short Description(150 char)'  %}
+                            <tr class="{{ wk_temp_mf[0] | slice: 2,key }}">
+                              <th>{{ wk_temp_mf[0] | slice: 2,key }}</th>
+                              <td>{{ wk_temp_mf[1] | slice: 0,value }}</td>
+                            </tr>
+                          {% endif %}
+                        {% endfor %}
+                        <tr>
+                          <th>SKU</th>
+                          <td><span class="detail-product-meta__sku-number">{{ product.selected_or_first_available_variant.sku }}</span></td>
+                        </tr>
+                      {% endunless %}
+
+                    </table>
+                  </div>
+                {% elsif product.metafields.AE_PROD_DTLS['usp'] != blank %}
+                    <div class="product-info__block product-usp__col">
+                    <table class="product-ups__col">
+                  
+                      {% assign usps_list = product.metafields.AE_PROD_DTLS['usp'] | split: ';' %}
+                      {% for usp_item in usps_list %}
+                      {% assign usp_title = usp_item | split: ':' %}
+                      <tr class="{{ usp_title[0] }}">
+                        <th>{{ usp_title[0] }}</th>
+                        <td>{{ usp_title[1] }}</td>
+                      </tr> 
+                      {% endfor %} 
+                    </table>
+                  </div>
+                {% endif %}
+                <!-- Product Sangius fluit tab -->

@@ -1,0 +1,4653 @@
+{
+  "current": {
+    "heading_color": "#b89c7d",
+    "text_color": "#000000",
+    "accent_color": "#cab49e",
+    "link_color": "#cab49e",
+    "border_color": "#e2e2e2",
+    "background": "#ffffff",
+    "secondary_background": "#ffffff",
+    "error_color": "#ff6c00",
+    "success_color": "#96aa00",
+    "primary_button_background": "#cab49e",
+    "primary_button_text_color": "#ffffff",
+    "secondary_button_background": "#1e2d7d",
+    "secondary_button_text_color": "#ffffff",
+    "header_background": "#b89c7d",
+    "header_text_color": "#ffffff",
+    "header_light_text_color": "#a3afef",
+    "header_accent_color": "#cab49e",
+    "footer_background_color": "#ffffff",
+    "footer_heading_text_color": "#1e2d7d",
+    "footer_body_text_color": "#000000",
+    "footer_accent_color": "#cab49e",
+    "product_on_sale_accent": "#cab49e",
+    "product_in_stock_color": "#008a00",
+    "product_low_stock_color": "#ff6c00",
+    "product_sold_out_color": "#8a9297",
+    "product_label_1_background": "#e8f13c",
+    "product_label_2_background": "#00a500",
+    "product_star_color": "#ffbd00",
+    "base_text_font_size": 16,
+    "heading_font": "libre_baskerville_n4",
+    "text_font": "serif",
+    "underline_links": true,
+    "animation_image_zoom": true,
+    "search_mode": "product",
+    "show_vendor": true,
+    "show_secondary_image": true,
+    "show_discount": true,
+    "discount_mode": "percentage",
+    "product_price_position": "after_title",
+    "product_image_size": "square",
+    "show_color_swatch": false,
+    "show_inventory_quantity": true,
+    "low_inventory_threshold": 8,
+    "show_reviews_badge": true,
+    "cart_type": "drawer",
+    "cart_empty_button_link": "shopify:\/\/collections\/all",
+    "cart_show_checkout_button": true,
+    "cart_show_free_shipping_threshold": true,
+    "cart_free_shipping_threshold": "500",
+    "cart--show-mini": true,
+    "upsellCart--head": "Customers also bought",
+    "show_quick_buy": true,
+    "previously_purchased_title": "Previously Purchased",
+    "limit_diff_prodct": 1,
+    "social_facebook": "https:\/\/facebook.com\/amala.earth",
+    "social_twitter": "https:\/\/twitter.com\/amalaearth",
+    "social_pinterest": "https:\/\/in.pinterest.com\/amalaearth",
+    "social_instagram": "https:\/\/instagram.com\/amala.earth",
+    "social_vimeo": "",
+    "social_tumblr": "",
+    "social_youtube": "https:\/\/www.youtube.com\/channel\/UCsOUCPJYqGa4-lfPwOq8gEA\/featured",
+    "social_linkedin": "",
+    "social_snapchat": "",
+    "social_fancy": "",
+    "favicon": "shopify:\/\/shop_images\/faviconnew.png",
+    "enable_infinite": true,
+    "infinite_loader_img": "shopify:\/\/shop_images\/1484.gif",
+    "myaccount_needhelp_phone_number": "",
+    "myaccount_needhelp_email": "help@amalaearth.com",
+    "enable_tags": true,
+    "tags_allowed_on_frontend": "Sustainable,Gluten Free,Vegan,Eco Friendly, Sugar Free, Handmade",
+    "tags_allowed_count": "6",
+    "new_arrivals_allowed_count": "11",
+    "checkout_header_image": "shopify:\/\/shop_images\/checkoutbanner2_d80b1be8-3a53-40c2-a14d-508545f1ed06.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo-wh.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#f1f1f1",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#cab49e",
+    "checkout_button_color": "#b89c7d",
+    "checkout_error_color": "#ff0000",
+    "app_wk_enabled": true,
+    "app_wk_login_required": false,
+    "app_wk_icon": "heart",
+    "app_wk_col_bg_shape": "square",
+    "app_wk_share_position": "top",
+    "app_wk_products_per_row": "5",
+    "share_image": "",
+    "social_google_plus": "",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "67ecfc96-e7df-447b-80f1-56c99b025d9f": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_item": "",
+              "image_1_heading": "Your image",
+              "image_1_text": "Tell your story",
+              "image_1_link": "",
+              "image_2_heading": "Your image",
+              "image_2_text": "Tell your story",
+              "image_2_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "67ecfc96-e7df-447b-80f1-56c99b025d9f"
+        ],
+        "settings": {
+          "enable_sticky_header": true,
+          "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0523\/3252\/7770\/files\/Amala_Header.svg?v=1620292254",
+          "logo_max_width": 215,
+          "mobile_logo_max_width": 140,
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "navigation_menu": "main-menu",
+          "desktop_navigation_layout": "inline",
+          "desktop_navigation_open_trigger": "hover",
+          "show_navigation_social_media": true,
+          "navigation_phone_number": "+91 8800703122",
+          "navigation_email": "help@amalaearth.com",
+          "show_condensed_search": false,
+          "show_search_filter": false,
+          "search_menu": "",
+          "show_search_menu_title": true,
+          "show_super_deal": false,
+          "super_deal_value": "40%",
+          "super_deal_text": "Deal",
+          "deal_link_url": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "99eabba8-7dc0-4a03-a176-861b3465dae0": {
+            "type": "links",
+            "settings": {
+              "menu": "category-menu",
+              "title": "Categories"
+            }
+          },
+          "89dde50b-7ddd-47c4-85b9-c2a8ffe0d391": {
+            "type": "links",
+            "settings": {
+              "menu": "collections",
+              "title": "Tags"
+            }
+          },
+          "aa0a9845-7e5b-4735-9362-d8bf4915fdf2": {
+            "type": "links",
+            "settings": {
+              "menu": "footer",
+              "title": "Policies"
+            }
+          },
+          "b8d90090-7d8c-4591-b114-96c3e602d357": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Become a Seller",
+              "subheading": "<p>Whether you are a home-based start-up or an established business, we are looking to work with conscious brands like yours.<\/p>"
+            }
+          },
+          "3e100cfb-0adc-4026-9eb4-5abfe735f482": {
+            "type": "text",
+            "settings": {
+              "title1": "Newsletter",
+              "title": "",
+              "content": ""
+            }
+          },
+          "9f9d4839-c39a-473c-8e70-1d160784c87d": {
+            "type": "payment",
+            "settings": {
+              "paymet_icon": "shopify:\/\/shop_images\/payment.png"
+            }
+          },
+          "dca13146-b40f-4dc5-981a-8cba6b290c1e": {
+            "type": "social",
+            "settings": {
+              "social_icon": "shopify:\/\/shop_images\/facebook.png",
+              "social_link": "https:\/\/www.facebook.com\/Amala.Earth\/"
+            }
+          },
+          "a0f63b35-ea5b-4bdf-87a2-42c09e002661": {
+            "type": "social",
+            "settings": {
+              "social_icon": "shopify:\/\/shop_images\/insta.png",
+              "social_link": "https:\/\/www.instagram.com\/amala.earth\/"
+            }
+          },
+          "6017195a-1b59-44d2-bf8c-4f59d02aa9c5": {
+            "type": "social",
+            "settings": {
+              "social_icon": "shopify:\/\/shop_images\/pin.png",
+              "social_link": "https:\/\/in.pinterest.com\/amalaearth"
+            }
+          },
+          "332d5290-44e6-47ce-9fba-0274cc49c1e7": {
+            "type": "social",
+            "settings": {
+              "social_icon": "shopify:\/\/shop_images\/you.png",
+              "social_link": "https:\/\/www.youtube.com\/channel\/UCsOUCPJYqGa4-lfPwOq8gEA"
+            }
+          },
+          "3bb1e073-cc3b-40dc-9cdc-fd16ba1d7072": {
+            "type": "work",
+            "settings": {
+              "heading": "Become a Seller",
+              "detail_text": "Whether you are a home-based start-up or an established business, we are looking to work with conscious brands like yours.",
+              "btn_url": "https:\/\/docs.google.com\/forms\/d\/13AD9JQR7rUVL1y9p21shiiDluI-PCsgZmk0n285bN1o\/viewform?edit_requested=true",
+              "btn_text": "Register your interest"
+            }
+          },
+          "bf2ce7ef-fc3f-4409-b51d-5a1be82d5c83": {
+            "type": "work",
+            "settings": {
+              "heading": "Work With Us",
+              "detail_text": "We are constantly looking for passionate, highly motivated people to come on board. If you would like to work with us, please submit your details and we will get in touch.",
+              "btn_url": "https:\/\/amala.earth\/pages\/career",
+              "btn_text": "Submit your CV"
+            }
+          },
+          "ba73fb65-2475-4e6a-b3e4-0e303b37e8a8": {
+            "type": "work",
+            "settings": {
+              "heading": "Collaborate With Us",
+              "detail_text": "We love to collaborate with artists, creators and influencers and partner with creative people on various stages of the process of creating a conscious community. If you would like to collaborate with us, please submit your details and we will get in touch.",
+              "btn_url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSdVk0YaIMpdVbSxl-yLU7TTKYHzbsmLwujeNUkCbr3gUoLlKA\/viewform?vc=0&c=0&w=1&flr=0",
+              "btn_text": "Submit your details"
+            }
+          },
+          "64f87aa9-f4ff-4093-8ed5-305ceb65015f": {
+            "type": "work",
+            "settings": {
+              "heading": "Bulk Order Request",
+              "detail_text": "Interested in Bulk Ordering? We're here to help you. Please submit your bulk order request and our team will get in touch with you soon",
+              "btn_url": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw\/viewform?vc=0&c=0&w=1&flr=0",
+              "btn_text": "Submit your details"
+            }
+          }
+        },
+        "block_order": [
+          "99eabba8-7dc0-4a03-a176-861b3465dae0",
+          "89dde50b-7ddd-47c4-85b9-c2a8ffe0d391",
+          "aa0a9845-7e5b-4735-9362-d8bf4915fdf2",
+          "b8d90090-7d8c-4591-b114-96c3e602d357",
+          "3e100cfb-0adc-4026-9eb4-5abfe735f482",
+          "9f9d4839-c39a-473c-8e70-1d160784c87d",
+          "dca13146-b40f-4dc5-981a-8cba6b290c1e",
+          "a0f63b35-ea5b-4bdf-87a2-42c09e002661",
+          "6017195a-1b59-44d2-bf8c-4f59d02aa9c5",
+          "332d5290-44e6-47ce-9fba-0274cc49c1e7",
+          "3bb1e073-cc3b-40dc-9cdc-fd16ba1d7072",
+          "bf2ce7ef-fc3f-4409-b51d-5a1be82d5c83",
+          "ba73fb65-2475-4e6a-b3e4-0e303b37e8a8",
+          "64f87aa9-f4ff-4093-8ed5-305ceb65015f"
+        ],
+        "settings": {
+          "show_contact_support": true,
+          "show_newsletter": true,
+          "contact_heading": "Contact and Support",
+          "contact_content": "<p><a href=\"mailto:help@amalaearth.com\">help@amalaearth.com<\/a><\/p>\n<p style=\"margin-top:10px;\"><a href=\"tel:8800703122\">+91 8800703122<\/a><\/p>\n<p style=\"margin-top:10px;\">Timings: 09:00 AM to 06:00 PM, Monday to Sunday.<\/p>",
+          "show_social_media": true,
+          "headingapps": "",
+          "appdownloadtext": "",
+          "appdownloadurl": "",
+          "show_payment_icons": true,
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "show_cookie_bar": false,
+          "text": "<p>Use this bar to show information about your cookie policy.<\/p>",
+          "accept_button": "Accept",
+          "show_store_directions": true,
+          "work_us": "Work With Us",
+          "workus_text": "<p>We are constantly looking for passionate, highly motivated people to come on board. If you would like to work with us, please submit your details and we will get in touch. <br\/><br\/><\/p>",
+          "workus_link": "https:\/\/amala.earth\/pages\/career"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "d9efc2d0-c545-4ce6-83cf-3844eb72fd7f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Durga_puja_RF_Banner_1920x600_b2ef0462-c4e0-4c5c-b791-da16457ad335.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Durga_puja_RF_mobile_Banner.png",
+              "show_overlay": false,
+              "overlay_opacity": 0,
+              "text_color": "#ffffff",
+              "title": "",
+              "subtitle": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "rgba(0,0,0,0)",
+              "button_text_color": "#ffffff",
+              "background_color": "rgba(0,0,0,0)",
+              "button_text": "",
+              "link": "shopify:\/\/collections\/durga-puja"
+            }
+          },
+          "5356fd42-4443-44e4-8ba5-9e34e60ae3a4": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Puja_essentials_JH_Banner2_1920x600_3b5bf370-78f9-43c2-ab37-55dd9e63ea83.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Puja_essentials_JH_2_Mobile_Banner.png",
+              "show_overlay": false,
+              "overlay_opacity": 24,
+              "text_color": "#ffffff",
+              "title": "",
+              "subtitle": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "rgba(0,0,0,0)",
+              "button_text_color": "#ffffff",
+              "background_color": "rgba(0,0,0,0)",
+              "button_text": "",
+              "link": "shopify:\/\/collections\/pooja-essentials"
+            }
+          },
+          "slide-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/final_banner.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/paste-better-res_1.png",
+              "show_overlay": false,
+              "overlay_opacity": 36,
+              "text_color": "#ffffff",
+              "title": "",
+              "subtitle": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "rgba(0,0,0,0)",
+              "button_text_color": "#ffffff",
+              "background_color": "#ae9173",
+              "button_text": "",
+              "link": "https:\/\/amala.earth\/collections\/childrens-ethnic-wear"
+            }
+          },
+          "44bb93f4-4c86-4558-9183-1e608f6c6ec6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Desktop_version-V3.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Mobile_V4.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 0,
+              "text_color": "#ffffff",
+              "title": "",
+              "subtitle": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "rgba(0,0,0,0)",
+              "button_text_color": "#ffffff",
+              "background_color": "rgba(0,0,0,0)",
+              "button_text": "",
+              "link": "https:\/\/amala.earth\/collections\/fasting-food"
+            }
+          },
+          "1b1e9de4-3753-42f4-86db-17f94a5907b2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Desktop-fragrances-ethical_beauty.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Mobile-Fragrances-ethical_beauty.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 32,
+              "text_color": "#ffffff",
+              "title": "",
+              "subtitle": "",
+              "content": "",
+              "content_position": "top_center",
+              "button_background": "rgba(0,0,0,0)",
+              "button_text_color": "rgba(0,0,0,0)",
+              "background_color": "#ae9173",
+              "button_text": "",
+              "link": "shopify:\/\/collections\/natural-skincare"
+            }
+          },
+          "478c66ef-d397-46a8-a2a4-22f571c4ec01": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Fashion_Banner_1920x600_05a7537e-6850-493f-861c-0b63479addbc.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Fashion-Banner_414x270_24b74df4-74ff-4641-8b94-5b5ef9d2dc96.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 0,
+              "text_color": "#ffffff",
+              "title": "",
+              "subtitle": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "rgba(0,0,0,0)",
+              "button_text_color": "#ffffff",
+              "background_color": "rgba(0,0,0,0)",
+              "button_text": "",
+              "link": "https:\/\/amala.earth\/collections\/ethnic-clothing"
+            }
+          }
+        },
+        "block_order": [
+          "d9efc2d0-c545-4ce6-83cf-3844eb72fd7f",
+          "5356fd42-4443-44e4-8ba5-9e34e60ae3a4",
+          "slide-0",
+          "44bb93f4-4c86-4558-9183-1e608f6c6ec6",
+          "1b1e9de4-3753-42f4-86db-17f94a5907b2",
+          "478c66ef-d397-46a8-a2a4-22f571c4ec01"
+        ],
+        "settings": {
+          "edge_to_edge": true,
+          "section_size": "large",
+          "carousel_effect": "slide",
+          "autoplay": true,
+          "cycle_speed": 5
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "disabled": true,
+        "blocks": {
+          "collection-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "aromatherapy",
+              "image": "shopify:\/\/shop_images\/cat-01.png",
+              "link": ""
+            }
+          },
+          "collection-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "baby-food",
+              "image": "shopify:\/\/shop_images\/car-02.png",
+              "link": ""
+            }
+          },
+          "collection-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "baby-skin-care",
+              "image": "shopify:\/\/shop_images\/cat-03.png",
+              "link": ""
+            }
+          },
+          "collection-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "baby-toys",
+              "image": "shopify:\/\/shop_images\/cat-04.png",
+              "link": ""
+            }
+          },
+          "collection-4": {
+            "type": "collection",
+            "settings": {
+              "collection": "baby-food",
+              "image": "shopify:\/\/shop_images\/cat-05.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "collection-0",
+          "collection-1",
+          "collection-2",
+          "collection-3",
+          "collection-4"
+        ],
+        "settings": {
+          "title": "Shop by category",
+          "link_title": "View all",
+          "link": "shopify:\/\/collections",
+          "round_images": true,
+          "show_collection_title": true
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "settings": {
+          "product": "",
+          "title": "Featured product",
+          "link_title": "View details",
+          "show_vendor": true,
+          "show_sku": false,
+          "show_share_buttons": true,
+          "show_description": true,
+          "description_below_add_to_cart": false,
+          "selector_mode": "block",
+          "color_mode": "color",
+          "show_quantity_selector": true,
+          "show_reviews_badge": false,
+          "show_payment_button": true,
+          "show_pickup_availability": false,
+          "image_size": "small",
+          "enable_image_zoom": true,
+          "enable_video_looping": false,
+          "zoom_effect": "outside",
+          "carousel_effect": "fade",
+          "show_inventory_quantity": false,
+          "low_inventory_threshold": 0
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "895adea9-7c46-4ad2-ac48-569eef2a8f41": {
+            "type": "filters",
+            "settings": {
+              "hide": false,
+              "title": "Brand Standards",
+              "filter_tag_list": "Organic, Eco-friendly, Cruelty-free, Locally Sourced, Ethically Sourced, Community-driven",
+              "filter_tag": "brand_standard__",
+              "filter_expand": true,
+              "filter_global": true
+            }
+          },
+          "8846a317-35df-411a-82fe-0d13121c32f5": {
+            "type": "filters",
+            "settings": {
+              "hide": true,
+              "title": "Sustainable Parameters",
+              "filter_tag_list": "",
+              "filter_tag": "Brand_Standard",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          },
+          "4e969a9c-73bd-44c8-b07a-f5f2c21b5fec": {
+            "type": "filters",
+            "settings": {
+              "hide": true,
+              "title": "Concerns",
+              "filter_tag_list": "Immunity Building",
+              "filter_tag": "Concern",
+              "filter_expand": false,
+              "filter_global": true
+            }
+          },
+          "748d7e55-0d1e-4fbe-bae0-bf81afebaaa2": {
+            "type": "filters",
+            "settings": {
+              "hide": false,
+              "title": "Material",
+              "filter_tag_list": "",
+              "filter_tag": "Material",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          },
+          "3ff28c86-9524-4acb-a2fd-59bfce60df69": {
+            "type": "filters",
+            "settings": {
+              "hide": false,
+              "title": "Ingredients",
+              "filter_tag_list": "",
+              "filter_tag": "Ingredients",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          },
+          "8633fb79-f81f-4521-ae55-d2d809a602bb": {
+            "type": "filters",
+            "settings": {
+              "hide": true,
+              "title": "Price",
+              "filter_tag_list": "",
+              "filter_tag": "price",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          },
+          "62e65ec9-1445-44a2-9a8f-24b3ec086b40": {
+            "type": "filters",
+            "settings": {
+              "hide": true,
+              "title": "Brand",
+              "filter_tag_list": "",
+              "filter_tag": "brand",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          }
+        },
+        "block_order": [
+          "895adea9-7c46-4ad2-ac48-569eef2a8f41",
+          "8846a317-35df-411a-82fe-0d13121c32f5",
+          "4e969a9c-73bd-44c8-b07a-f5f2c21b5fec",
+          "748d7e55-0d1e-4fbe-bae0-bf81afebaaa2",
+          "3ff28c86-9524-4acb-a2fd-59bfce60df69",
+          "8633fb79-f81f-4521-ae55-d2d809a602bb",
+          "62e65ec9-1445-44a2-9a8f-24b3ec086b40"
+        ],
+        "settings": {
+          "show_collection_image": false,
+          "show_sub_collection": true,
+          "sub_collection_title": "Sub Collection",
+          "collapse_collection_description": false,
+          "collection_image_size": "small",
+          "products_per_row": "4",
+          "default_products_per_page": 24,
+          "default_view_layout": "grid",
+          "show_quick_buy": "list_grid",
+          "show_quick_view": "list_grid",
+          "quick_links": "main-menu",
+          "quick_links_show_products_count": false,
+          "show_filters": true,
+          "show_filter_color_swatch": false,
+          "filter_type": "group",
+          "open_group_filters_mode": "all_closed",
+          "show_filters_search": false,
+          "filters_search_items": "1"
+        }
+      },
+      "recently-viewed-products": {
+        "type": "recently-viewed-products",
+        "settings": {
+          "title": "Recently viewed"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_vendor": true,
+          "show_sku": true,
+          "show_share_buttons": true,
+          "show_discount": true,
+          "show_taxes_included": false,
+          "show_short_description": true,
+          "selector_mode": "dropdown",
+          "color_mode": "dropdown",
+          "show_quantity_selector": true,
+          "show_payment_button": true,
+          "show_pickup_availability": true,
+          "image_size": "small",
+          "enable_video_looping": false,
+          "enable_image_zoom": true,
+          "zoom_effect": "outside",
+          "carousel_effect": "fade",
+          "show_inventory_quantity": true,
+          "low_inventory_threshold": 4,
+          "content_display_mode": "show_all_and_expand_description",
+          "tab1_label": "Product Description",
+          "tab2_label": "Product Details",
+          "tab3_label": "Additional Information",
+          "show_expanded_description": true,
+          "show_usp_description": true,
+          "show_space_for_detail_tab": true,
+          "tab_page_1_handle": "",
+          "tab_page_2_handle": "",
+          "tab_page_3_handle": "",
+          "enable_reviews": false,
+          "show_reviews_badge": true,
+          "trust_title": "Payment & Security",
+          "show_payment_icons": false,
+          "custom_security_badge_width": 200,
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "United States",
+          "show_refunds_policy": true
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": false,
+          "heading": "You may also like",
+          "show_quick_buy": false
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_announcement": false,
+          "background": "#ffffff",
+          "text_color": "#000000",
+          "text": "A one-stop curated marketplace for Conscious Living",
+          "text_position": "left",
+          "link": "",
+          "show_newsletter": false,
+          "newsletter_button": "Subscribe for exclusive offers!",
+          "newsletter_title": "Newsletter",
+          "newsletter_content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+        }
+      },
+      "1542984811767": {
+        "type": "featured-collection",
+        "settings": {
+          "collection": "bestselling-products",
+          "title": "Bestselling products",
+          "logged_in": false,
+          "products_count": 10,
+          "layout": "vertical",
+          "stack_products": false,
+          "show_sold_out": false,
+          "show_quick_buy": true,
+          "link_title": "View all",
+          "link_url": "",
+          "button_position": "top"
+        }
+      },
+      "1542984882560": {
+        "type": "blog-posts",
+        "settings": {
+          "blog": "amala-earth-blog",
+          "blog_posts_count": 3,
+          "title": "Recent Blog Posts",
+          "link_title": "View all",
+          "show_category": false,
+          "show_author": false,
+          "show_date": false,
+          "show_excerpt": true,
+          "stack_mobile": true
+        }
+      },
+      "popups": {
+        "type": "popups",
+        "settings": {
+        }
+      },
+      "text-with-icons": {
+        "type": "text-with-icons",
+        "blocks": {
+          "text-with-icons-0": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-delivery",
+              "custom_icon": "shopify:\/\/shop_images\/usp-icon-01.png",
+              "title": "Free delivery worldwide",
+              "content": "<p>No hidden charges. Just a promise to deliver your earth-friendly products quickly and safely<\/p>"
+            }
+          },
+          "text-with-icons-1": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-returns",
+              "title": "Satisfied or refunded",
+              "content": "<p>Short content about your store<\/p>"
+            }
+          },
+          "text-with-icons-2": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-customer-support",
+              "title": "Top-notch support",
+              "content": "<p>Short content about your store<\/p>"
+            }
+          },
+          "text-with-icons-3": {
+            "type": "item",
+            "settings": {
+              "icon": "bi-secure-payment",
+              "title": "Secure payments",
+              "content": "<p>Short content about your store<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "text-with-icons-0",
+          "text-with-icons-1",
+          "text-with-icons-2",
+          "text-with-icons-3"
+        ],
+        "settings": {
+          "show_section": false,
+          "stack_mobile": false
+        }
+      },
+      "1610017820736263b9": {
+        "type": "collection-with-image",
+        "disabled": true,
+        "blocks": {
+          "64240058-86f7-43dd-962a-772d07c57479": {
+            "type": "Collection",
+            "settings": {
+              "collection": "ethical-beauty",
+              "products_count": 12,
+              "background": "#f8f4f0",
+              "text_color": "#000000",
+              "title": "Ethical Beauty",
+              "content": "Dedicated to products that include naturally sourced ingredients that make you look good and feel good.",
+              "show_sold_out": false,
+              "button_background": "#b89c7d",
+              "button_text_color": "#ffffff",
+              "button_text": "See more products",
+              "button_link": "shopify:\/\/collections\/ethical-beauty",
+              "product1": "handcrafted-lavender-shea-butter-cold-processed-soap-110gm",
+              "product2": "coconut-fiber-dry-body-brush",
+              "product3": "",
+              "product4": "",
+              "product5": "",
+              "product6": ""
+            }
+          },
+          "6dead3de-e104-4f20-9a52-3fa08a95978d": {
+            "type": "Collection",
+            "disabled": true,
+            "settings": {
+              "collection": "",
+              "products_count": 3,
+              "background": "#f8f4f0",
+              "text_color": "#000000",
+              "title": "Immunity-Boosting Teas",
+              "content": "Did you know that your favourite steaming cup of happiness can boost your immunity to keep common ailments at bay? Our hand-picked range of immunity-boosting teas have natural ingredients that protect and provide relief with every sip while recharging your body",
+              "show_sold_out": false,
+              "button_background": "#b89c7d",
+              "button_text_color": "#ffffff",
+              "button_text": "See more products",
+              "button_link": "shopify:\/\/pages\/immunity-boosting-teas",
+              "product1": "giloy-neem-green-tea",
+              "product2": "organic-ginger-tulsi-tea-bags",
+              "product3": "black-forest-dessert-tea",
+              "product4": "nutty-yogi-anti-allergy-tea-herbal-green-tea",
+              "product5": "nutty-yogi-ayurvedic-masala-chai",
+              "product6": ""
+            }
+          }
+        },
+        "block_order": [
+          "64240058-86f7-43dd-962a-772d07c57479",
+          "6dead3de-e104-4f20-9a52-3fa08a95978d"
+        ],
+        "settings": {
+        }
+      },
+      "1610017862fa30940c": {
+        "type": "recently-viewed-products",
+        "disabled": true,
+        "settings": {
+          "title": "",
+          "products_count": 10,
+          "show_quick_buy": true
+        }
+      },
+      "161001793655f9a4f7": {
+        "type": "logo-list",
+        "blocks": {
+          "d5bec50b-d914-4949-816d-ffcc37bb4ecd": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/KEqBlCMOGN.png",
+              "link": "shopify:\/\/collections\/true-elements"
+            }
+          },
+          "161001793655f9a4f7-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Logo_2_0deba812-57a0-4906-bc9a-597f9ea611dd.png",
+              "link": "shopify:\/\/collections\/dressfolk"
+            }
+          },
+          "161001793655f9a4f7-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Green_Heirloom_Logo.png",
+              "link": "shopify:\/\/collections\/green-heirloom"
+            }
+          },
+          "161001793655f9a4f7-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Vaaya_Logo.jpg",
+              "link": "shopify:\/\/collections\/vaaya"
+            }
+          },
+          "161001793655f9a4f7-3": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/wholetruth.png",
+              "link": "shopify:\/\/collections\/the-whole-truth"
+            }
+          },
+          "9c485752-ad67-4635-b957-27bbc303ffcb": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PAIO_Logo.png",
+              "link": "shopify:\/\/collections\/paio"
+            }
+          },
+          "a6f0d64b-f848-471c-a4e6-3dba79412ff9": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Poochmate_logo.png",
+              "link": "shopify:\/\/collections\/poochmate"
+            }
+          },
+          "a63f0f7c-a601-4182-b91e-e1761bf76066": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Kronkare.jpg",
+              "link": "shopify:\/\/collections\/kronokare"
+            }
+          },
+          "5c009dbe-891c-401a-84a8-6a33372a544b": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Mezmo_logo.png",
+              "link": "shopify:\/\/collections\/mezmo"
+            }
+          },
+          "ba40fef5-ca65-47fb-a34c-71abe47abe05": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HALO.png",
+              "link": "shopify:\/\/collections\/halo"
+            }
+          },
+          "8904184f-61d0-474e-9a4c-b618f860b2d2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Just_organik.png",
+              "link": "shopify:\/\/collections\/just-organik"
+            }
+          },
+          "f0346981-439c-4a7b-bb9c-3d04cbc6cb5d": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Namaq_Cheeni.png",
+              "link": "shopify:\/\/collections\/namaq-cheeni"
+            }
+          },
+          "91d64771-f4b4-4155-be67-a19bc1eb1bdb": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Nourish_You.png",
+              "link": "shopify:\/\/collections\/nourish-you"
+            }
+          },
+          "1f79cfe5-d265-49fb-a89a-d6939f81b806": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Nutty_Yogi.png",
+              "link": "shopify:\/\/collections\/nutty-yogi"
+            }
+          },
+          "d1b44bf0-cb69-46ed-920c-514fec1a4303": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/sadev.png",
+              "link": "shopify:\/\/collections\/sadhev"
+            }
+          },
+          "53ad4c31-c88e-4455-a3bb-567be9dae80f": {
+            "type": "logo",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/theoni.png",
+              "link": "shopify:\/\/collections\/theoni"
+            }
+          },
+          "153f01d9-da85-4e85-a965-b39f388c9ba2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Whitewater_Kids.jpg",
+              "link": "shopify:\/\/collections\/white-water-kids"
+            }
+          }
+        },
+        "block_order": [
+          "d5bec50b-d914-4949-816d-ffcc37bb4ecd",
+          "161001793655f9a4f7-1",
+          "161001793655f9a4f7-0",
+          "161001793655f9a4f7-2",
+          "161001793655f9a4f7-3",
+          "9c485752-ad67-4635-b957-27bbc303ffcb",
+          "a6f0d64b-f848-471c-a4e6-3dba79412ff9",
+          "a63f0f7c-a601-4182-b91e-e1761bf76066",
+          "5c009dbe-891c-401a-84a8-6a33372a544b",
+          "ba40fef5-ca65-47fb-a34c-71abe47abe05",
+          "8904184f-61d0-474e-9a4c-b618f860b2d2",
+          "f0346981-439c-4a7b-bb9c-3d04cbc6cb5d",
+          "91d64771-f4b4-4155-be67-a19bc1eb1bdb",
+          "1f79cfe5-d265-49fb-a89a-d6939f81b806",
+          "d1b44bf0-cb69-46ed-920c-514fec1a4303",
+          "53ad4c31-c88e-4455-a3bb-567be9dae80f",
+          "153f01d9-da85-4e85-a965-b39f388c9ba2"
+        ],
+        "settings": {
+          "title": "Brands We Love",
+          "link_title": "",
+          "link": ""
+        }
+      },
+      "static-promotion-list": {
+        "type": "static-promotion-list",
+        "settings": {
+          "expand_items": false,
+          "section_size": "medium",
+          "stack_mobile": false
+        }
+      },
+      "static-recently-viewed-products": {
+        "type": "static-recently-viewed-products",
+        "settings": {
+          "show_section": true,
+          "title": "Recently viewed",
+          "show_quick_buy": false
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "enable_order_notes": false,
+          "show_payment_icons": true,
+          "gift_wrap_product": "",
+          "gift_wrap_text": "Do you want a gift wrap?",
+          "gift_wrap_button": "Add a gift wrap",
+          "show_shipping_estimator": false,
+          "shipping_estimator_default_country": "United States",
+          "trust_heading": "",
+          "upsell_heading": "Complete your cart",
+          "upsell_collection": "",
+          "upsell_products_count": 4
+        }
+      },
+      "161174908635c9e8d4": {
+        "type": "featured-collection-list",
+        "blocks": {
+          "f63c44d4-eaf1-45f0-a3ae-70cbc99c632c": {
+            "type": "collection",
+            "settings": {
+              "title": "Recyclable Packaging",
+              "image": "shopify:\/\/shop_images\/recycle.png",
+              "link": "https:\/\/amala.earth\/collections\/all\/recyclable-packaging"
+            }
+          },
+          "161174908635c9e8d4-1": {
+            "type": "collection",
+            "settings": {
+              "title": "Locally Sourced",
+              "image": "shopify:\/\/shop_images\/nav-locally-sourced.png",
+              "link": "https:\/\/amala.earth\/collections\/all\/locally-sourced"
+            }
+          },
+          "45abf88d-3f81-4643-a5f9-dc2078a72413": {
+            "type": "collection",
+            "settings": {
+              "title": "Zero Waste",
+              "image": "shopify:\/\/shop_images\/Zero_waste_1.png",
+              "link": "https:\/\/amala.earth\/collections\/all\/zero-waste"
+            }
+          },
+          "98e7e66d-ea95-4697-ab55-a8da80a2c91e": {
+            "type": "collection",
+            "settings": {
+              "title": "Fair Trade",
+              "image": "shopify:\/\/shop_images\/nav-coumnity.png",
+              "link": "https:\/\/amala.earth\/collections\/all\/fair-trade"
+            }
+          },
+          "4ee2f2a5-f014-4225-9db4-cc6a51238184": {
+            "type": "collection",
+            "settings": {
+              "title": "Artisan Led",
+              "image": "shopify:\/\/shop_images\/astrin.png",
+              "link": "https:\/\/amala.earth\/collections\/all\/artisan-led"
+            }
+          },
+          "161174908635c9e8d4-2": {
+            "type": "collection",
+            "settings": {
+              "title": "Cruelty Free",
+              "image": "shopify:\/\/shop_images\/Cruelty_free.png",
+              "link": "https:\/\/amala.earth\/collections\/all\/cruelty-free"
+            }
+          },
+          "161174908635c9e8d4-0": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "title": "Organic",
+              "image": "shopify:\/\/shop_images\/Untitled-2.png",
+              "link": "\/collections\/all\/organic"
+            }
+          },
+          "161174908635c9e8d4-3": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "title": "Eco-friendly",
+              "image": "shopify:\/\/shop_images\/ecofrindly_4544dbbb-7c9a-4a19-bd2e-6ca0f68f4509.png",
+              "link": "https:\/\/amala-earth.myshopify.com\/collections\/all\/eco-friendly"
+            }
+          },
+          "161174908635c9e8d4-5": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "title": "Community-driven",
+              "image": "shopify:\/\/shop_images\/Fair_Trade.png",
+              "link": "\/collections\/all\/community-driven"
+            }
+          },
+          "161174908635c9e8d4-4": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "title": "Ethically Sourced",
+              "image": "shopify:\/\/shop_images\/Ethically_Sourced.png",
+              "link": "\/collections\/all\/ethically-sourced"
+            }
+          }
+        },
+        "block_order": [
+          "f63c44d4-eaf1-45f0-a3ae-70cbc99c632c",
+          "161174908635c9e8d4-1",
+          "45abf88d-3f81-4643-a5f9-dc2078a72413",
+          "98e7e66d-ea95-4697-ab55-a8da80a2c91e",
+          "4ee2f2a5-f014-4225-9db4-cc6a51238184",
+          "161174908635c9e8d4-2",
+          "161174908635c9e8d4-0",
+          "161174908635c9e8d4-3",
+          "161174908635c9e8d4-5",
+          "161174908635c9e8d4-4"
+        ],
+        "settings": {
+          "title": "Shop by Tags",
+          "link_title": "View all",
+          "link": "shopify:\/\/pages\/all-tags",
+          "show_collection_title": true
+        }
+      },
+      "16118118216b5a31c5": {
+        "type": "featured-collection",
+        "settings": {
+          "collection": "new-arrivals",
+          "title": "Just in!",
+          "logged_in": false,
+          "products_count": 10,
+          "layout": "vertical",
+          "stack_products": false,
+          "show_sold_out": false,
+          "show_quick_buy": true,
+          "link_title": "View all",
+          "link_url": "",
+          "button_position": "top"
+        }
+      },
+      "1612162638130d3aa6": {
+        "type": "collection-quick-links",
+        "disabled": true,
+        "blocks": {
+          "1612162638130d3aa6-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "superfoods-and-nuts",
+              "image": "shopify:\/\/shop_images\/Superfoods_dry_fruits_and_Nuts_236cec08-f718-4570-bef3-382b8bf64364.jpg",
+              "link": "shopify:\/\/collections\/superfoods-and-nuts"
+            }
+          },
+          "1612162638130d3aa6-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "candles-and-aromatherapy",
+              "image": "shopify:\/\/shop_images\/Candles___Aromatherapy_3a0fec30-bfd7-44b4-804e-94dda4c6409c.jpg",
+              "link": "shopify:\/\/collections\/candles-and-aromatherapy"
+            }
+          },
+          "1612162638130d3aa6-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "bath-and-body-care",
+              "image": "shopify:\/\/shop_images\/Bath_and_Bodycare.jpg",
+              "link": "shopify:\/\/collections\/bath-and-body-care"
+            }
+          },
+          "1612162638130d3aa6-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "toys-and-games",
+              "image": "shopify:\/\/shop_images\/Toys_and_Games.jpg",
+              "link": "shopify:\/\/collections\/toys-and-games"
+            }
+          },
+          "1612162638130d3aa6-4": {
+            "type": "collection",
+            "settings": {
+              "collection": "western-wear",
+              "image": "shopify:\/\/shop_images\/Western_Clothing.jpg",
+              "link": "shopify:\/\/collections\/western-wear"
+            }
+          },
+          "93656684-e940-4483-99ea-c4d6a672919b": {
+            "type": "collection",
+            "settings": {
+              "collection": "immunity-essentials",
+              "image": "shopify:\/\/shop_images\/Immunity_Essentials_1.jpg",
+              "link": "shopify:\/\/collections\/immunity-essentials"
+            }
+          }
+        },
+        "block_order": [
+          "1612162638130d3aa6-0",
+          "1612162638130d3aa6-1",
+          "1612162638130d3aa6-2",
+          "1612162638130d3aa6-3",
+          "1612162638130d3aa6-4",
+          "93656684-e940-4483-99ea-c4d6a672919b"
+        ],
+        "settings": {
+          "title": "Explore More",
+          "link_title": "Shop Now",
+          "link": "shopify:\/\/collections",
+          "round_images": false,
+          "show_collection_title": true
+        }
+      },
+      "1612248082b8d8d149": {
+        "type": "previously-ordered",
+        "settings": {
+          "title": "Previously purchased",
+          "products_count": 10,
+          "limit_diff_prodct": 0,
+          "layout": "vertical",
+          "show_sold_out": false,
+          "stack_products": false,
+          "show_quick_buy": true,
+          "link_title": "View all",
+          "link_url": "https:\/\/amala.earth\/account"
+        }
+      },
+      "16123441178fc1291a": {
+        "type": "recently-viewed-products",
+        "disabled": true,
+        "settings": {
+          "title": "Recently viewed",
+          "products_count": 10,
+          "show_quick_buy": true
+        }
+      },
+      "1613123892349d07be": {
+        "type": "director-message",
+        "disabled": true,
+        "settings": {
+          "title": "Director Message",
+          "about_image": "shopify:\/\/shop_images\/dirctor-img.jpg",
+          "image_width": 35,
+          "content": "<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#x27;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.”<\/p>",
+          "name": "- Betty Moreno",
+          "role": "Director, Amala Earth"
+        }
+      },
+      "161355443602481f80": {
+        "type": "shop-by-category",
+        "blocks": {
+          "161355443602481f80-0": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/mindfuleating.png",
+              "title": "Mindful Eating",
+              "link": "shopify:\/\/collections\/mindful-eating"
+            }
+          },
+          "161355443602481f80-1": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Ethicalbeauty.png",
+              "title": "Ethical Beauty",
+              "link": "shopify:\/\/collections\/ethical-beauty"
+            }
+          },
+          "161355443602481f80-4": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JoyfulHome.png",
+              "title": "Joyful Home",
+              "link": "shopify:\/\/collections\/joyful-home"
+            }
+          },
+          "161355443602481f80-2": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Responsiblefashion.png",
+              "title": "Responsible Fashion",
+              "link": "shopify:\/\/collections\/responsible-fashion"
+            }
+          },
+          "161355443602481f80-3": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Consciousfamily.png",
+              "title": "Conscious Family",
+              "link": "shopify:\/\/collections\/conscious-family"
+            }
+          },
+          "47ed8c07-971a-466f-960c-d44c41f82ad6": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Other_743ebeb7-a65c-4d31-991c-6da89c2b8482.png",
+              "title": "Feel-good Others",
+              "link": "shopify:\/\/collections\/feel-good-others"
+            }
+          },
+          "ec494cda-5f03-4694-b67f-98438d574f5a": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/holistic_wellness_1.png",
+              "title": "Holistic Wellness",
+              "link": "shopify:\/\/collections\/holistic-wellness"
+            }
+          },
+          "83ac3461-b0b2-4386-b55b-a126f247952c": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3_1_1.png",
+              "title": "Gifts",
+              "link": "shopify:\/\/collections\/gifts"
+            }
+          },
+          "295720d5-3b5c-4c60-a19c-73df1bb43c4b": {
+            "type": "collection",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rakhee_Icon_Mobile_Menu.jpg",
+              "title": "Festivals",
+              "link": "shopify:\/\/collections\/festivals"
+            }
+          }
+        },
+        "block_order": [
+          "161355443602481f80-0",
+          "161355443602481f80-1",
+          "161355443602481f80-4",
+          "161355443602481f80-2",
+          "161355443602481f80-3",
+          "47ed8c07-971a-466f-960c-d44c41f82ad6",
+          "ec494cda-5f03-4694-b67f-98438d574f5a",
+          "83ac3461-b0b2-4386-b55b-a126f247952c",
+          "295720d5-3b5c-4c60-a19c-73df1bb43c4b"
+        ],
+        "settings": {
+          "title": "Shop by Category",
+          "link_title": "View all",
+          "link": "shopify:\/\/collections\/all",
+          "show_collection_title": true
+        }
+      },
+      "1613721295b5c3b2f5": {
+        "type": "slider-with-text",
+        "blocks": {
+          "1613721295b5c3b2f5-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Amala_Homepage_-_About_Us.png",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#000000",
+              "title": "About Us",
+              "subtitle": "",
+              "content": "Amala Earth is a way of conscious living built on a foundation rooted deeply in the Indian origin. It brings together brands, products, experts and individuals that create a world where all living beings can co-exist harmoniously.",
+              "content_position": "middle_left",
+              "button_background": "#b89c7d",
+              "button_text_color": "#ffffff",
+              "button_text1": "\/pages\/about-us",
+              "button_text2": "\/pages\/founders-note",
+              "button_text3": "\/pages\/philosophy",
+              "button_text": "Learn More",
+              "link": "shopify:\/\/pages\/about-us"
+            }
+          }
+        },
+        "block_order": [
+          "1613721295b5c3b2f5-0"
+        ],
+        "settings": {
+          "edge_to_edge": false,
+          "section_size": "preserve_ratio",
+          "carousel_effect": "fade",
+          "autoplay": true,
+          "cycle_speed": 5
+        }
+      },
+      "product-usp-icons": {
+        "type": "product-usp-icons",
+        "blocks": {
+          "807a019c-3f27-433e-a710-113d16efb778": {
+            "type": "text",
+            "settings": {
+              "text": ""
+            }
+          }
+        },
+        "block_order": [
+          "807a019c-3f27-433e-a710-113d16efb778"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "collection-quick-links": {
+        "type": "collection-quick-links",
+        "blocks": {
+          "ab262ad3-cf9d-47cf-aaff-1581555b37b4": {
+            "type": "collection",
+            "settings": {
+              "collection": "bedding-cushions-and-throws",
+              "image": "shopify:\/\/shop_images\/group-23_a4783c16-5a4a-4769-89cc-b3c07d65c7d0.jpg"
+            }
+          },
+          "17de8031-cc2c-4870-bc2c-7588206194a1": {
+            "type": "collection",
+            "settings": {
+              "collection": "bags-and-jewllery",
+              "image": "shopify:\/\/shop_images\/group-23.png"
+            }
+          },
+          "0b586036-5374-44f2-b566-cb88dbfefb32": {
+            "type": "collection",
+            "settings": {
+              "collection": "body-care",
+              "image": "shopify:\/\/shop_images\/group-23_2ba7be31-fbb8-4e21-b311-310347ce8e12.jpg"
+            }
+          },
+          "de9e8bd1-ea60-45f0-9205-1a2e00826886": {
+            "type": "collection",
+            "settings": {
+              "collection": "coffee-and-tea",
+              "image": "shopify:\/\/shop_images\/group-23.png"
+            }
+          },
+          "2b76244d-3c2d-4a35-b57f-fb1a431744ac": {
+            "type": "collection",
+            "settings": {
+              "collection": "baby-skin-care",
+              "image": "shopify:\/\/shop_images\/group-23_57e8c6a1-16aa-4d00-87c0-782ad24c1014.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "ab262ad3-cf9d-47cf-aaff-1581555b37b4",
+          "17de8031-cc2c-4870-bc2c-7588206194a1",
+          "0b586036-5374-44f2-b566-cb88dbfefb32",
+          "de9e8bd1-ea60-45f0-9205-1a2e00826886",
+          "2b76244d-3c2d-4a35-b57f-fb1a431744ac"
+        ],
+        "settings": {
+          "title": "Quick Links",
+          "link_title": "View all",
+          "link": "shopify:\/\/collections",
+          "round_images": false,
+          "show_collection_title": true
+        }
+      },
+      "more-from-seller": {
+        "type": "more-from-seller",
+        "settings": {
+          "enable": true,
+          "title": "Seller Description"
+        }
+      },
+      "product-reviews": {
+        "type": "product-reviews",
+        "settings": {
+        }
+      },
+      "about-text-icons": {
+        "type": "about-text-icons",
+        "blocks": {
+          "6f39b001-973b-4bd4-bdb0-54ed6617e0ab": {
+            "type": "text-with-icon",
+            "settings": {
+              "custom_icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0523\/3252\/7770\/files\/free.svg?v=1625724308",
+              "title": "Free delivery across India",
+              "content": "<p>Free delivery above ₹500. We promise to deliver your products quickly and safely.<br\/><br\/><\/p>"
+            }
+          },
+          "b5b93896-413c-43cc-833d-6c9b3217cc33": {
+            "type": "text-with-icon",
+            "settings": {
+              "custom_icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0523\/3252\/7770\/files\/easy.svg?v=1625724308",
+              "title": "Easy replacement",
+              "content": "<p>If you receive a damaged product, we’ll take it back! Now enjoy hassle-free shopping.<\/p>"
+            }
+          },
+          "e5e0c98a-387b-4819-9ce1-fd34357ef11e": {
+            "type": "text-with-icon",
+            "settings": {
+              "custom_icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0523\/3252\/7770\/files\/safety.svg?v=1625724308",
+              "title": "Strict COVID-safety measures",
+              "content": "<p>We follow all precautions at every step of acquiring, packaging and delivering your product.<\/p>"
+            }
+          },
+          "9b2d021d-57e0-495f-ab98-8e4d988fdd96": {
+            "type": "text-with-icon",
+            "settings": {
+              "custom_icon": "https:\/\/cdn.shopify.com\/s\/files\/1\/0523\/3252\/7770\/files\/secure.svg?v=1625724308",
+              "title": "Secure payments",
+              "content": "<p>With a 100% secure payment gateway, our website is perfectly safe for you to shop from.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "6f39b001-973b-4bd4-bdb0-54ed6617e0ab",
+          "b5b93896-413c-43cc-833d-6c9b3217cc33",
+          "e5e0c98a-387b-4819-9ce1-fd34357ef11e",
+          "9b2d021d-57e0-495f-ab98-8e4d988fdd96"
+        ],
+        "settings": {
+          "show_section": true,
+          "title": "Icon with text"
+        }
+      },
+      "frequently-bought-together": {
+        "type": "frequently-bought-together",
+        "settings": {
+          "enable": false,
+          "title": "Frequently Bought Together"
+        }
+      },
+      "related-products": {
+        "type": "related-products",
+        "settings": {
+          "show_related_products": true,
+          "heading": "Related Products",
+          "show_quick_buy": true,
+          "show_sold_out": true
+        }
+      },
+      "upsell-products": {
+        "type": "upsell-products",
+        "settings": {
+          "show_upsell_products": true,
+          "heading": "Upsell Products",
+          "show_quick_buy": true,
+          "show_sold_out": true
+        }
+      },
+      "previously-ordered": {
+        "type": "previously-ordered",
+        "settings": {
+          "title": "Previously Purchased",
+          "products_count": 5,
+          "limit_diff_prodct": 5,
+          "layout": "vertical",
+          "show_sold_out": true,
+          "stack_products": false,
+          "show_quick_buy": true,
+          "link_title": "View all",
+          "link_url": ""
+        }
+      },
+      "blog-posts": {
+        "type": "blog-posts",
+        "settings": {
+          "blog": "amala-earth-blog",
+          "blog_posts_count": 3,
+          "title": "Recent Blog Posts",
+          "link_title": "View all",
+          "show_category": false,
+          "show_author": false,
+          "show_date": false,
+          "show_excerpt": true,
+          "stack_mobile": true
+        }
+      },
+      "related-blog-posts": {
+        "type": "related-blog-posts",
+        "settings": {
+          "enable": true,
+          "title": "Related Blog posts",
+          "blog_posts_count": 3,
+          "show_category": false,
+          "show_author": false,
+          "show_date": false,
+          "show_excerpt": true,
+          "stack_mobile": true
+        }
+      },
+      "static-newsletter": {
+        "type": "static-newsletter",
+        "settings": {
+          "show_section": false,
+          "title": "Subscribe to our newsletter",
+          "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+          "subtext": "100% free, Unsubscribe any time!",
+          "background": "#1e2d7d",
+          "text": "#ffffff"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "eea168ae-5762-435a-88c9-d1dd648d55ab": {
+            "type": "collection",
+            "settings": {
+              "collection": "mindful-eating"
+            }
+          },
+          "f33790f8-ab85-411d-b778-a4630de70600": {
+            "type": "collection",
+            "settings": {
+              "collection": "ethical-beauty"
+            }
+          },
+          "f636b759-05ce-41c9-9ad4-1f6f35cf0f12": {
+            "type": "collection",
+            "settings": {
+              "collection": "joyful-home"
+            }
+          },
+          "d2dbc043-7163-4162-b587-7320d5120517": {
+            "type": "collection",
+            "settings": {
+              "collection": "responsible-fashion"
+            }
+          },
+          "a4ad6dab-9b02-413d-b21b-2772e220a535": {
+            "type": "collection",
+            "settings": {
+              "collection": "conscious-family"
+            }
+          },
+          "32132003-c293-45f1-b8c0-74d7616633ae": {
+            "type": "collection",
+            "settings": {
+              "collection": "feel-good-others"
+            }
+          },
+          "9902cc1c-16f4-4b3c-9f9a-d8cf0e8630c4": {
+            "type": "collection",
+            "settings": {
+              "collection": "holistic-wellness"
+            }
+          },
+          "3cd87239-92c2-49e1-89a7-0b55a8a83be9": {
+            "type": "collection",
+            "settings": {
+              "collection": "gifts"
+            }
+          },
+          "d16c53e5-3a66-4326-9677-a473967d1f43": {
+            "type": "collection",
+            "settings": {
+              "collection": "rakhi"
+            }
+          }
+        },
+        "block_order": [
+          "eea168ae-5762-435a-88c9-d1dd648d55ab",
+          "f33790f8-ab85-411d-b778-a4630de70600",
+          "f636b759-05ce-41c9-9ad4-1f6f35cf0f12",
+          "d2dbc043-7163-4162-b587-7320d5120517",
+          "a4ad6dab-9b02-413d-b21b-2772e220a535",
+          "32132003-c293-45f1-b8c0-74d7616633ae",
+          "9902cc1c-16f4-4b3c-9f9a-d8cf0e8630c4",
+          "3cd87239-92c2-49e1-89a7-0b55a8a83be9",
+          "d16c53e5-3a66-4326-9677-a473967d1f43"
+        ],
+        "settings": {
+          "collections_to_show": "selected",
+          "show_collection_title": true,
+          "show_collection_overlay": true,
+          "collection_overlay_opacity": 20
+        }
+      },
+      "section-footer-banner-image": {
+        "type": "section-footer-banner-image",
+        "settings": {
+          "enable": false,
+          "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0523\/3252\/7770\/files\/footer-logo.svg?v=1618485502",
+          "title": "A way to Conscious Living",
+          "image1": "shopify:\/\/shop_images\/footer-graphic-left_48ea5089-f344-42b9-b744-082c9147cea6.png",
+          "image2": "shopify:\/\/shop_images\/footer-graphic-right_02deb608-d4af-45b2-aa1c-27f274d07fd1.png"
+        }
+      },
+      "search-template": {
+        "type": "search-template",
+        "settings": {
+          "products_per_row": "5",
+          "default_view_layout": "grid",
+          "show_quick_view": "list",
+          "show_quick_buy": "list",
+          "quick_links": ""
+        }
+      },
+      "header-backup": {
+        "type": "header-backup",
+        "settings": {
+          "enable_sticky_header": true,
+          "logo_max_width": 140,
+          "mobile_logo_max_width": 100,
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "navigation_menu": "main-menu",
+          "desktop_navigation_layout": "condensed",
+          "desktop_navigation_open_trigger": "hover",
+          "show_navigation_social_media": true,
+          "navigation_phone_number": "",
+          "navigation_email": "",
+          "show_condensed_search": true,
+          "show_search_filter": true,
+          "search_menu": "",
+          "show_search_menu_title": true,
+          "show_super_deal": false,
+          "super_deal_value": "",
+          "super_deal_text": ""
+        }
+      },
+      "16200241989001c5a4": {
+        "type": "recommended-products-homepage",
+        "disabled": true,
+        "settings": {
+          "title": "Recommended Products",
+          "products_count": 10,
+          "min_products": 5,
+          "layout": "vertical",
+          "show_sold_out": false,
+          "stack_products": false,
+          "show_quick_buy": true,
+          "link_title": "View all",
+          "link_url": ""
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "show_category": false,
+          "show_author": true,
+          "show_date": true,
+          "show_share_buttons": true,
+          "show_tags": true,
+          "show_gravatar": true
+        }
+      },
+      "blog-sidebar": {
+        "type": "blog-sidebar",
+        "blocks": {
+          "a3094b8d-e860-464e-8dac-32d805fb2bff": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+              "title": "Join Us",
+              "content": "<p>Get expert content on how to make conscious living a way of life.<\/p>",
+              "subtext": "No spam. Unsubscribe anytime.",
+              "background": "#ebe0d4",
+              "text": "#000000"
+            }
+          },
+          "e5fa5dbc-1967-4396-90b4-2ae0e310ba85": {
+            "type": "social_media",
+            "disabled": true,
+            "settings": {
+              "title": "Follow us",
+              "show_rss": true
+            }
+          }
+        },
+        "block_order": [
+          "a3094b8d-e860-464e-8dac-32d805fb2bff",
+          "e5fa5dbc-1967-4396-90b4-2ae0e310ba85"
+        ],
+        "settings": {
+          "show_on_mobile": true
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "articles_per_page": 12,
+          "highlight_first_article": true,
+          "show_tags": false,
+          "show_category": false,
+          "show_author": false,
+          "show_date": false,
+          "show_excerpt": true
+        }
+      },
+      "pdp-expert-picks": {
+        "type": "pdp-expert-picks",
+        "settings": {
+          "show_expert_picks_products": true,
+          "heading": "Expert Picks",
+          "products_count": 10,
+          "min_products": 5,
+          "show_quick_buy": true,
+          "show_sold_out": true
+        }
+      },
+      "auto-related-products": {
+        "type": "auto-related-products",
+        "settings": {
+          "show_related_products": true,
+          "products_count": 6,
+          "min_products": 5,
+          "heading": "You may also like",
+          "show_quick_buy": true,
+          "show_sold_out": true
+        }
+      },
+      "all-tag-page": {
+        "type": "all-tag-page",
+        "blocks": {
+          "557db75a-391f-4303-bc45-363fe6aa46f6": {
+            "type": "collection",
+            "settings": {
+              "title": "Biodegradable  Packaging",
+              "image": "shopify:\/\/shop_images\/Biodegradable_Packaging.png",
+              "link": "\/collections\/all\/biodegradable-packaging"
+            }
+          },
+          "98d89cbb-c612-4eb1-83a2-b01a4ac3897c": {
+            "type": "collection",
+            "settings": {
+              "title": "Eco-friendly",
+              "image": "shopify:\/\/shop_images\/ecofrindly_4544dbbb-7c9a-4a19-bd2e-6ca0f68f4509.png",
+              "link": "\/collections\/all\/eco-friendly"
+            }
+          },
+          "c58e8545-d6cc-480d-ba89-81ec94e52b0e": {
+            "type": "collection",
+            "settings": {
+              "title": "Ethically Sourced Ingredients",
+              "image": "shopify:\/\/shop_images\/Ethically_Sourced.png",
+              "link": "\/collections\/all\/ethically-sourced"
+            }
+          },
+          "5b501c86-d7cd-417d-9d59-550a2b96cf6a": {
+            "type": "collection",
+            "settings": {
+              "title": "Fair Trade",
+              "image": "shopify:\/\/shop_images\/Fair_Trade.png",
+              "link": "\/collections\/all\/fair-trade"
+            }
+          },
+          "131f1b20-99b5-40de-a123-25b6b79b80b3": {
+            "type": "collection",
+            "settings": {
+              "title": "Locally Sourced Ingredients",
+              "image": "shopify:\/\/shop_images\/Locally_sourced_1.png",
+              "link": "\/collections\/all\/locally-sourced"
+            }
+          },
+          "0c879370-5c6a-4e2a-af58-429b05b095c3": {
+            "type": "collection",
+            "settings": {
+              "title": "Natural Fabrics",
+              "image": "shopify:\/\/shop_images\/natural-fabrics.png",
+              "link": "\/collections\/all\/natural-fabrics"
+            }
+          },
+          "b5d256cb-0a43-40f0-bd6b-7c6c36a8335d": {
+            "type": "collection",
+            "settings": {
+              "title": "Natural Fibres",
+              "image": "shopify:\/\/shop_images\/natural-fab.png",
+              "link": "https:\/\/amala.earth\/collections\/natural-fibres"
+            }
+          },
+          "521d6ab5-8d44-43fd-88ed-217c4928fdbd": {
+            "type": "collection",
+            "settings": {
+              "title": "Natural Materials",
+              "image": "shopify:\/\/shop_images\/natural-material.png",
+              "link": "https:\/\/amala.earth\/collections\/all\/natural-materials"
+            }
+          },
+          "00e12e91-db25-4ecf-ae3b-97407d21d2c8": {
+            "type": "collection",
+            "settings": {
+              "title": "Organic",
+              "image": "shopify:\/\/shop_images\/organic.png",
+              "link": "\/collections\/all\/organic"
+            }
+          },
+          "3c8ac03c-e13e-44cd-a029-ef05589b6067": {
+            "type": "collection",
+            "settings": {
+              "title": "Recyclable Packaging",
+              "image": "shopify:\/\/shop_images\/recycle.png",
+              "link": "\/collections\/all\/recyclable-packaging"
+            }
+          },
+          "2d8e8ff1-e6ba-4195-ad17-c51faf1eedd8": {
+            "type": "collection",
+            "settings": {
+              "title": "Skin-friendly",
+              "image": "shopify:\/\/shop_images\/skin.png",
+              "link": "\/collections\/all\/skin-friendly"
+            }
+          },
+          "2484f584-6101-4078-aa3f-02290e6a7a12": {
+            "type": "collection",
+            "settings": {
+              "title": "Socially Responsible",
+              "image": "shopify:\/\/shop_images\/Socially_responsible.png",
+              "link": "\/collections\/all\/socially-responsible"
+            }
+          },
+          "494f28ec-e329-4004-ad58-c72010dbab8c": {
+            "type": "collection",
+            "settings": {
+              "title": "Sustainable",
+              "image": "shopify:\/\/shop_images\/Sustainable100.png",
+              "link": "\/collections\/all\/sustainable"
+            }
+          },
+          "aea243e1-1164-4a6f-835a-d9e92d566f51": {
+            "type": "collection",
+            "settings": {
+              "title": "Women-led",
+              "image": "shopify:\/\/shop_images\/Women_Led.png",
+              "link": "\/collections\/all\/women-led"
+            }
+          },
+          "8335d38e-6ffa-4f49-92c7-dc494f4d9f6e": {
+            "type": "collection",
+            "settings": {
+              "title": "Zero Waste",
+              "image": "shopify:\/\/shop_images\/Zero_waste_1.png",
+              "link": "\/collections\/all\/zero-waste"
+            }
+          },
+          "eaf7083d-b750-4a1a-af67-f80d2af72ab1": {
+            "type": "collection",
+            "settings": {
+              "title": "Cruelty-free",
+              "image": "shopify:\/\/shop_images\/curelty.png",
+              "link": "\/collections\/all\/cruelty-free"
+            }
+          },
+          "1f47d556-a538-43f7-883d-bd1a13ee13ed": {
+            "type": "collection",
+            "settings": {
+              "title": "Artisan-led",
+              "image": "shopify:\/\/shop_images\/astrin.png",
+              "link": "\/collections\/all\/artisan-led"
+            }
+          }
+        },
+        "block_order": [
+          "557db75a-391f-4303-bc45-363fe6aa46f6",
+          "98d89cbb-c612-4eb1-83a2-b01a4ac3897c",
+          "c58e8545-d6cc-480d-ba89-81ec94e52b0e",
+          "5b501c86-d7cd-417d-9d59-550a2b96cf6a",
+          "131f1b20-99b5-40de-a123-25b6b79b80b3",
+          "0c879370-5c6a-4e2a-af58-429b05b095c3",
+          "b5d256cb-0a43-40f0-bd6b-7c6c36a8335d",
+          "521d6ab5-8d44-43fd-88ed-217c4928fdbd",
+          "00e12e91-db25-4ecf-ae3b-97407d21d2c8",
+          "3c8ac03c-e13e-44cd-a029-ef05589b6067",
+          "2d8e8ff1-e6ba-4195-ad17-c51faf1eedd8",
+          "2484f584-6101-4078-aa3f-02290e6a7a12",
+          "494f28ec-e329-4004-ad58-c72010dbab8c",
+          "aea243e1-1164-4a6f-835a-d9e92d566f51",
+          "8335d38e-6ffa-4f49-92c7-dc494f4d9f6e",
+          "eaf7083d-b750-4a1a-af67-f80d2af72ab1",
+          "1f47d556-a538-43f7-883d-bd1a13ee13ed"
+        ],
+        "settings": {
+          "title": "All Tags",
+          "link_title": "",
+          "link": "shopify:\/\/collections",
+          "round_images": true,
+          "show_collection_title": true
+        }
+      },
+      "blog-filters": {
+        "type": "blog-filters",
+        "settings": {
+        }
+      },
+      "page-collection": {
+        "type": "page-collection",
+        "settings": {
+          "title": "Immunity-Boosting Teas",
+          "banner_img": "shopify:\/\/shop_images\/istockphoto-1143012135-612x612_1200x_d930eb79-9f8b-4cdf-9363-06031dc4f685.jpg",
+          "description": "Did you know that your favourite steaming cup of happiness can boost your immunity to keep common ailments at bay? Our hand-picked range of immunity-boosting teas have natural ingredients that protect and provide relief with every sip while recharging your body.",
+          "related_tag": "Concerns:Immunity Building",
+          "related_blog_tag": "Ayurvedic",
+          "show_author": true,
+          "show_category": false,
+          "show_excerpt": true,
+          "show_date": true
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "settings": {
+          "collection": "bestselling-products",
+          "title": "Bestselling Products",
+          "logged_in": false,
+          "products_count": 10,
+          "layout": "vertical",
+          "stack_products": false,
+          "show_sold_out": false,
+          "show_quick_buy": true,
+          "link_title": "View all",
+          "link_url": "shopify:\/\/collections\/bestselling-products",
+          "button_position": "top"
+        }
+      },
+      "162667572687666960": {
+        "type": "collection-with-image",
+        "disabled": true,
+        "blocks": {
+          "8bc02aa8-7164-4a96-b8dc-800dcef44759": {
+            "type": "Collection",
+            "settings": {
+              "collection": "",
+              "products_count": 3,
+              "background": "#f8f4f0",
+              "text_color": "#000000",
+              "title": "Immunity-Boosting Teas",
+              "content": "Did you know that your favourite steaming cup of happiness can boost your immunity to keep common ailments at bay? Our hand-picked range of immunity-boosting teas have natural ingredients that protect and provide relief with every sip while recharging your body",
+              "show_sold_out": false,
+              "button_background": "#b89c7d",
+              "button_text_color": "#ffffff",
+              "button_text": "See more products",
+              "button_link": "shopify:\/\/pages\/immunity-boosting-teas",
+              "product1": "arabian-nights-moroccan-mint-green-tea",
+              "product2": "black-forest-dessert-tea",
+              "product3": "chamomile-calming-tea",
+              "product4": "",
+              "product5": "",
+              "product6": ""
+            }
+          },
+          "4ca99050-67eb-41e8-aa9e-c5c2c1027f34": {
+            "type": "Collection",
+            "disabled": true,
+            "settings": {
+              "collection": "",
+              "products_count": 3,
+              "image": "shopify:\/\/shop_images\/Collection_Category_Banners-03.png",
+              "background": "#f8f4f0",
+              "text_color": "#000000",
+              "title": "Self Care Essentials",
+              "content": "Self care essentials",
+              "show_sold_out": false,
+              "button_background": "#b89c7d",
+              "button_text_color": "#ffffff",
+              "button_text": "See more products",
+              "button_link": "shopify:\/\/pages\/self-care-essentials",
+              "product1": "peppermint-essential-oil",
+              "product2": "bergamot-essential-oil",
+              "product3": "jasmine-aroma-floating-candle",
+              "product4": "cheerleader-9-free-breathable-lacquer-nail-polish",
+              "product5": "baesic-9-free-breathable-lacquer-nail-polish",
+              "product6": ""
+            }
+          }
+        },
+        "block_order": [
+          "8bc02aa8-7164-4a96-b8dc-800dcef44759",
+          "4ca99050-67eb-41e8-aa9e-c5c2c1027f34"
+        ],
+        "settings": {
+        }
+      },
+      "collection-template-limit": {
+        "type": "collection-template-limit",
+        "blocks": {
+          "a15cf0f2-98c7-4a80-ba06-6a781637d3d1": {
+            "type": "filters",
+            "settings": {
+              "hide": false,
+              "title": "Brand Standards",
+              "filter_tag_list": "Organic, Eco-friendly, Cruelty-free, Locally Sourced, Ethically Sourced, Community-driven",
+              "filter_tag": "brand_standard__",
+              "filter_expand": true,
+              "filter_global": true
+            }
+          },
+          "2f427cb5-975c-41fa-af1d-786f0c7517d8": {
+            "type": "filters",
+            "settings": {
+              "hide": true,
+              "title": "Sustainable Parameters",
+              "filter_tag_list": "",
+              "filter_tag": "Brand_Standard",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          },
+          "22bb5d2d-390e-450e-8c95-f435cd2b04ad": {
+            "type": "filters",
+            "settings": {
+              "hide": false,
+              "title": "Concerns",
+              "filter_tag_list": "Immunity Building,Selfcare Essentials,Hygiene Kits,After Covid care,Natural Mosquito Repellants,Air Purifying Products",
+              "filter_tag": "Concerns",
+              "filter_expand": false,
+              "filter_global": true
+            }
+          },
+          "29551239-70d3-475f-97d2-a232aa28ecfd": {
+            "type": "filters",
+            "settings": {
+              "hide": false,
+              "title": "Material",
+              "filter_tag_list": "",
+              "filter_tag": "Material",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          },
+          "187aa560-747a-4219-ba0f-6bffcf2375e3": {
+            "type": "filters",
+            "settings": {
+              "hide": false,
+              "title": "Ingredients",
+              "filter_tag_list": "",
+              "filter_tag": "Ingredients",
+              "filter_expand": false,
+              "filter_global": false
+            }
+          }
+        },
+        "block_order": [
+          "a15cf0f2-98c7-4a80-ba06-6a781637d3d1",
+          "2f427cb5-975c-41fa-af1d-786f0c7517d8",
+          "22bb5d2d-390e-450e-8c95-f435cd2b04ad",
+          "29551239-70d3-475f-97d2-a232aa28ecfd",
+          "187aa560-747a-4219-ba0f-6bffcf2375e3"
+        ],
+        "settings": {
+          "show_collection_image": true,
+          "show_sub_collection": true,
+          "sub_collection_title": "",
+          "collapse_collection_description": false,
+          "collection_image_size": "small",
+          "products_per_row": "4",
+          "default_products_per_page": 24,
+          "default_view_layout": "grid",
+          "show_quick_buy": "list_grid",
+          "show_quick_view": "list_grid",
+          "quick_links": "",
+          "quick_links_show_products_count": true,
+          "show_filters": true,
+          "show_filter_color_swatch": true,
+          "filter_type": "group",
+          "open_group_filters_mode": "all_closed",
+          "show_filters_search": false,
+          "filters_search_items": "",
+          "total_product_count": "100"
+        }
+      },
+      "16270390826b873c97": {
+        "type": "amala-recommend",
+        "blocks": {
+          "654864c8-cfe4-4518-84b4-ba2a921af0d3": {
+            "type": "Product",
+            "settings": {
+              "product": "ira-jamdani-silk-saree-red-ira052-5922"
+            }
+          },
+          "f5163582-71b7-478c-b0da-2f74408efe61": {
+            "type": "Product",
+            "settings": {
+              "product": "metallic-celeste-jar-gold"
+            }
+          },
+          "770b0010-0b20-4cfb-8653-9f157caa36b9": {
+            "type": "Product",
+            "settings": {
+              "product": "kesarco-kashmiri-walnut-kernels-150-g-300822"
+            }
+          },
+          "e5801fa4-5b1b-4b92-8bed-3abf5357f6ab": {
+            "type": "Product",
+            "settings": {
+              "product": "mr-brat-muslin-kurta-with-dhoti-for-girls-fuschia-pink-mbrb004-12922"
+            }
+          },
+          "107b340b-6885-43e3-8ba3-32c16c7eece7": {
+            "type": "Product",
+            "settings": {
+              "product": "oonth-silver-ethnic-jewellery-92-5-silver-big-stud-earrings-ep10-16922"
+            }
+          },
+          "aae58fcc-d2c0-44b8-8f88-9f54e648e39f": {
+            "type": "Product",
+            "settings": {
+              "product": "soy-wax-mogra-scented-candle"
+            }
+          },
+          "746a5809-9b53-4db5-a8d0-ed6c3566d3b1": {
+            "type": "Product",
+            "settings": {
+              "product": "skin-radiance-kumkumadi-oil-12-ml"
+            }
+          },
+          "8dc68ce5-4322-4fbc-b41e-19210d10d968": {
+            "type": "Product",
+            "settings": {
+              "product": "indus-people-stoneware-kulhad-tea-gift-box-white-gbdg-kultea-ivory-31822"
+            }
+          },
+          "a72196e5-3bf5-4e82-8016-4e38cc9d00c1": {
+            "type": "Product",
+            "settings": {
+              "product": "charcaol-free-flower-based-lemongrass-incense-sticks-40-sticks"
+            }
+          },
+          "085f5981-13ee-4baf-82d2-79c34d049eee": {
+            "type": "Product",
+            "settings": {
+              "product": "cotton-banana-paper-carry-bag-light-green-set-of-5"
+            }
+          },
+          "1d189f67-2f3d-48d3-97bc-c2ea14b4b227": {
+            "type": "Product",
+            "settings": {
+              "product": "herbal-eyeliner-kajal-paraben-free"
+            }
+          },
+          "c059074f-b334-4f3d-b37b-c5add65c7e4b": {
+            "type": "Product",
+            "disabled": true,
+            "settings": {
+              "product": "pure-cotton-lime-green-angrakha-kurta-with-sharara"
+            }
+          },
+          "0c3648cc-23ea-4d40-895a-c0a5274f718d": {
+            "type": "Product",
+            "disabled": true,
+            "settings": {
+              "product": "handcrafted-scented-soy-wax-votive-candles-set-of-4"
+            }
+          },
+          "b4249e6f-9174-4fc2-a869-496f1897ae52": {
+            "type": "Product",
+            "settings": {
+              "product": ""
+            }
+          },
+          "3db7abb8-c7dd-4047-bb76-6fdcca7aa5ee": {
+            "type": "Product",
+            "settings": {
+              "product": ""
+            }
+          }
+        },
+        "block_order": [
+          "654864c8-cfe4-4518-84b4-ba2a921af0d3",
+          "f5163582-71b7-478c-b0da-2f74408efe61",
+          "770b0010-0b20-4cfb-8653-9f157caa36b9",
+          "e5801fa4-5b1b-4b92-8bed-3abf5357f6ab",
+          "107b340b-6885-43e3-8ba3-32c16c7eece7",
+          "aae58fcc-d2c0-44b8-8f88-9f54e648e39f",
+          "746a5809-9b53-4db5-a8d0-ed6c3566d3b1",
+          "8dc68ce5-4322-4fbc-b41e-19210d10d968",
+          "a72196e5-3bf5-4e82-8016-4e38cc9d00c1",
+          "085f5981-13ee-4baf-82d2-79c34d049eee",
+          "1d189f67-2f3d-48d3-97bc-c2ea14b4b227",
+          "c059074f-b334-4f3d-b37b-c5add65c7e4b",
+          "0c3648cc-23ea-4d40-895a-c0a5274f718d",
+          "b4249e6f-9174-4fc2-a869-496f1897ae52",
+          "3db7abb8-c7dd-4047-bb76-6fdcca7aa5ee"
+        ],
+        "settings": {
+          "title": "Amala Earth Recommends",
+          "logged_in": false,
+          "products_count": 38,
+          "layout": "vertical",
+          "stack_products": false,
+          "show_sold_out": false,
+          "show_quick_buy": true,
+          "link_title": "",
+          "link_url": "",
+          "button_position": "top"
+        }
+      },
+      "1627043555ca6795e0": {
+        "type": "feature-category-with-image",
+        "blocks": {
+          "a063e164-7669-4bc7-8ac8-85e9bc2ea392": {
+            "type": "product",
+            "settings": {
+              "product": "organic-lipstick-lip-nourishing-cremey-matte-nude-neutral-4-2-g"
+            }
+          },
+          "8a47ca35-c690-4765-af1e-5d97223dfe16": {
+            "type": "product",
+            "settings": {
+              "product": "anti-frizz-hair-shampoo-dry-damaged-hair-250-ml"
+            }
+          },
+          "6a286f3e-46af-4fcd-85d9-eb9819cbfd05": {
+            "type": "product",
+            "settings": {
+              "product": "charcoal-facemask-for-acne-pron-skin-100-g"
+            }
+          },
+          "9dd90a94-a1f9-470b-8fbb-d433a38ba790": {
+            "type": "product",
+            "settings": {
+              "product": "vegan-walnut-and-apricot-face-scrub"
+            }
+          },
+          "63facfb9-7997-4526-871e-f3865bf12588": {
+            "type": "product",
+            "settings": {
+              "product": "organic-nourishing-hair-oil-i-120-ml"
+            }
+          },
+          "22b53865-5ad3-44bd-9b11-b33ce086656d": {
+            "type": "product",
+            "settings": {
+              "product": "gifts-for-sister-petrichor-attar-perfume-rain-smell-organic-3-ml-maati"
+            }
+          },
+          "6d24bc3c-9bbb-41e3-bf08-edd206a5d1fe": {
+            "type": "product",
+            "settings": {
+              "product": "rich-honey-bb-cream-i-30-g"
+            }
+          },
+          "11842e36-3d45-4188-987a-78d6f525710f": {
+            "type": "product",
+            "settings": {
+              "product": "anti-acne-face-elixir-skin-cleanser-15-ml"
+            }
+          },
+          "de7d0cbe-f496-4199-ae55-f6a176b2290b": {
+            "type": "product",
+            "settings": {
+              "product": "armpit-mask-underarm-odor-control-40-ml"
+            }
+          },
+          "75eb7d8e-9697-4a1a-90c6-22fe2773013c": {
+            "type": "product",
+            "settings": {
+              "product": "kansa-gua-sha-face-massage-tool-for-fine-lines-glowing-skin-144gm"
+            }
+          },
+          "e54d9263-8381-46f9-8a54-3d5fda363963": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "armpit-mask-underarm-odor-control-100-ml"
+            }
+          },
+          "8fbfa8f8-d557-485d-8139-9113ee76c7bb": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "organic-raw-unrefined-shea-butter-for-skin-moisturizer-500gms"
+            }
+          },
+          "94e1cb90-6bdf-478e-abc8-6ab111d0824d": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "saffron-infused-in-musk-amber-regal-fragrance-50ml"
+            }
+          },
+          "6c1f4735-9495-4b7a-9fe4-f3094162dc85": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "last-forest-coconut-balm-for-cracked-heels-20gm"
+            }
+          },
+          "6ba03c0c-9ee9-437b-a350-699188de963b": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": ""
+            }
+          }
+        },
+        "block_order": [
+          "a063e164-7669-4bc7-8ac8-85e9bc2ea392",
+          "8a47ca35-c690-4765-af1e-5d97223dfe16",
+          "6a286f3e-46af-4fcd-85d9-eb9819cbfd05",
+          "9dd90a94-a1f9-470b-8fbb-d433a38ba790",
+          "63facfb9-7997-4526-871e-f3865bf12588",
+          "22b53865-5ad3-44bd-9b11-b33ce086656d",
+          "6d24bc3c-9bbb-41e3-bf08-edd206a5d1fe",
+          "11842e36-3d45-4188-987a-78d6f525710f",
+          "de7d0cbe-f496-4199-ae55-f6a176b2290b",
+          "75eb7d8e-9697-4a1a-90c6-22fe2773013c",
+          "e54d9263-8381-46f9-8a54-3d5fda363963",
+          "8fbfa8f8-d557-485d-8139-9113ee76c7bb",
+          "94e1cb90-6bdf-478e-abc8-6ab111d0824d",
+          "6c1f4735-9495-4b7a-9fe4-f3094162dc85",
+          "6ba03c0c-9ee9-437b-a350-699188de963b"
+        ],
+        "settings": {
+          "collection": "",
+          "products_count": 16,
+          "background": "#f8f4f0",
+          "text_color": "#000000",
+          "title": "Ethical Beauty",
+          "content": "Dedicated to products that include naturally sourced ingredients that make you look good and feel good.",
+          "show_sold_out": false,
+          "button_background": "#b89c7d",
+          "button_text_color": "#ffffff",
+          "button_text": "See more products",
+          "button_link": "shopify:\/\/collections\/ethical-beauty"
+        }
+      },
+      "1627044427d1305f29": {
+        "type": "feature-category-with-image",
+        "blocks": {
+          "52be56af-366f-4f96-b313-f0d24198b5ba": {
+            "type": "product",
+            "settings": {
+              "product": "ganga-jamuna-kadha"
+            }
+          },
+          "1af198a7-a877-48e9-9473-385298b3c8be": {
+            "type": "product",
+            "settings": {
+              "product": "natural-saffron-rose-infusion-powder-70-g-pack-of-2"
+            }
+          },
+          "1660ae47-2c22-4c1b-a06c-b13a46edaa38": {
+            "type": "product",
+            "settings": {
+              "product": "ayurvedic-kapha-balance-herbs-100gm"
+            }
+          },
+          "bccf1925-0081-49ed-a546-534ca84e3cd1": {
+            "type": "product",
+            "settings": {
+              "product": "neem-giloy-brew"
+            }
+          },
+          "9e9b4058-07e1-4eca-be37-1dfc45bd4c35": {
+            "type": "product",
+            "settings": {
+              "product": "ayurvedic-care-herbal-conditioner-200-ml"
+            }
+          },
+          "8c33be87-ab1e-4f8b-9929-3595054760be": {
+            "type": "product",
+            "settings": {
+              "product": "organic-kumaon-turmeric-powder-225gm"
+            }
+          },
+          "9b8fe1d2-65eb-46ad-8fb3-300283a4667e": {
+            "type": "product",
+            "settings": {
+              "product": "ayurvedic-tablets-for-immunity-booster"
+            }
+          },
+          "e0c65ff2-0e59-4a99-bfc7-fbf7945b34f8": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "organic-shikakai-pods-set-of-2"
+            }
+          },
+          "69ce8789-dd8a-496c-a2ea-133ac797cdb8": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "natural-amla-brahmi-and-aloe-vera-drink-100-ml"
+            }
+          },
+          "afdd5b30-31ca-4040-b11e-9e4e786e3041": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "herbal-tea-wellness-tea-for-women-boost-immunity-20-tea-bags"
+            }
+          },
+          "f90b50fa-f74d-44cd-a59b-49353a2c028c": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "dream-tea-relaxes-mind-20-tea-bags"
+            }
+          },
+          "3fc6f753-68a2-4ebc-b59e-57a838e75d3f": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "zest-tea-gift-box"
+            }
+          }
+        },
+        "block_order": [
+          "52be56af-366f-4f96-b313-f0d24198b5ba",
+          "1af198a7-a877-48e9-9473-385298b3c8be",
+          "1660ae47-2c22-4c1b-a06c-b13a46edaa38",
+          "bccf1925-0081-49ed-a546-534ca84e3cd1",
+          "9e9b4058-07e1-4eca-be37-1dfc45bd4c35",
+          "8c33be87-ab1e-4f8b-9929-3595054760be",
+          "9b8fe1d2-65eb-46ad-8fb3-300283a4667e",
+          "e0c65ff2-0e59-4a99-bfc7-fbf7945b34f8",
+          "69ce8789-dd8a-496c-a2ea-133ac797cdb8",
+          "afdd5b30-31ca-4040-b11e-9e4e786e3041",
+          "f90b50fa-f74d-44cd-a59b-49353a2c028c",
+          "3fc6f753-68a2-4ebc-b59e-57a838e75d3f"
+        ],
+        "settings": {
+          "collection": "",
+          "products_count": 8,
+          "background": "#f8f4f0",
+          "text_color": "#000000",
+          "title": "Ayurvedic Food and Self-care",
+          "content": "A curation of Ayurvedic products that work wonders for your health and well-being.",
+          "show_sold_out": false,
+          "button_background": "#b89c7d",
+          "button_text_color": "#ffffff",
+          "button_text": "See more products",
+          "button_link": "shopify:\/\/collections\/ayurvedic-food-skin"
+        }
+      },
+      "amala-recommend": {
+        "type": "amala-recommend",
+        "blocks": {
+          "786bd408-a11c-4573-b114-c1fda1a10cd4": {
+            "type": "Product",
+            "settings": {
+              "product": "natural-strong-immunity"
+            }
+          },
+          "ce5c1666-7c69-42fa-8f33-a440b0c17e55": {
+            "type": "Product",
+            "settings": {
+              "product": "ayurvedic-aloe-vera-gel-150-gm"
+            }
+          },
+          "117a4f59-de75-4c12-b063-75ccd7394ea4": {
+            "type": "Product",
+            "settings": {
+              "product": "handcrafted-ivory-ceramic-almond-shaped-platter-with-brown-boundary-set-of-2"
+            }
+          },
+          "033075d1-f888-406f-a99f-dc63d87814ad": {
+            "type": "Product",
+            "settings": {
+              "product": "indigo-hand-dyed-origami-ruffled-dress"
+            }
+          },
+          "24a5e2d8-746a-4213-89c4-e0128f76e573": {
+            "type": "Product",
+            "settings": {
+              "product": "100-organic-cotton-bunny-jersey-printed-wrap"
+            }
+          },
+          "1e86f8eb-578f-4ac2-975e-223e5a5ce6a3": {
+            "type": "Product",
+            "settings": {
+              "product": "gluten-free-himalayan-red-rice-500-gm"
+            }
+          },
+          "3a5b89c3-050f-4ad2-a61b-dfcc9543966f": {
+            "type": "Product",
+            "settings": {
+              "product": "natural-cotton-cream-meditation-mat"
+            }
+          },
+          "5f2ec308-4aa4-473c-bedc-c1007740885b": {
+            "type": "Product",
+            "settings": {
+              "product": "handcrafted-cobalt-blue-cotton-bouti-block-printed-quilt"
+            }
+          },
+          "89466ccb-63d6-4cf0-96ac-7833fa0f1f40": {
+            "type": "Product",
+            "settings": {
+              "product": "pain-relief-soothing-hot-pack-for-women-instant-relief-from-menstrual-cramps"
+            }
+          },
+          "6f02797c-9972-4266-b626-38db81c308b6": {
+            "type": "Product",
+            "settings": {
+              "product": "organic-cotton-tie-dye-yellow-t-shirt"
+            }
+          }
+        },
+        "block_order": [
+          "786bd408-a11c-4573-b114-c1fda1a10cd4",
+          "ce5c1666-7c69-42fa-8f33-a440b0c17e55",
+          "117a4f59-de75-4c12-b063-75ccd7394ea4",
+          "033075d1-f888-406f-a99f-dc63d87814ad",
+          "24a5e2d8-746a-4213-89c4-e0128f76e573",
+          "1e86f8eb-578f-4ac2-975e-223e5a5ce6a3",
+          "3a5b89c3-050f-4ad2-a61b-dfcc9543966f",
+          "5f2ec308-4aa4-473c-bedc-c1007740885b",
+          "89466ccb-63d6-4cf0-96ac-7833fa0f1f40",
+          "6f02797c-9972-4266-b626-38db81c308b6"
+        ],
+        "settings": {
+          "title": "Amala Earth Recommends",
+          "logged_in": false,
+          "products_count": 10,
+          "layout": "vertical",
+          "stack_products": false,
+          "show_sold_out": false,
+          "show_quick_buy": true,
+          "link_title": "",
+          "link_url": "",
+          "button_position": "top"
+        }
+      },
+      "1631544470ae25b516": {
+        "type": "feature-category-with-image",
+        "blocks": {
+          "e71cbe22-2427-4ae3-a351-d56268bcb1ce": {
+            "type": "product",
+            "settings": {
+              "product": "mango-wood-hand-painted-serving-platter-set-of-2-brown"
+            }
+          },
+          "d1cd593d-bcd3-4a09-b3f2-ac64a02c4bc9": {
+            "type": "product",
+            "settings": {
+              "product": "the-gruham-cotton-bohemian-cushion-cover-with-fringes-multicolour-g-001-01-22822"
+            }
+          },
+          "e60fd005-b5b4-4db0-ad5e-670927c5c1dc": {
+            "type": "product",
+            "settings": {
+              "product": "jute-round-small-tray-beige-red"
+            }
+          },
+          "83bd7fbc-2386-4224-af98-8b578db80ebb": {
+            "type": "product",
+            "settings": {
+              "product": "brass-kadhai"
+            }
+          },
+          "98e4a003-8c48-4c53-b5b3-3c4f4770de14": {
+            "type": "product",
+            "settings": {
+              "product": "mango-wood-stainless-steel-masala-box-gold"
+            }
+          },
+          "aa21a894-6bf5-438b-a06b-c417a8e8d782": {
+            "type": "product",
+            "settings": {
+              "product": "copper-bottle-with-2-glasses-red-950-ml"
+            }
+          },
+          "ff339829-7627-4436-9fb7-c9ec7937482c": {
+            "type": "product",
+            "settings": {
+              "product": "sustainable-100-soy-wax-candles"
+            }
+          },
+          "ec40e0f1-a305-4284-aa8c-76ad8fdadc28": {
+            "type": "product",
+            "settings": {
+              "product": "artboxx-by-archana-macrame-basket-planter-off-white-aebp-01-22822"
+            }
+          },
+          "789614cc-ea14-40ac-84bc-02d0050a6879": {
+            "type": "product",
+            "settings": {
+              "product": "thorny-affair-iron-handpainted-planter-blue-mb07p-21722"
+            }
+          },
+          "33b57319-239b-4f90-a2a6-2c9ed6fb7e26": {
+            "type": "product",
+            "settings": {
+              "product": "cotton-white-throw-with-tassels-1"
+            }
+          },
+          "2aea179b-5be4-4ee5-8152-7c1fa0d72a63": {
+            "type": "product",
+            "settings": {
+              "product": "pure-cotton-printed-bedcover-pink"
+            }
+          },
+          "64445bf8-c69a-41b1-9981-a2950cf8f67d": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "100-organic-cotton-forest-green-bath-towel"
+            }
+          },
+          "99af3017-8e3a-4b73-8694-1665cb714dd3": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "eco-friendly-white-ceramic-platter"
+            }
+          },
+          "a3f85525-86f4-4e46-8534-538abac13d14": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "handcrafted-brass-vase"
+            }
+          }
+        },
+        "block_order": [
+          "e71cbe22-2427-4ae3-a351-d56268bcb1ce",
+          "d1cd593d-bcd3-4a09-b3f2-ac64a02c4bc9",
+          "e60fd005-b5b4-4db0-ad5e-670927c5c1dc",
+          "83bd7fbc-2386-4224-af98-8b578db80ebb",
+          "98e4a003-8c48-4c53-b5b3-3c4f4770de14",
+          "aa21a894-6bf5-438b-a06b-c417a8e8d782",
+          "ff339829-7627-4436-9fb7-c9ec7937482c",
+          "ec40e0f1-a305-4284-aa8c-76ad8fdadc28",
+          "789614cc-ea14-40ac-84bc-02d0050a6879",
+          "33b57319-239b-4f90-a2a6-2c9ed6fb7e26",
+          "2aea179b-5be4-4ee5-8152-7c1fa0d72a63",
+          "64445bf8-c69a-41b1-9981-a2950cf8f67d",
+          "99af3017-8e3a-4b73-8694-1665cb714dd3",
+          "a3f85525-86f4-4e46-8534-538abac13d14"
+        ],
+        "settings": {
+          "collection": "",
+          "products_count": 12,
+          "background": "#f8f4f0",
+          "text_color": "#000000",
+          "title": "Joyful Home",
+          "content": "To create a sense of positivity in our everyday spaces, our options of conscious home products are made from restorative, reclaimed and materials sourced from natural elements.",
+          "show_sold_out": true,
+          "button_background": "#b89c7d",
+          "button_text_color": "#ffffff",
+          "button_text": "See More Products",
+          "button_link": "shopify:\/\/collections\/joyful-home"
+        }
+      },
+      "1631544653cd7e2ad4": {
+        "type": "feature-category-with-image",
+        "blocks": {
+          "a6528ab4-bb38-4709-ac09-9828e64145ea": {
+            "type": "product",
+            "settings": {
+              "product": "healthy-gift-hampers-wellness-immunity-boosting-sampler-gift-box"
+            }
+          },
+          "2ede93d7-a5fc-4ad2-94b4-9f0b86ba99cc": {
+            "type": "product",
+            "settings": {
+              "product": "eco-friendly-soy-wax-rose-marigold-gratitude-candle"
+            }
+          },
+          "dd268999-40ce-403b-89dd-36a8f03215fb": {
+            "type": "product",
+            "settings": {
+              "product": "pureclothco-baby-shower-hamper-yellow-sunshine-organic-cotton-pack-of-4-gh001-box-3m-6m-20722"
+            }
+          },
+          "42e9359b-b779-4353-8483-bdbc4af1b2fb": {
+            "type": "product",
+            "settings": {
+              "product": "indus-people-stoneware-kulhad-tea-gift-box-pink-gbdg-kultea-oldrose-31822"
+            }
+          },
+          "58a838ff-cf5e-42f6-934a-df7f139508b8": {
+            "type": "product",
+            "settings": {
+              "product": "eco-friendly-gifts-plantable-ganesha-and-lakshmiji-idols-marigold-tulsi-seeds"
+            }
+          },
+          "890dccf7-fd70-4d5e-96fc-4db2b224e5b9": {
+            "type": "product",
+            "settings": {
+              "product": "cotton-dyed-ribbons-purple-set-of-6"
+            }
+          },
+          "2594207c-2ef3-4cca-99e8-ecb916afd90e": {
+            "type": "product",
+            "settings": {
+              "product": "healthy-gift-hampers-vegan-crimson-red-assorted-dates-and-chocolates-gift-box-16-pcs"
+            }
+          },
+          "22a6bd8d-359c-4628-9ddc-be0d96f052b5": {
+            "type": "product",
+            "settings": {
+              "product": "gifts-for-her-daily-skin-care-combo-kit-pack-of-4"
+            }
+          },
+          "29d826e8-63a2-4f0b-81c6-92f4ba9cf01b": {
+            "type": "product",
+            "settings": {
+              "product": "eco-friendly-neutral-set-of-56-playing-cards"
+            }
+          },
+          "87a3205c-ace0-4b1b-a111-29271889d888": {
+            "type": "product",
+            "settings": {
+              "product": "handcrafted-block-printed-wrapping-paper-set"
+            }
+          },
+          "6b21746c-33c8-425b-bfbf-d4ccbbb90771": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "rakhi-gift-hampers-green-tea-gift-box-set-of-2"
+            }
+          },
+          "144d34d0-0f40-4d60-a23f-11fd4d826109": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "eco-friendly-gifts-upcycled-experiential-gift-box"
+            }
+          },
+          "85ea7b02-edb6-4094-9403-09f151a8f23f": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "face-pack-trio-set-ayurvedic-set-of-3"
+            }
+          },
+          "73670bbb-8fcd-44b7-8b2a-f2dbb46b4214": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "gifts-for-her-glow-boosting-beauties-kit-set-of-4"
+            }
+          },
+          "6f6c394e-a939-482f-98cb-ee47dd42909b": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "pureclothco-baby-shower-hamper-yellow-sunshine-organic-cotton-pack-of-4-gh001-box-3m-6m-20722"
+            }
+          },
+          "b0785d39-01d4-4063-9644-f709ee525f8a": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "eco-friendly-gifts-zero-waste-starter-kit-1"
+            }
+          },
+          "976a486e-60bc-497a-92fe-d97b875cf6df": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": ""
+            }
+          },
+          "82f9aa30-8cb0-4c0c-a5d1-83935a213efc": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": ""
+            }
+          }
+        },
+        "block_order": [
+          "a6528ab4-bb38-4709-ac09-9828e64145ea",
+          "2ede93d7-a5fc-4ad2-94b4-9f0b86ba99cc",
+          "dd268999-40ce-403b-89dd-36a8f03215fb",
+          "42e9359b-b779-4353-8483-bdbc4af1b2fb",
+          "58a838ff-cf5e-42f6-934a-df7f139508b8",
+          "890dccf7-fd70-4d5e-96fc-4db2b224e5b9",
+          "2594207c-2ef3-4cca-99e8-ecb916afd90e",
+          "22a6bd8d-359c-4628-9ddc-be0d96f052b5",
+          "29d826e8-63a2-4f0b-81c6-92f4ba9cf01b",
+          "87a3205c-ace0-4b1b-a111-29271889d888",
+          "6b21746c-33c8-425b-bfbf-d4ccbbb90771",
+          "144d34d0-0f40-4d60-a23f-11fd4d826109",
+          "85ea7b02-edb6-4094-9403-09f151a8f23f",
+          "73670bbb-8fcd-44b7-8b2a-f2dbb46b4214",
+          "6f6c394e-a939-482f-98cb-ee47dd42909b",
+          "b0785d39-01d4-4063-9644-f709ee525f8a",
+          "976a486e-60bc-497a-92fe-d97b875cf6df",
+          "82f9aa30-8cb0-4c0c-a5d1-83935a213efc"
+        ],
+        "settings": {
+          "collection": "",
+          "products_count": 11,
+          "background": "#f8f4f0",
+          "text_color": "#000000",
+          "title": "Purposeful Gifts",
+          "content": "Unique, thoughtful and handmade products ideal for every occasion.",
+          "show_sold_out": true,
+          "button_background": "#b89c7d",
+          "button_text_color": "#ffffff",
+          "button_text": "See More Products",
+          "button_link": "shopify:\/\/collections\/gifts"
+        }
+      },
+      "1632982418c8f90198": {
+        "type": "video-slider",
+        "blocks": {
+          "86e81609-a716-40cc-9dcf-1f8ee2e59507": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/qBocU25C_Hk",
+              "image": "shopify:\/\/shop_images\/3121a56d-fa71-4585-8c1c-7b2bd403a1d8_1.jpg",
+              "videoHeading": "Monsoon Poetry with Helly Shah",
+              "expspeaks": true
+            }
+          },
+          "9c82c6e1-adef-404c-8894-b9dc7184b3a2": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/L7kkPlQDTJA",
+              "image": "shopify:\/\/shop_images\/Accessories.jpg",
+              "videoHeading": "Summer Accessories",
+              "expspeaks": false
+            }
+          },
+          "7893f85c-692a-457e-9924-d6b15aeecc4f": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/Tx1TMrh0_mU",
+              "image": "shopify:\/\/shop_images\/3_2.png",
+              "videoHeading": "Monsoon Poetry with Shah Umair | Sikkawala",
+              "expspeaks": false
+            }
+          },
+          "d5fb67fc-f37f-4783-b600-b571825c241b": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/rTwLjzmIxd4",
+              "image": "shopify:\/\/shop_images\/YT_thumbnail_1.png",
+              "videoHeading": "Pet care products",
+              "expspeaks": false
+            }
+          },
+          "420aa8bf-4d9c-4922-a55d-cdc120a0bd51": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/Lg1z3mJVUOo",
+              "image": "shopify:\/\/shop_images\/YT_thumbnail.png",
+              "videoHeading": "Monsoon Poetry with Arunoday Singh",
+              "expspeaks": false
+            }
+          },
+          "233eb978-4850-4913-abaf-38bc12d805c4": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/VCuPjxLrxSY",
+              "image": "shopify:\/\/shop_images\/ankita_cover.jpg",
+              "videoHeading": "Monsoon Poetry with Ankita",
+              "expspeaks": false
+            }
+          },
+          "c24b6143-4efb-4f13-94e2-a69e2c68419e": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/PI5zMfcPEmE",
+              "image": "shopify:\/\/shop_images\/BK1A1403.jpg",
+              "videoHeading": "Ayurvedic Foot Soak Routine",
+              "expspeaks": false
+            }
+          },
+          "b7c1327c-07d5-4f90-9eac-a4d96d846ef6": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=XYDKXinPlCI",
+              "image": "shopify:\/\/shop_images\/Foot-Soak-Video-2.jpg",
+              "videoHeading": "A calming self-care foot soak to include in your weekend ritual",
+              "expspeaks": false
+            }
+          },
+          "cf811233-3539-4a3e-9cea-19b520da6553": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/OxvU4nfqYJo",
+              "image": "shopify:\/\/shop_images\/2_3.png",
+              "videoHeading": "Monsoon Poetry with Mansa Jimmy",
+              "expspeaks": false
+            }
+          },
+          "165b2fd5-8534-4cc4-98df-58d507c30fd3": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=QTYuBTDxFLE",
+              "image": "shopify:\/\/shop_images\/Intention-2-Cover.png",
+              "videoHeading": "Conscious practices for 2022",
+              "expspeaks": false
+            }
+          },
+          "f9cd8315-3616-4b6b-9ae8-7a801f86b6a7": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/uiSAWDeOn-U",
+              "image": "shopify:\/\/shop_images\/5_8a3549b5-df98-4a8b-bdfb-f0bbeb8b7edf.jpg",
+              "videoHeading": "Monsoon Poetry with Damini Bhist",
+              "expspeaks": false
+            }
+          },
+          "50482e36-c7ec-4947-8e0a-27e715d51e63": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/BfJpqBp84Fg",
+              "image": "shopify:\/\/shop_images\/Fitness_to_fun_-_Athleisure.jpg",
+              "videoHeading": "Fitness to fun - Athleisure",
+              "expspeaks": false
+            }
+          },
+          "f41b29bf-d040-420e-9c09-70553adc52c7": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/MqxU5Hz2jj0",
+              "image": "shopify:\/\/shop_images\/self_care_cover.jpg",
+              "videoHeading": "Handblocked and Handcrafted",
+              "expspeaks": false
+            }
+          },
+          "24ed1f9c-00fa-41fc-8bc4-74a66edc8ddb": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=8t47oyqHc1s",
+              "image": "shopify:\/\/shop_images\/Shonali_cover-01.jpg",
+              "videoHeading": "Kid-friendly superfoods - Nutritionist and gut health expert, Shonali Sabherwal",
+              "expspeaks": true
+            }
+          },
+          "8921de12-ca66-408a-9bff-eea460a4e260": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=mHvenLO3G3k",
+              "image": "shopify:\/\/shop_images\/Intentions-Cover.jpg",
+              "videoHeading": "Listen to that inner voice this NEW Year 2022",
+              "expspeaks": false
+            }
+          },
+          "50edeab9-e914-4534-94f6-f191bab3793a": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=IWw_XyQLLDo",
+              "image": "shopify:\/\/shop_images\/Scent-Video-Cover.jpg",
+              "videoHeading": "The Best Natural and Organic Fragrances",
+              "expspeaks": false
+            }
+          },
+          "f8c2d2c4-d275-49d8-9480-bebf899bfc42": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=vowWTR9-XL8",
+              "image": "shopify:\/\/shop_images\/Christmas-Box-Cover.jpg",
+              "videoHeading": "The Amala Earth Mindful Gift Box",
+              "expspeaks": false
+            }
+          },
+          "5b3e91a0-ace0-4226-99d9-1e26a502714f": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=grQ0FQCXFAY",
+              "image": "shopify:\/\/shop_images\/Manya-cover.png",
+              "videoHeading": "Making Christmas Cards Using Natural Colours with Ms. Manya Cherrabuddi",
+              "expspeaks": true
+            }
+          },
+          "307c4953-d725-47ac-9a0e-f8537b963525": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=xc1w_SSBAEQ",
+              "image": "shopify:\/\/shop_images\/cover-hot-chocolate-video.jpg",
+              "videoHeading": "Thick, creamy, spiced hot chocolate is just what the season ordered ☕️",
+              "expspeaks": false
+            }
+          },
+          "bfd0dc0c-235e-4148-aead-a831cc130416": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=4HRW7ms1gCI",
+              "image": "shopify:\/\/shop_images\/Cover-Amala-Candles-Video.jpg",
+              "videoHeading": "100% Soy Wax Candles For Christmas",
+              "expspeaks": false
+            }
+          },
+          "9fc30d01-4e34-47ea-834a-c810d008e530": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=ciw77_sqaq0",
+              "image": "shopify:\/\/shop_images\/Cover-Christmas_Calendars.jpg",
+              "videoHeading": "Seed paper calendars are the best gift for your loved ones to start the New Year",
+              "expspeaks": false
+            }
+          },
+          "90aa6ad9-2403-49a3-95ef-9cf64ab8ea0d": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=dRQtU5bRl1A",
+              "image": "shopify:\/\/shop_images\/Cover-image-Upcycled-Heart.jpg",
+              "videoHeading": "Best Eco-friendly Gifts For Christmas | Upcycled Hearts",
+              "expspeaks": false
+            }
+          },
+          "8a64f689-419d-47ac-aba8-20c3c141005d": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=82yXqjyLd88",
+              "image": "shopify:\/\/shop_images\/Chywanprash-cover.jpg",
+              "videoHeading": "Handmade Natural Chywanprash to Boost Your Immunity",
+              "expspeaks": false
+            }
+          },
+          "6648bc24-259c-4348-b8dc-f0e9c962a289": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=1ARvKobDTx8",
+              "image": "shopify:\/\/shop_images\/cover-vasudha.jpg",
+              "videoHeading": "Building Skincare & Selfcare Rituals with Vasudha Rai",
+              "expspeaks": true
+            }
+          },
+          "f2122964-68f6-4984-810c-3a1ab2bf9c4a": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=IumCBSbopBo",
+              "image": "shopify:\/\/shop_images\/Slik-Linen.jpg",
+              "videoHeading": "Naturally Dyed Earth-Friendly Silk Sarees for Winter Festivities",
+              "expspeaks": false
+            }
+          },
+          "d31868b2-88e7-4522-a4fe-438ef94cb2a5": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=DruND7J6GWY",
+              "image": "shopify:\/\/shop_images\/Unwind.jpg",
+              "videoHeading": "Unwinding Rituals in Linen Sarees",
+              "expspeaks": false
+            }
+          },
+          "98e4ad43-77df-43a8-9841-ca5db5b89890": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=P0RdbauHesM",
+              "image": "shopify:\/\/shop_images\/hemp-seed-cover.jpg",
+              "videoHeading": "Buy Hemp Products Online in India",
+              "expspeaks": false
+            }
+          },
+          "77709d50-61d0-4cf5-8220-c6db7a8c2a44": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=ioRCn4wEhVY",
+              "image": "shopify:\/\/shop_images\/Hemp_fabric.jpg",
+              "videoHeading": "Why Wear Hemp? The Benefits Of Wearing Hemp Clothing",
+              "expspeaks": false
+            }
+          },
+          "6609caf5-f036-4ad0-9a38-c48614132be3": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=ROK0WJwK2no",
+              "image": "shopify:\/\/shop_images\/Kids_-_mobile_banner.jpg",
+              "videoHeading": "Eco-friendly Gifts for Babies and Kids That Moms Will Love Too",
+              "expspeaks": false
+            }
+          },
+          "8df86c24-eec2-400c-bb39-1bbd799ca68c": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=Ov36FVJ1DIw",
+              "image": "shopify:\/\/shop_images\/Ladoo_Cover_Image.jpg",
+              "videoHeading": "Dates Ladoos Recipe for a healthy festive season!",
+              "expspeaks": false
+            }
+          },
+          "104a488d-467f-4ee9-bb46-1242f18b0b96": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=1Q5RJqGxzyo",
+              "image": "shopify:\/\/shop_images\/250822298_4784062318305555_4073082512983222532_n.jpg",
+              "videoHeading": "Low waste style Diwali decoration - Live session Sneha Singhi with Mala Barua",
+              "expspeaks": false
+            }
+          },
+          "62df0ead-f005-4491-8549-737b868c8954": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=VYrIr2-xflA",
+              "image": "shopify:\/\/shop_images\/Amala-Earth-Gift-Boxes.jpg",
+              "videoHeading": "Amala Earth Eco-friendly Diwali Gift Boxes",
+              "expspeaks": false
+            }
+          },
+          "365eb7dd-2a82-4a7b-9b35-e33fd5b0e24b": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=T3EUAtFdvDU",
+              "image": "shopify:\/\/shop_images\/Live_cover_0aa8c84c-8156-40a9-9a7e-42886d4a6bf8.jpg",
+              "videoHeading": "Live with co founder & head designer of P-tal, Ms. Kirti Goel",
+              "expspeaks": true
+            }
+          },
+          "12c3f696-7dde-4d24-a2f4-471220d7ab7d": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=bT8en0RZjPQ",
+              "image": "shopify:\/\/shop_images\/Plantable-Anar.jpg",
+              "videoHeading": "Plantable seed crackers - Eco-friendly Diwali Gifts",
+              "expspeaks": false
+            }
+          },
+          "d8d2935e-68cb-4e9f-818f-1da4beed5ab0": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=4X80TvbcmSc",
+              "image": "shopify:\/\/shop_images\/Candle-Cover.jpg",
+              "videoHeading": "Amala Earth - 100% organic and pure soy wax candles",
+              "expspeaks": false
+            }
+          },
+          "33b40cd0-49a8-43bd-8133-bd2d84f7240c": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=B4rVGPAGedk",
+              "image": "shopify:\/\/shop_images\/Diwal-Gift-Box-Plantable-Ganesha-img.jpg",
+              "videoHeading": "Sow-and-grow handcrafted Ganesha idols",
+              "expspeaks": false
+            }
+          },
+          "9e31b2d1-e3f2-41ca-bdec-cc5e7458a717": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=fEJr--i6H7k",
+              "image": "shopify:\/\/shop_images\/Oili-routine.jpg",
+              "videoHeading": "Hair oiling routine - Organic hair oils and natural hair care products",
+              "expspeaks": false
+            }
+          },
+          "09e14dd8-91a5-481f-b974-418e11816815": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=1kSFAadikCE",
+              "image": "shopify:\/\/shop_images\/Live_cover.jpg",
+              "videoHeading": "Minimising Waste at Home - Live Session with Vani Murthy and Jia Singh",
+              "expspeaks": false
+            }
+          },
+          "e9eae960-76df-4df6-a78f-a734bea1775e": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=ZJGu4rTdZq4",
+              "image": "shopify:\/\/shop_images\/make-up.jpg",
+              "videoHeading": "Natural & cruelty-free makeup",
+              "expspeaks": false
+            }
+          },
+          "efe87481-da26-4b6c-b7f8-5ae1d0279e07": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=hhnugSOC26g",
+              "image": "shopify:\/\/shop_images\/Foot-soak.jpg",
+              "videoHeading": "Foot care at home",
+              "expspeaks": false
+            }
+          },
+          "53ec8ed0-7917-48d2-b71c-69a3a20a14dc": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/Jmw3j2nOE60",
+              "image": "shopify:\/\/shop_images\/maxresdefault.jpg",
+              "videoHeading": "Natural and earth-friendly self-care routine",
+              "expspeaks": false
+            }
+          },
+          "7aee12ea-a2bf-4daf-b8ed-bda2e7d2f944": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=igCaoB_2bSA",
+              "image": "shopify:\/\/shop_images\/Body-Scrub.jpg",
+              "videoHeading": "DIY body scrub | Easy recipe to exfoliate your skin",
+              "expspeaks": false
+            }
+          },
+          "ccf6fa99-4bbe-43ae-97ce-eb2d311c91d4": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=JbCpQYQ9dJ8",
+              "image": "shopify:\/\/shop_images\/Mala-Cheese_Making.png",
+              "videoHeading": "Vegan cheese making workshop with Mala Barua",
+              "expspeaks": false
+            }
+          },
+          "c8d86a71-4701-4aea-84a6-d4ddc090adad": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=vnQozwTx8kc",
+              "image": "shopify:\/\/shop_images\/Cheese_platter_compressed.jpg",
+              "videoHeading": "Vegan cheese recipe",
+              "expspeaks": false
+            }
+          },
+          "d76b0d3d-743b-43c0-bc4f-f9f359feb88a": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=b8YNeKox1F8",
+              "image": "shopify:\/\/shop_images\/Rose_cake_compressed.jpg",
+              "videoHeading": "Try this easy-to-follow rose cake recipe today! 🥮",
+              "expspeaks": false
+            }
+          },
+          "0eb38b6f-551d-4914-9c4c-d0551c6ecb54": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=megr3-gpNok",
+              "image": "shopify:\/\/shop_images\/Triphala_smoothie_compressed.jpg",
+              "videoHeading": "Triphala smoothie recipe",
+              "expspeaks": false
+            }
+          },
+          "523074fa-cc31-4d53-9cb3-51533bd33370": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=m1PSF-GrSmM",
+              "image": "shopify:\/\/shop_images\/Ashwagandha_milk_-_Compressed.jpg",
+              "videoHeading": "Ashwagandha milk recipe - Delicious tonic",
+              "expspeaks": false
+            }
+          },
+          "8ea8b45a-d90e-4261-a4fb-011e51d4d079": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=Snpxxbr21go",
+              "image": "shopify:\/\/shop_images\/pancakes_compressed.jpg",
+              "videoHeading": "Recipe - Beetroot & oats pancakes with eucalyptus honey 🥞",
+              "expspeaks": false
+            }
+          },
+          "6490cff0-6e8a-4507-8961-937c3ceb35bc": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=4H2-vThxl0M",
+              "image": "shopify:\/\/shop_images\/Amaranth_Porridge_compressed.jpg",
+              "videoHeading": "Recipe - Organic amaranth, honey, and nuts & seeds porridge",
+              "expspeaks": false
+            }
+          },
+          "0d320964-474b-49f6-865d-e33ee4ce0048": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=XMA7rZ12DFc",
+              "image": "shopify:\/\/shop_images\/Nut-Butter-2.jpg",
+              "videoHeading": "Recipe - Healthy & yummy nut butter",
+              "expspeaks": false
+            }
+          },
+          "11058bbd-fb59-4b8c-bea8-647653bc21c9": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=g2kc6-b-p7Y",
+              "image": "shopify:\/\/shop_images\/Immunity_tea_compressed.jpg",
+              "videoHeading": "Immunity boosting turmeric tea",
+              "expspeaks": false
+            }
+          },
+          "6070f96f-530b-4c1a-b391-1446b7998305": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=OM3Ar-vRKLs",
+              "image": "shopify:\/\/shop_images\/Butterfly_tea_compressed.jpg",
+              "videoHeading": "Butterfly Pea Tea",
+              "expspeaks": false
+            }
+          },
+          "6f6714d0-754e-423e-9b51-8f85d562526c": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=k15u4jGHxSQ",
+              "image": "shopify:\/\/shop_images\/Hibiscus_tea_compressed.jpg",
+              "videoHeading": "Caffeine-free Hibiscus Tea",
+              "expspeaks": false
+            }
+          },
+          "635e0dfd-d353-4584-b7f3-63508eb9249a": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=8pK1UK8_mPU",
+              "image": "shopify:\/\/shop_images\/Turmeric_ice_tea_compressed.jpg",
+              "videoHeading": "Recipe - Turmeric Iced Tea",
+              "expspeaks": false
+            }
+          },
+          "02e1720e-4ab4-4538-9a59-31fa3b7fba9f": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=EfI7JD4zswc",
+              "image": "shopify:\/\/shop_images\/Mindful_Tea.jpg",
+              "videoHeading": "Caffiene-free, natural, loose teas for mindfulness",
+              "expspeaks": false
+            }
+          },
+          "dd105a91-b3f2-49bb-b3a9-d06930e8e060": {
+            "type": "video",
+            "disabled": true,
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=_k1-Hjm3Vvo",
+              "image": "shopify:\/\/shop_images\/Tea_cup_compressed.jpg",
+              "videoHeading": "Tea time with Amala Earth",
+              "expspeaks": false
+            }
+          }
+        },
+        "block_order": [
+          "86e81609-a716-40cc-9dcf-1f8ee2e59507",
+          "9c82c6e1-adef-404c-8894-b9dc7184b3a2",
+          "7893f85c-692a-457e-9924-d6b15aeecc4f",
+          "d5fb67fc-f37f-4783-b600-b571825c241b",
+          "420aa8bf-4d9c-4922-a55d-cdc120a0bd51",
+          "233eb978-4850-4913-abaf-38bc12d805c4",
+          "c24b6143-4efb-4f13-94e2-a69e2c68419e",
+          "b7c1327c-07d5-4f90-9eac-a4d96d846ef6",
+          "cf811233-3539-4a3e-9cea-19b520da6553",
+          "165b2fd5-8534-4cc4-98df-58d507c30fd3",
+          "f9cd8315-3616-4b6b-9ae8-7a801f86b6a7",
+          "50482e36-c7ec-4947-8e0a-27e715d51e63",
+          "f41b29bf-d040-420e-9c09-70553adc52c7",
+          "24ed1f9c-00fa-41fc-8bc4-74a66edc8ddb",
+          "8921de12-ca66-408a-9bff-eea460a4e260",
+          "50edeab9-e914-4534-94f6-f191bab3793a",
+          "f8c2d2c4-d275-49d8-9480-bebf899bfc42",
+          "5b3e91a0-ace0-4226-99d9-1e26a502714f",
+          "307c4953-d725-47ac-9a0e-f8537b963525",
+          "bfd0dc0c-235e-4148-aead-a831cc130416",
+          "9fc30d01-4e34-47ea-834a-c810d008e530",
+          "90aa6ad9-2403-49a3-95ef-9cf64ab8ea0d",
+          "8a64f689-419d-47ac-aba8-20c3c141005d",
+          "6648bc24-259c-4348-b8dc-f0e9c962a289",
+          "f2122964-68f6-4984-810c-3a1ab2bf9c4a",
+          "d31868b2-88e7-4522-a4fe-438ef94cb2a5",
+          "98e4ad43-77df-43a8-9841-ca5db5b89890",
+          "77709d50-61d0-4cf5-8220-c6db7a8c2a44",
+          "6609caf5-f036-4ad0-9a38-c48614132be3",
+          "8df86c24-eec2-400c-bb39-1bbd799ca68c",
+          "104a488d-467f-4ee9-bb46-1242f18b0b96",
+          "62df0ead-f005-4491-8549-737b868c8954",
+          "365eb7dd-2a82-4a7b-9b35-e33fd5b0e24b",
+          "12c3f696-7dde-4d24-a2f4-471220d7ab7d",
+          "d8d2935e-68cb-4e9f-818f-1da4beed5ab0",
+          "33b40cd0-49a8-43bd-8133-bd2d84f7240c",
+          "9e31b2d1-e3f2-41ca-bdec-cc5e7458a717",
+          "09e14dd8-91a5-481f-b974-418e11816815",
+          "e9eae960-76df-4df6-a78f-a734bea1775e",
+          "efe87481-da26-4b6c-b7f8-5ae1d0279e07",
+          "53ec8ed0-7917-48d2-b71c-69a3a20a14dc",
+          "7aee12ea-a2bf-4daf-b8ed-bda2e7d2f944",
+          "ccf6fa99-4bbe-43ae-97ce-eb2d311c91d4",
+          "c8d86a71-4701-4aea-84a6-d4ddc090adad",
+          "d76b0d3d-743b-43c0-bc4f-f9f359feb88a",
+          "0eb38b6f-551d-4914-9c4c-d0551c6ecb54",
+          "523074fa-cc31-4d53-9cb3-51533bd33370",
+          "8ea8b45a-d90e-4261-a4fb-011e51d4d079",
+          "6490cff0-6e8a-4507-8961-937c3ceb35bc",
+          "0d320964-474b-49f6-865d-e33ee4ce0048",
+          "11058bbd-fb59-4b8c-bea8-647653bc21c9",
+          "6070f96f-530b-4c1a-b391-1446b7998305",
+          "6f6714d0-754e-423e-9b51-8f85d562526c",
+          "635e0dfd-d353-4584-b7f3-63508eb9249a",
+          "02e1720e-4ab4-4538-9a59-31fa3b7fba9f",
+          "dd105a91-b3f2-49bb-b3a9-d06930e8e060"
+        ],
+        "settings": {
+          "title": "Video Blogs",
+          "btn_text": "View all",
+          "video_link": "https:\/\/www.youtube.com\/channel\/UCsOUCPJYqGa4-lfPwOq8gEA\/videos"
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "enabled": false,
+          "home-page-only": false,
+          "timer": false,
+          "bgColor": "#1d1a1a",
+          "textColor": "#ffffff",
+          "text": "Use SHOP10 or SHOP15 to get rewarded for earth-friendly food choices. Click Here",
+          "link": "https:\/\/amala.earth\/collections\/earth-friendly-food-products",
+          "date": "August 7,2022: 11:59 pm"
+        }
+      },
+      "page-ethos": {
+        "type": "page-ethos",
+        "blocks": {
+          "d3ec4b10-87a9-4411-ba37-a6fd42dda66d": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Authentic.png",
+              "d_heading": "Authentic",
+              "d_details": "“Amala Earth bases itself on the promise to be true and to do our best to offer authenticity to the consumer. We aspire to build the trust of our fellow consumers as a reliable and authentic brand. Ethical practices strengthen the authenticity of our mission.”"
+            }
+          },
+          "ce2296ef-be5b-440b-8f70-7fb6431c6153": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Responsible.png",
+              "d_heading": "Responsible",
+              "d_details": "“We believe in inspiring and introducing our partners to choose responsibly, whether they are involved in producing, packaging or buying consumer products. We encourage informed choices, ensuring a positive impact on the environment.”"
+            }
+          },
+          "3136e86c-6f20-4406-bca4-83ddea7c8b01": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Local.png",
+              "d_heading": "Local",
+              "d_details": "\"Buying local supports communities at ground level. This is our way of connecting to our Indian heritage and reducing our carbon footprint. The world, today, demands that we look closely at our consumer behavioural patterns across all boards.\""
+            }
+          },
+          "ef5c3204-675e-4024-89a7-a69688585637": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Trustworthy.png",
+              "d_heading": "Trustworthy",
+              "d_details": "\"Our selection parameters allow us to identify entrepreneurs that are dedicated to delivering quality and building trust whilst moving towards a more earth-friendly approach. We support and guide sellers to work towards a more transparent and trustworthy process in terms of their product and packaging.\""
+            }
+          },
+          "56f29fd8-7426-4679-9e7e-b79e9b68aa69": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Concious_community.png",
+              "d_heading": "Conscious Community",
+              "d_details": "\"Amala Earth supports and promotes local farmers, artisans, craftsmen and other community clusters who produce handcrafted, handwoven and handmade products. By supporting community-driven and sustainable practices, we all become responsible for the health of our community and the environment.\""
+            }
+          }
+        },
+        "block_order": [
+          "d3ec4b10-87a9-4411-ba37-a6fd42dda66d",
+          "ce2296ef-be5b-440b-8f70-7fb6431c6153",
+          "3136e86c-6f20-4406-bca4-83ddea7c8b01",
+          "ef5c3204-675e-4024-89a7-a69688585637",
+          "56f29fd8-7426-4679-9e7e-b79e9b68aa69"
+        ],
+        "settings": {
+          "banner_image": "shopify:\/\/shop_images\/slide-brand.png",
+          "page_heading": "Our Ethos",
+          "content": "<p><br\/>At Amala Earth, our ethos is to be conscious and supportive of the welfare of the community as well as the environment. We curate products, materials and packaging that are already moving towards or aspiring to be more earth-friendly. We hope to build a platform of like-minded individuals driven by these values and make responsible choices in their lifestyle.<br\/><\/p>"
+        }
+      },
+      "16354151529a91ebb2": {
+        "type": "collection-flat",
+        "blocks": {
+          "12aef879-e4c8-4727-8737-37c2f976fca2": {
+            "type": "collection",
+            "settings": {
+              "collection_text": "Holistic Wellness",
+              "image": "shopify:\/\/shop_images\/holistic_wellness_4.png",
+              "link": "shopify:\/\/collections\/holistic-wellness",
+              "collection": "holistic-wellness"
+            }
+          },
+          "16354151529a91ebb2-2": {
+            "type": "collection",
+            "settings": {
+              "collection_text": "Ethically Sourced Gifts Hampers",
+              "image": "shopify:\/\/shop_images\/Ethically_Sourced_Gifts_Hampers_4bdcd276-a20b-4921-aaed-2bbc8b5f2510.jpg",
+              "link": "shopify:\/\/collections\/gifts",
+              "collection": "gifts"
+            }
+          },
+          "7a5f0bdf-c301-4e4f-b503-5e66319b42e6": {
+            "type": "collection",
+            "settings": {
+              "collection_text": "Pooja Essentials",
+              "image": "shopify:\/\/shop_images\/pooja_essentials_1.png",
+              "link": "shopify:\/\/collections\/pooja-essentials",
+              "collection": "pooja-essentials"
+            }
+          },
+          "16354151529a91ebb2-3": {
+            "type": "collection",
+            "settings": {
+              "collection_text": "Yoga and Meditation",
+              "image": "shopify:\/\/shop_images\/Yoga_essentials.jpg",
+              "link": "shopify:\/\/collections\/yoga-essentials",
+              "collection": "yoga-essentials"
+            }
+          },
+          "16354151529a91ebb2-0": {
+            "type": "collection",
+            "settings": {
+              "collection_text": "Eco-friendly Stationery",
+              "image": "shopify:\/\/shop_images\/Eco-Friendly_Stationery_1.jpg",
+              "link": "shopify:\/\/collections\/stationery",
+              "collection": "stationery"
+            }
+          },
+          "16354151529a91ebb2-1": {
+            "type": "collection",
+            "settings": {
+              "collection_text": "Cruelty-free Pet Care",
+              "image": "shopify:\/\/shop_images\/Organic_Pet_Care_f1fb7c92-5192-4f84-86ca-0fd2127369ca.jpg",
+              "link": "shopify:\/\/collections\/pet-care",
+              "collection": "pet-care"
+            }
+          }
+        },
+        "block_order": [
+          "12aef879-e4c8-4727-8737-37c2f976fca2",
+          "16354151529a91ebb2-2",
+          "7a5f0bdf-c301-4e4f-b503-5e66319b42e6",
+          "16354151529a91ebb2-3",
+          "16354151529a91ebb2-0",
+          "16354151529a91ebb2-1"
+        ],
+        "settings": {
+          "title": "Explore More",
+          "link_title": "View all",
+          "link": "shopify:\/\/collections",
+          "round_images": false,
+          "show_collection_title": true
+        }
+      },
+      "page-usp": {
+        "type": "page-usp",
+        "blocks": {
+          "aed451c1-205b-4c51-b98c-640358008eb9": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Healthy_and_Conscious_Living-01.png",
+              "d_heading": "Healthy and Conscious Living",
+              "d_details": "<p>“Amala Earth’s single-most purpose of being is to encourage healthy and conscious living by creating an inclusive platform of people who are keen to start the journey of transformation or those who are consciously in tune with nature.”<\/p>"
+            }
+          },
+          "686f1be0-8dc2-44f6-af34-c41be5460fe7": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Curated_Marketplace-01.png",
+              "d_heading": "A Curated Marketplace",
+              "d_details": "<p>\"We, at Amala Earth, are mindful of whom we partner with. Based on a definitive set of parameters, our team carefully chooses the brands that make this one-stop curated marketplace an enriching experience.\"<\/p>"
+            }
+          },
+          "176273f4-6ef7-419d-934b-fa65ff115b22": {
+            "type": "text",
+            "settings": {
+              "d_image": "shopify:\/\/shop_images\/Community_Focused_final-01.png",
+              "d_heading": "Conscious Community",
+              "d_details": "<p>AMALA is derived from the Sanskrit word amal which means ‘clean and pure’.  <\/p><p>At the core of everything that we do, our aim is to build a community that inspires responsible, earth-friendly choices. By creating expert content that educates people, this community, by example, will be the voice of a conscious way of living in kindness and compassion.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "aed451c1-205b-4c51-b98c-640358008eb9",
+          "686f1be0-8dc2-44f6-af34-c41be5460fe7",
+          "176273f4-6ef7-419d-934b-fa65ff115b22"
+        ],
+        "settings": {
+          "banner_image": "shopify:\/\/shop_images\/Final-banner.jpg",
+          "page_heading": "Amala Earth’s USPs",
+          "content": ""
+        }
+      },
+      "16396342995dc2dc5c": {
+        "type": "feature-category-with-image",
+        "blocks": {
+          "cb2f33df-91be-4a53-8b09-b8c27543157d": {
+            "type": "product",
+            "settings": {
+              "product": "handwoven-peach-maheshwari-silk-nurin-saree"
+            }
+          },
+          "f6c1cdb9-8e35-4ffd-aa0f-a0fd17daae29": {
+            "type": "product",
+            "settings": {
+              "product": "sad45-e"
+            }
+          },
+          "55ed93b9-7c1d-4804-805c-6ad4b01fab24": {
+            "type": "product",
+            "settings": {
+              "product": "kalp-cotton-kantha-weave-kurta-brown-kk543-080822"
+            }
+          },
+          "32948e70-5127-47e0-9dc3-a9c3cdfdeced": {
+            "type": "product",
+            "settings": {
+              "product": "ready-to-bali-dress"
+            }
+          },
+          "c6aa9052-d181-4cf8-a25d-6894e9c79a06": {
+            "type": "product",
+            "settings": {
+              "product": "handcrafted-peach-printed-flats-for-women"
+            }
+          },
+          "1f5c0833-d39b-4849-bdef-7193e194b25e": {
+            "type": "product",
+            "settings": {
+              "product": "dressfolk-cotton-silk-blouse-teal-green-2022-113-bl-24822"
+            }
+          },
+          "5e838e2a-09ea-4051-ba17-099af7817a78": {
+            "type": "product",
+            "settings": {
+              "product": "bow-square-linen-short-kurta-yellow-bskuhln0005-22822"
+            }
+          },
+          "df3edb2d-aef9-41dc-ac4d-b5cebdce3200": {
+            "type": "product",
+            "settings": {
+              "product": "handloom-cotton-orange-button-down-kurta-set"
+            }
+          },
+          "cc40f39b-1adf-496f-adc6-92bfa9e9c8f4": {
+            "type": "product",
+            "settings": {
+              "product": "gifts-for-her-recycled-brass-gold-toned-braided-chain"
+            }
+          },
+          "e7916f95-4ce7-4050-9606-da7f137c7103": {
+            "type": "product",
+            "settings": {
+              "product": "handcrafted-pink-cotton-linen-solid-gathered-dress-with-gather-details"
+            }
+          },
+          "3010240f-eb48-47a1-8dd4-4134ac48d9aa": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "handcrafted-tangerine-tissue-silk-ensemble-with-dual-toned-silk-chanderi-dupatta"
+            }
+          },
+          "7f5fcf4d-8a89-4cf6-a3cc-b7aacf05a9cc": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "pure-cotton-tiered-dress-orange"
+            }
+          },
+          "1d655bb1-50c5-4305-a557-9d348a2a0e7c": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "upcycled-cork-brown-women-flat-sandals"
+            }
+          },
+          "1ae41085-b5ad-4ec9-b68e-ab82b85658b5": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "kalp-cotton-angrakha-set-purple-kk-ss-2027-080822"
+            }
+          },
+          "6e14eac0-7cd8-41fb-8bcb-6ada8239a8cb": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "sadgi-brass-necklace-set-gold-plated-sad55_ns-25822"
+            }
+          },
+          "979ba6ff-6226-427f-9728-523650e80cf9": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "handspun-tencel-yellow-floral-print-top"
+            }
+          },
+          "77a4ed87-c880-488c-9b00-b819e2320883": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "zebein-linen-v-neck-shirt-pink-zeb22002-pamela-pink-26722"
+            }
+          },
+          "c07a3649-f275-4ead-9153-cfac87c61651": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": "handloom-chanderi-yellow-saree"
+            }
+          },
+          "dfa7b360-745f-4b03-ae4f-6a8904c28ec1": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": ""
+            }
+          },
+          "fd2916a9-3828-4b09-9f0a-189582f22691": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": ""
+            }
+          },
+          "7323d07a-f1ba-4e95-811a-da6d20347104": {
+            "type": "product",
+            "disabled": true,
+            "settings": {
+              "product": ""
+            }
+          }
+        },
+        "block_order": [
+          "cb2f33df-91be-4a53-8b09-b8c27543157d",
+          "f6c1cdb9-8e35-4ffd-aa0f-a0fd17daae29",
+          "55ed93b9-7c1d-4804-805c-6ad4b01fab24",
+          "32948e70-5127-47e0-9dc3-a9c3cdfdeced",
+          "c6aa9052-d181-4cf8-a25d-6894e9c79a06",
+          "1f5c0833-d39b-4849-bdef-7193e194b25e",
+          "5e838e2a-09ea-4051-ba17-099af7817a78",
+          "df3edb2d-aef9-41dc-ac4d-b5cebdce3200",
+          "cc40f39b-1adf-496f-adc6-92bfa9e9c8f4",
+          "e7916f95-4ce7-4050-9606-da7f137c7103",
+          "3010240f-eb48-47a1-8dd4-4134ac48d9aa",
+          "7f5fcf4d-8a89-4cf6-a3cc-b7aacf05a9cc",
+          "1d655bb1-50c5-4305-a557-9d348a2a0e7c",
+          "1ae41085-b5ad-4ec9-b68e-ab82b85658b5",
+          "6e14eac0-7cd8-41fb-8bcb-6ada8239a8cb",
+          "979ba6ff-6226-427f-9728-523650e80cf9",
+          "77a4ed87-c880-488c-9b00-b819e2320883",
+          "c07a3649-f275-4ead-9153-cfac87c61651",
+          "dfa7b360-745f-4b03-ae4f-6a8904c28ec1",
+          "fd2916a9-3828-4b09-9f0a-189582f22691",
+          "7323d07a-f1ba-4e95-811a-da6d20347104"
+        ],
+        "settings": {
+          "collection": "",
+          "products_count": 22,
+          "background": "#f8f4f0",
+          "text_color": "#000000",
+          "title": "Responsible Fashion",
+          "content": "Made with upcycled, handwoven, natural fabrics, these clothes are comfortable, high quality and a great choice.",
+          "show_sold_out": false,
+          "button_background": "#b89c7d",
+          "button_text_color": "#ffffff",
+          "button_text": "See more products",
+          "button_link": "shopify:\/\/collections\/responsible-fashion"
+        }
+      },
+      "amala-shopify-recommendations": {
+        "type": "amala-shopify-recommendations",
+        "settings": {
+          "title": "Amala Earth Recommendations",
+          "enabled": true,
+          "products_count": 5,
+          "layout": "vertical"
+        }
+      },
+      "searchtap": {
+        "type": "searchtap",
+        "settings": {
+        }
+      },
+      "view-similar": {
+        "type": "view-similar",
+        "settings": {
+          "title": "View Similar Products",
+          "enabled": true,
+          "products_count": 24,
+          "layout": "vertical"
+        }
+      },
+      "collection-bottom-description": {
+        "type": "collection-bottom-description",
+        "settings": {
+        }
+      },
+      "seo-content": {
+        "type": "seo-content",
+        "settings": {
+        }
+      },
+      "video-slider": {
+        "type": "video-slider",
+        "blocks": {
+          "dfbfdf5b-07ea-4f11-8ba7-3a4a24c79acd": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/qBocU25C_Hk",
+              "image": "shopify:\/\/shop_images\/3121a56d-fa71-4585-8c1c-7b2bd403a1d8_1.jpg",
+              "videoHeading": "",
+              "expspeaks": false
+            }
+          },
+          "535de79e-7952-45d9-a3ab-940c24e40736": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/L7kkPlQDTJA",
+              "image": "shopify:\/\/shop_images\/Accessories_300x300_crop_center_9181c1c0-e657-44d4-b399-10ce43a0cbf6.jpg",
+              "videoHeading": "",
+              "expspeaks": false
+            }
+          },
+          "e5ae019e-cc9e-4010-b458-7b0f68ed3667": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/Tx1TMrh0_mU",
+              "image": "shopify:\/\/shop_images\/3_2.png",
+              "videoHeading": "",
+              "expspeaks": false
+            }
+          },
+          "036b9b60-1ef3-4ab1-8db2-0773e77ee845": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/rTwLjzmIxd4",
+              "image": "shopify:\/\/shop_images\/YT_thumbnail_1_300x300_crop_center_521a89b7-1f50-480c-b500-656de9cbbb80.png",
+              "videoHeading": "",
+              "expspeaks": false
+            }
+          }
+        },
+        "block_order": [
+          "dfbfdf5b-07ea-4f11-8ba7-3a4a24c79acd",
+          "535de79e-7952-45d9-a3ab-940c24e40736",
+          "e5ae019e-cc9e-4010-b458-7b0f68ed3667",
+          "036b9b60-1ef3-4ab1-8db2-0773e77ee845"
+        ],
+        "settings": {
+          "title": "Videos",
+          "btn_text": "View all",
+          "video_link": "https:\/\/www.youtube.com\/channel\/UCsOUCPJYqGa4-lfPwOq8gEA\/videos"
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "161355443602481f80",
+      "16270390826b873c97",
+      "161174908635c9e8d4",
+      "1631544653cd7e2ad4",
+      "16200241989001c5a4",
+      "collection-list",
+      "16396342995dc2dc5c",
+      "1632982418c8f90198",
+      "1542984811767",
+      "1610017820736263b9",
+      "1610017862fa30940c",
+      "16118118216b5a31c5",
+      "1627044427d1305f29",
+      "162667572687666960",
+      "1631544470ae25b516",
+      "1627043555ca6795e0",
+      "1612248082b8d8d149",
+      "161001793655f9a4f7",
+      "1542984882560",
+      "16354151529a91ebb2",
+      "1612162638130d3aa6",
+      "1613721295b5c3b2f5",
+      "1613123892349d07be",
+      "16123441178fc1291a"
+    ],
+    "blocks": {
+      "573254258818049612": {
+        "type": "shopify:\/\/apps\/crazy-egg\/blocks\/app-embed\/7ea73823-6ad9-4252-a63e-088397d54aed",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Metal": {
+      "heading_color": "#1e2d7d",
+      "text_color": "#677279",
+      "accent_color": "#00badb",
+      "link_color": "#00badb",
+      "border_color": "#e1e3e4",
+      "background": "#f3f5f6",
+      "secondary_background": "#ffffff",
+      "error_color": "#ff0000",
+      "success_color": "#00aa00",
+      "primary_button_background": "#00badb",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#1e2d7d",
+      "secondary_button_text_color": "#ffffff",
+      "header_background": "#1e2d7d",
+      "header_text_color": "#ffffff",
+      "header_light_text_color": "#a3afef",
+      "header_accent_color": "#00badb",
+      "product_on_sale_accent": "#ee0000",
+      "product_in_stock_color": "#008a00",
+      "product_low_stock_color": "#ee0000",
+      "product_sold_out_color": "#8a9297",
+      "product_label_1_background": "#008a00",
+      "product_label_2_background": "#00a500",
+      "product_star_color": "#ffbd00",
+      "footer_background_color": "#f3f5f6",
+      "footer_heading_text_color": "#1e2d7d",
+      "footer_body_text_color": "#677279",
+      "footer_accent_color": "#00badb",
+      "base_text_font_size": 16,
+      "heading_font": "din_next_n5",
+      "text_font": "din_next_n4",
+      "underline_links": true,
+      "animation_image_zoom": true,
+      "search_mode": "product,article",
+      "show_vendor": true,
+      "show_secondary_image": true,
+      "product_price_position": "after_title",
+      "product_image_size": "natural",
+      "show_discount": true,
+      "discount_mode": "saving",
+      "show_color_swatch": false,
+      "show_inventory_quantity": false,
+      "low_inventory_threshold": 0,
+      "show_reviews_badge": false,
+      "cart_type": "drawer",
+      "cart_empty_button_link": "shopify:\/\/collections\/all",
+      "cart_show_checkout_button": true,
+      "cart_show_free_shipping_threshold": false,
+      "cart_free_shipping_threshold": "50",
+      "share_image": "",
+      "social_facebook": "",
+      "social_twitter": "",
+      "social_google_plus": "",
+      "social_pinterest": "",
+      "social_instagram": "",
+      "social_vimeo": "",
+      "social_tumblr": "",
+      "social_youtube": "",
+      "social_linkedin": "",
+      "social_snapchat": "",
+      "social_fancy": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#00badb",
+      "checkout_button_color": "#00badb",
+      "checkout_error_color": "#ff0000",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 140,
+            "mobile_logo_max_width": 100,
+            "navigation_menu": "main-menu",
+            "desktop_navigation_layout": "inline",
+            "desktop_navigation_open_trigger": "hover",
+            "navigation_phone_number": "Call us 000-000-0000",
+            "navigation_email": "info@yourwebsite.com",
+            "search_menu": ""
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "mobile_image": "",
+                "text_color": "#ffffff",
+                "title": "Tell your story",
+                "content": "Tell your story",
+                "content_position": "bottomLeft",
+                "button_background": "#ffffff",
+                "button_text_color": "#000000",
+                "button_text": "Button",
+                "link": ""
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "mobile_image": "",
+                "text_color": "#ffffff",
+                "title": "Tell your story",
+                "content": "Tell your story",
+                "content_position": "bottomLeft",
+                "button_background": "#ffffff",
+                "button_text_color": "#000000",
+                "button_text": "Button",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "edge_to_edge": true,
+            "section_size": "preserve_ratio",
+            "cycle_speed": 5
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-3": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-4": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-5": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2",
+            "collection-3",
+            "collection-4",
+            "collection-5"
+          ],
+          "settings": {
+            "title": "Our collections",
+            "link_title": "View all",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "product": "",
+            "title": "Featured product",
+            "selector_mode": "block",
+            "color_mode": "color",
+            "low_inventory_threshold": 0,
+            "zoom_effect": "outside",
+            "carousel_effect": "fade"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "collection_image_size": "small",
+            "default_view_layout": "grid",
+            "show_quick_view": "list",
+            "show_quick_buy": "list",
+            "quick_links": "",
+            "filter_type": "tag"
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "title": "Recently viewed"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "color",
+            "low_inventory_threshold": 0,
+            "zoom_effect": "outside",
+            "carousel_effect": "fade",
+            "tab_page_1_handle": "",
+            "tab_page_2_handle": "",
+            "tab_page_3_handle": "",
+            "custom_security_badge": ""
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "background": "#1e2d7d",
+            "text_color": "#ffffff",
+            "text": "Announce something here",
+            "link": "",
+            "newsletter_button": "Subscribe & Save",
+            "newsletter_title": "Newsletter",
+            "newsletter_content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+          }
+        },
+        "1542984811767": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "products_count": 12,
+            "layout": "vertical",
+            "link_title": "View all"
+          }
+        },
+        "1542984842027": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Newsletter",
+            "content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+          }
+        },
+        "1542984882560": {
+          "type": "blog-posts",
+          "settings": {
+            "blog": "news",
+            "title": "Blog posts"
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "1542984811767",
+        "collection-list",
+        "1542984842027",
+        "featured-product",
+        "1542984882560"
+      ]
+    },
+    "Wood": {
+      "heading_color": "#3a2a2f",
+      "text_color": "#3a2a2f",
+      "accent_color": "#ff6128",
+      "link_color": "#ff6128",
+      "border_color": "#e7e2de",
+      "background": "#f7f4f2",
+      "secondary_background": "#ffffff",
+      "error_color": "#f71b1b",
+      "success_color": "#48b448",
+      "primary_button_background": "#ff6128",
+      "primary_button_text_color": "#ffffff",
+      "secondary_button_background": "#3a2a2f",
+      "secondary_button_text_color": "#ffffff",
+      "header_background": "#3a2a2f",
+      "header_text_color": "#ffffff",
+      "header_light_text_color": "#e9e2dd",
+      "header_accent_color": "#ff6128",
+      "product_on_sale_accent": "#ee0000",
+      "product_in_stock_color": "#008a00",
+      "product_low_stock_color": "#ee0000",
+      "product_sold_out_color": "#d1d1d4",
+      "product_label_1_background": "#ff6128",
+      "product_label_2_background": "#a95ebe",
+      "product_star_color": "#ffb647",
+      "footer_background_color": "#f7f4f2",
+      "footer_heading_text_color": "#3a2a2f",
+      "footer_body_text_color": "#3a2a2f",
+      "footer_accent_color": "#ff6128",
+      "base_text_font_size": 15,
+      "heading_font": "itc_avant_garde_gothic_n5",
+      "text_font": "basic_commercial_n4",
+      "underline_links": true,
+      "animation_image_zoom": true,
+      "search_mode": "product,article,page",
+      "show_vendor": true,
+      "show_secondary_image": true,
+      "show_discount": true,
+      "discount_mode": "percentage",
+      "product_price_position": "after_title",
+      "product_image_size": "square",
+      "show_color_swatch": false,
+      "show_inventory_quantity": true,
+      "low_inventory_threshold": 1,
+      "show_reviews_badge": false,
+      "cart_type": "drawer",
+      "cart_empty_button_link": "shopify:\/\/collections\/all",
+      "cart_show_checkout_button": true,
+      "cart_show_free_shipping_threshold": true,
+      "cart_free_shipping_threshold": "50",
+      "checkout_logo_position": "center",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#f7f4f2",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#ff6128",
+      "checkout_button_color": "#ff6128",
+      "checkout_error_color": "#f71b1b",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 140,
+            "mobile_logo_max_width": 100,
+            "navigation_menu": "main-menu",
+            "desktop_navigation_layout": "inline",
+            "desktop_navigation_open_trigger": "hover",
+            "navigation_phone_number": "Call us 000-000-0000",
+            "navigation_email": "info@yourwebsite.com",
+            "search_menu": ""
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "text",
+              "settings": {
+                "title": "About the shop",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>"
+              }
+            },
+            "footer-1": {
+              "type": "links",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_social_media": true,
+            "show_payment_icons": true
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slide-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "mobile_image": "",
+                "text_color": "#ffffff",
+                "title": "Tell your story",
+                "content": "Tell your story",
+                "content_position": "bottomLeft",
+                "button_background": "#ffffff",
+                "button_text_color": "#000000",
+                "button_text": "Button",
+                "link": ""
+              }
+            },
+            "slide-1": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "mobile_image": "",
+                "text_color": "#ffffff",
+                "title": "Tell your story",
+                "content": "Tell your story",
+                "content_position": "bottomLeft",
+                "button_background": "#ffffff",
+                "button_text_color": "#000000",
+                "button_text": "Button",
+                "link": ""
+              }
+            }
+          },
+          "block_order": [
+            "slide-0",
+            "slide-1"
+          ],
+          "settings": {
+            "edge_to_edge": true,
+            "section_size": "preserve_ratio",
+            "cycle_speed": 5
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-2": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-3": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-4": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "collection-5": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "collection-1",
+            "collection-2",
+            "collection-3",
+            "collection-4",
+            "collection-5"
+          ],
+          "settings": {
+            "title": "Our collections",
+            "link_title": "View all",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "collection_image_size": "small",
+            "default_view_layout": "grid",
+            "show_quick_buy": "list",
+            "show_quick_view": "list",
+            "quick_links": "",
+            "filter_type": "tag"
+          }
+        },
+        "recently-viewed-products": {
+          "type": "recently-viewed-products",
+          "settings": {
+            "title": "Recently viewed"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "color",
+            "zoom_effect": "outside",
+            "carousel_effect": "fade",
+            "low_inventory_threshold": 0,
+            "tab_page_1_handle": "",
+            "tab_page_2_handle": "",
+            "tab_page_3_handle": "",
+            "custom_security_badge": ""
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+          }
+        },
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "settings": {
+            "background": "#3a2a2f",
+            "text_color": "#ffffff",
+            "text": "Announce something here",
+            "link": "",
+            "newsletter_button": "Subscribe & Save",
+            "newsletter_title": "Newsletter",
+            "newsletter_content": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+          }
+        },
+        "1542984811767": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "",
+            "title": "Featured collection",
+            "products_count": 12,
+            "layout": "vertical",
+            "link_title": "View all"
+          }
+        },
+        "1550833441117": {
+          "type": "collection-with-image",
+          "settings": {
+          }
+        },
+        "1555314133560": {
+          "type": "promotion-list",
+          "blocks": {
+            "1555314133560-0": {
+              "type": "item",
+              "settings": {
+                "image": "",
+                "show_overlay": false,
+                "stretch_image": false,
+                "background": "#6f42ef",
+                "text_color": "#ffffff",
+                "title": "Your heading",
+                "content": "Tell more about your product, collection...",
+                "button_background": "#ffffff",
+                "button_text_color": "#6f42ef",
+                "button_text": "Learn more",
+                "button_link": ""
+              }
+            },
+            "1555314133560-1": {
+              "type": "item",
+              "settings": {
+                "image": "",
+                "show_overlay": false,
+                "stretch_image": false,
+                "background": "#fc2a68",
+                "text_color": "#ffffff",
+                "title": "Your heading",
+                "content": "Tell more about your product, collection...",
+                "button_background": "#ffffff",
+                "button_text_color": "#fc2a68",
+                "button_text": "Learn more",
+                "button_link": ""
+              }
+            },
+            "1555314133560-2": {
+              "type": "item",
+              "settings": {
+                "image": "",
+                "show_overlay": false,
+                "stretch_image": false,
+                "background": "#26c1ce",
+                "text_color": "#ffffff",
+                "title": "Your heading",
+                "content": "Tell more about your product, collection...",
+                "button_background": "#ffffff",
+                "button_text_color": "#26c1ce",
+                "button_text": "Learn more",
+                "button_link": ""
+              }
+            }
+          },
+          "block_order": [
+            "1555314133560-0",
+            "1555314133560-1",
+            "1555314133560-2"
+          ],
+          "settings": {
+            "expand_items": false,
+            "section_size": "medium",
+            "stack_mobile": false
+          }
+        },
+        "1542984882560": {
+          "type": "blog-posts",
+          "settings": {
+            "blog": "news",
+            "title": "Blog posts"
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "1542984811767",
+        "1555314133560",
+        "collection-list",
+        "1550833441117",
+        "1542984882560"
+      ]
+    }
+  }
+}

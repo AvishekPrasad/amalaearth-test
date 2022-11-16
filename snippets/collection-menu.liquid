@@ -1,0 +1,61 @@
+{% assign coll = collection.url %}
+<ul class="collection-scrollabale-menu">
+{% for link in linklists.main-menu.links %}
+  {% assign semititle = link.title %}
+  {% assign semiurl = link.url %}
+  {% if link.links.size > 0 %}
+      {% for semi_link in link.links %}
+          {% if semi_link.url == 'https://amala.earth/pages/diwali' %}
+              {% assign semititle = semi_link.title %}
+              {% assign semiurl = '/collections/diwali' %}
+              {% break %}
+          {% else %}
+              {% if semi_link.url == coll %}
+                  {% assign semititle = semi_link.title %}
+                  {% assign semiurl = semi_link.url %}
+                  {% break %}
+              {% endif %}
+          {% endif %}
+      {% endfor %}
+  {% endif %}
+  <li class="collection-menu-item {%if coll == semiurl %}show active {% endif %} {{ semititle | handle}}"><a href= "{{ semiurl }}">{{ semititle }}</a>
+    <ul class="collection-scrollabale-submenu">
+  {% if link.links.size > 0 %}
+      {% for semi_link in link.links %}
+          {% if semi_link.url == coll or semi_link.url == 'https://amala.earth/pages/diwali' %}
+              {% for more_semi_link in semi_link.links %}
+                  <li class="collection-submenu-item {%if coll == more_semi_link.url %}active{% endif %}" data-title="{{ more_semi_link.title | handle}}"><a href="{{more_semi_link.url}}">{{more_semi_link.title}}</a></li>
+              {% endfor %}
+          {% endif %}
+      {% endfor %}
+  {% else %}
+      {%- for sub_link in link.links -%}
+          <li class="collection-submenu-item {%if coll == sub_link.url %}active{% endif %}" data-title="{{ link.title | handle}}"><a href="{{sub_link.url}}">{{sub_link.title}}</a></li>
+      {% endfor %}
+  {% endif %}
+    </ul>
+    </li>
+{% endfor %}
+</ul>
+<style>
+  
+  .collection-menu-item:not(.show){display:none;}
+  :where(.collection-scrollabale-submenu, .collection-scrollabale-menu){list-style:none;}
+  .collection-scrollabale-menu{overflow:hidden;}
+  .collection-scrollabale-menu{overflow-x:auto;}
+  .collection-menu-item{display:flex}
+  .collection-scrollabale-submenu{display:flex;}
+  .collection-menu-item a{display:block;padding:5px 10px; white-space:nowrap; color:#777;}
+  .collection-menu-item.active > a{color:#111; border-bottom:3px solid #b89c7d;font-weight:bold;}
+  .collection-menu-item li.active a{color:#111; border-bottom:3px solid #b89c7d;font-weight:bold;}
+  @media(max-width:768px){
+    .col-menu-wrapper {
+      background-color:#fff;
+      position:sticky;
+      top:52px;
+      z-index:4;
+    }
+    .collection header .collection__meta .collection__title{font-size:18px; font-weight:500;}
+    .collection header .collection__description{font-size:12px;}
+  }
+</style>

@@ -1,0 +1,49 @@
+{% if product.metafields.custom.product_reviews != blank %}
+<section class="review-section">
+  <div class="container">
+    <div class="heading-bx">
+      <h3 class="section__title">{{ section.settings.sec_head }}<span class="line-heading"></span></h3>
+    </div>
+  </div>
+  <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/tree-branch-top.png?v=1657378671" class="tree-branch-top">
+  <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/tree-branch-bottom.png?v=1657378491" class="tree-branch-bottom">
+  <div class="review-slider slider-arrow">
+   {% for item in product.metafields.custom.product_reviews.value %}
+    <div class="review-cards-item">
+      <h3>{{ item.review }}</h3>
+      <div class="rating-bx">
+        <div class="star-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>{{ item.namein }}</h4>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Reviews PDP",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sec_head",
+        "label" : "Section Heading",
+        "default" : "Reviews"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

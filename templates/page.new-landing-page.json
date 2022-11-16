@@ -1,0 +1,1115 @@
+{
+  "sections": {
+    "festival-landings-page": {
+      "type": "Main-banner",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/grid_lines.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/Rectangle_45_edb89e68-6697-4287-bd7a-c144253339aa.png",
+        "desktop_banner_title": "Lorem ipsum dolor sit amet",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "Lorem ipsum dolor sit amet",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "shop Now",
+        "color_button": "#ffffff",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "2205d5ab-0f89-4601-a377-bcb2ada4443b": {
+      "type": "custom-grid",
+      "blocks": {
+        "8e2023f1-3fe4-4221-8bc5-32df0be7d02e": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_5.png",
+            "title": "Gluten-free",
+            "block_button_url": ""
+          }
+        },
+        "074bee1b-a4a9-4606-b566-330343354918": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_4.png",
+            "title": "High protein",
+            "block_button_url": ""
+          }
+        },
+        "1a06776b-e9c7-4514-888a-c5b9aeaba3cd": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_3.png",
+            "title": "Gluten-free3",
+            "block_button_url": ""
+          }
+        },
+        "515cefbe-fbe6-45bd-b991-bec4056eccb1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_2.png",
+            "title": "High protein",
+            "block_button_url": ""
+          }
+        },
+        "9f6d3727-b1be-42f1-b393-403b7c880183": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_1.png",
+            "title": "Gluten-free5",
+            "block_button_url": ""
+          }
+        },
+        "71bbafef-86b3-4d39-83d7-fbf4aff04673": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165.png",
+            "title": "Gluten-free6",
+            "block_button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "8e2023f1-3fe4-4221-8bc5-32df0be7d02e",
+        "074bee1b-a4a9-4606-b566-330343354918",
+        "1a06776b-e9c7-4514-888a-c5b9aeaba3cd",
+        "515cefbe-fbe6-45bd-b991-bec4056eccb1",
+        "9f6d3727-b1be-42f1-b393-403b7c880183",
+        "71bbafef-86b3-4d39-83d7-fbf4aff04673"
+      ],
+      "settings": {
+      }
+    },
+    "b9eb933f-f6f5-419d-a635-22a4ed1a0fad": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "fc68cfd2-1b54-497b-a923-a882bc2b07ef": {
+          "type": "Product",
+          "settings": {
+            "product": "10-plantable-seed-balls-with-okra-ladyfinger-seeds-beej-balls"
+          }
+        },
+        "b787e12f-b5a4-4be3-8226-28b7ee8d6a4f": {
+          "type": "Product",
+          "settings": {
+            "product": "10-plantable-seed-balls-with-sunflower-seeds-beej-balls"
+          }
+        },
+        "d18c5626-6546-4c77-a845-3d063696afc2": {
+          "type": "Product",
+          "settings": {
+            "product": "100-natural-hemp-trail-mix-seeds-250gm"
+          }
+        },
+        "dcd3710a-4681-4ac1-9dc6-289b387d0cc9": {
+          "type": "Product",
+          "settings": {
+            "product": "100-avocado-butter-200-ml"
+          }
+        },
+        "0dc84543-5fe7-4920-936e-81b9063f3dd9": {
+          "type": "Product",
+          "settings": {
+            "product": "100-organic-cotton-jersey-woodland-print-gown"
+          }
+        },
+        "9f2d0276-6a1e-48b5-beeb-c9491bda8645": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-blue-glider-print-baby-crib-set"
+          }
+        }
+      },
+      "block_order": [
+        "fc68cfd2-1b54-497b-a923-a882bc2b07ef",
+        "b787e12f-b5a4-4be3-8226-28b7ee8d6a4f",
+        "d18c5626-6546-4c77-a845-3d063696afc2",
+        "dcd3710a-4681-4ac1-9dc6-289b387d0cc9",
+        "0dc84543-5fe7-4920-936e-81b9063f3dd9",
+        "9f2d0276-6a1e-48b5-beeb-c9491bda8645"
+      ],
+      "settings": {
+        "title1": "Amala Earth",
+        "title2": "Plant-based",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "603f6341-e9b1-4cba-88cb-c06df4b91aff": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "e29b677a-1249-48dd-be10-8e119f5d9252": {
+          "type": "Product",
+          "settings": {
+            "product": "10-plantable-seed-balls-with-tomato-seeds-beej-balls"
+          }
+        },
+        "d9f63216-a4fe-483c-bed9-45c637437156": {
+          "type": "Product",
+          "settings": {
+            "product": "10-plantable-seed-balls-with-vinca-flower-seeds-beej-balls"
+          }
+        },
+        "2a152651-381b-4681-8b08-414ca864260e": {
+          "type": "Product",
+          "settings": {
+            "product": "100-organic-cotton-jersey-woodland-print-gown"
+          }
+        },
+        "0bd47416-91ba-4a10-963b-d5abd246238d": {
+          "type": "Product",
+          "settings": {
+            "product": "petal-home-100-cotton-abstract-print-table-runner-blue-ph-tbr-gbb-011-5922"
+          }
+        },
+        "d86e5afd-34e5-4264-91eb-ddc82f284be6": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-blue-glider-print-baby-crib-set"
+          }
+        },
+        "e6f43079-85e6-4329-9740-976efecbbedf": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-peach-animal-print-baby-crib-set"
+          }
+        }
+      },
+      "block_order": [
+        "e29b677a-1249-48dd-be10-8e119f5d9252",
+        "d9f63216-a4fe-483c-bed9-45c637437156",
+        "2a152651-381b-4681-8b08-414ca864260e",
+        "0bd47416-91ba-4a10-963b-d5abd246238d",
+        "d86e5afd-34e5-4264-91eb-ddc82f284be6",
+        "e6f43079-85e6-4329-9740-976efecbbedf"
+      ],
+      "settings": {
+        "title1": "Amala Earth",
+        "title2": "Gluten-free",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "2b6e3093-77a8-43a7-b3ce-76dab50e0f22": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "ac685713-d606-4392-a3ea-190ac24e6314": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/JoyfulHome_240x240_2_5.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Seeds 1",
+            "second_block_url": ""
+          }
+        },
+        "7ac4c567-5d85-4f4a-9aac-97e6cb296564": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_5.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Seeds 2",
+            "second_block_url": ""
+          }
+        },
+        "c8bf4cee-e860-4db4-8422-95ffc0aa1e25": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1_7.png",
+            "block_two_subtitle": "Power-packed",
+            "title": "Oil 1",
+            "second_block_url": ""
+          }
+        },
+        "289589e2-1996-4693-8836-54bafcf0e33c": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_4.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Oil 2",
+            "second_block_url": ""
+          }
+        },
+        "12458d01-85c6-43a4-af94-abfc3b7b0559": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1_6.png",
+            "block_two_subtitle": "Organic",
+            "title": "Spices 1",
+            "second_block_url": ""
+          }
+        },
+        "84cdd711-7ac8-49fd-a949-3fb571a3f3a9": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_3.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Spices 2",
+            "second_block_url": ""
+          }
+        },
+        "14cd96d6-b839-44fe-b54d-6ead42cd34fb": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_4.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Spices 4",
+            "second_block_url": ""
+          }
+        },
+        "0efe3b8f-b93f-4f1b-b0ac-a97ed8c6834e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1_7.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Spices 7",
+            "second_block_url": ""
+          }
+        },
+        "04a3b7a0-c8e9-400f-a60c-1fff3147f322": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_5.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Spices 8",
+            "second_block_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "ac685713-d606-4392-a3ea-190ac24e6314",
+        "7ac4c567-5d85-4f4a-9aac-97e6cb296564",
+        "c8bf4cee-e860-4db4-8422-95ffc0aa1e25",
+        "289589e2-1996-4693-8836-54bafcf0e33c",
+        "12458d01-85c6-43a4-af94-abfc3b7b0559",
+        "84cdd711-7ac8-49fd-a949-3fb571a3f3a9",
+        "14cd96d6-b839-44fe-b54d-6ead42cd34fb",
+        "0efe3b8f-b93f-4f1b-b0ac-a97ed8c6834e",
+        "04a3b7a0-c8e9-400f-a60c-1fff3147f322"
+      ],
+      "settings": {
+      }
+    },
+    "d2b015a5-60e7-4897-81a2-b78a61b96d21": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "12405569-74c4-47d0-91d6-9aa1e900eae6": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_7.png",
+            "title": "plant 1",
+            "url_link": ""
+          }
+        },
+        "4f5568c0-4435-48b2-8ef3-6399d8536095": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_6.png",
+            "title": "plant 2",
+            "url_link": ""
+          }
+        },
+        "074dc969-30d6-4082-a3e9-e977211d6b32": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_5.png",
+            "title": "plant 3",
+            "url_link": ""
+          }
+        },
+        "7bc47bff-0da4-400c-9e64-0ff3e79e04b7": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_3.png",
+            "title": "plant 4",
+            "url_link": ""
+          }
+        },
+        "5b6e8234-3140-42b0-882e-a5562fd8f5f8": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_1.png",
+            "title": "plant 5",
+            "url_link": ""
+          }
+        },
+        "3844f6f4-7feb-44c8-81e4-6ec0a5d018c2": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "plant 6",
+            "url_link": ""
+          }
+        },
+        "aaa65749-d993-4cd2-bb4b-c709db1577ea": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "plant 7",
+            "url_link": ""
+          }
+        },
+        "926f827e-75e2-42c8-90d4-d83784d0cdb1": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "plant 8",
+            "url_link": ""
+          }
+        },
+        "c0ac79fd-77c2-475c-b43b-dfd9eb7f038e": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "plant 9",
+            "url_link": ""
+          }
+        },
+        "cb91c7ee-5ede-4be2-97bf-0007b9174903": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "plant 10",
+            "url_link": ""
+          }
+        },
+        "c77685bf-1be1-4f93-aa6b-ea908d4fae15": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "plant 11",
+            "url_link": ""
+          }
+        },
+        "0a4dcd12-13f0-4402-94a2-905736324b40": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "plant 12",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "12405569-74c4-47d0-91d6-9aa1e900eae6",
+        "4f5568c0-4435-48b2-8ef3-6399d8536095",
+        "074dc969-30d6-4082-a3e9-e977211d6b32",
+        "7bc47bff-0da4-400c-9e64-0ff3e79e04b7",
+        "5b6e8234-3140-42b0-882e-a5562fd8f5f8",
+        "3844f6f4-7feb-44c8-81e4-6ec0a5d018c2",
+        "aaa65749-d993-4cd2-bb4b-c709db1577ea",
+        "926f827e-75e2-42c8-90d4-d83784d0cdb1",
+        "c0ac79fd-77c2-475c-b43b-dfd9eb7f038e",
+        "cb91c7ee-5ede-4be2-97bf-0007b9174903",
+        "c77685bf-1be1-4f93-aa6b-ea908d4fae15",
+        "0a4dcd12-13f0-4402-94a2-905736324b40"
+      ],
+      "settings": {
+        "heading_one": "Plant-based",
+        "heading_two": "Supplements"
+      }
+    },
+    "28235e47-af1d-46d9-9471-8f064c1131ef": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "481ae058-26b4-4d2e-8965-ebc2b47624ff": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_3.png",
+            "title": "Snacks",
+            "url_link": ""
+          }
+        },
+        "0f74726e-5c70-4644-ba7b-14cdcc83bc13": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_3.png",
+            "title": "Snacks 1",
+            "url_link": ""
+          }
+        },
+        "d93a0c3d-90e5-4517-a312-e3a4eeb3b95a": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks 2",
+            "url_link": ""
+          }
+        },
+        "a984730e-5e93-4465-938d-6628d503ca94": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks 3",
+            "url_link": ""
+          }
+        },
+        "b5b92c33-2c8f-42f4-a09a-84a5c363516f": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks 4",
+            "url_link": ""
+          }
+        },
+        "ffcfed23-44f2-4c5d-b668-6ea9ac1da61f": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks5",
+            "url_link": ""
+          }
+        },
+        "ec23c437-b8a8-4d48-925d-e1b98f67ff77": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks 5",
+            "url_link": ""
+          }
+        },
+        "f21d46b9-4d23-4fae-9e59-ae3ee3a4b57a": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks 6",
+            "url_link": ""
+          }
+        },
+        "7074e1ab-fa0f-40ca-a68f-13d25c872fbc": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks 7",
+            "url_link": ""
+          }
+        },
+        "7d8931e1-0d97-4aaa-9c6d-6d0ae2c054eb": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "Snacks 8",
+            "url_link": ""
+          }
+        },
+        "3e427cbf-28dc-4e89-ae9c-e8b4ce029a03": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "snacks 11",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "481ae058-26b4-4d2e-8965-ebc2b47624ff",
+        "0f74726e-5c70-4644-ba7b-14cdcc83bc13",
+        "d93a0c3d-90e5-4517-a312-e3a4eeb3b95a",
+        "a984730e-5e93-4465-938d-6628d503ca94",
+        "b5b92c33-2c8f-42f4-a09a-84a5c363516f",
+        "ffcfed23-44f2-4c5d-b668-6ea9ac1da61f",
+        "ec23c437-b8a8-4d48-925d-e1b98f67ff77",
+        "f21d46b9-4d23-4fae-9e59-ae3ee3a4b57a",
+        "7074e1ab-fa0f-40ca-a68f-13d25c872fbc",
+        "7d8931e1-0d97-4aaa-9c6d-6d0ae2c054eb",
+        "3e427cbf-28dc-4e89-ae9c-e8b4ce029a03"
+      ],
+      "settings": {
+        "heading_one": "Amala Earth",
+        "heading_two": "Gluten-free"
+      }
+    },
+    "1c658b50-352b-4c3b-8dc7-269ec2eb6f54": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "09b46ea2-d096-492f-827d-8bdbe330653d": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 1",
+            "url_link": ""
+          }
+        },
+        "d97a3790-387c-4913-9add-d015c9a95998": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_2.png",
+            "title": "plant\/based 2",
+            "url_link": ""
+          }
+        },
+        "83a77f99-dff5-4830-bb63-e9e35c4bb0e5": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 3",
+            "url_link": ""
+          }
+        },
+        "89d09516-7100-40f6-aaa7-bf6c666f6abe": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 4",
+            "url_link": ""
+          }
+        },
+        "74daa806-8d4e-4745-a061-f846328f4ceb": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based  5",
+            "url_link": ""
+          }
+        },
+        "ce69db82-7bdb-4bbc-b593-c4ecc276b7b5": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 6",
+            "url_link": ""
+          }
+        },
+        "8b2d798b-945d-45b8-a90d-cebc8335d331": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 7",
+            "url_link": ""
+          }
+        },
+        "46de412f-93ce-4b7b-87ed-c7581fa377cb": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 8",
+            "url_link": ""
+          }
+        },
+        "bca59405-1af7-4a24-b475-e8497797526b": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 9",
+            "url_link": ""
+          }
+        },
+        "d7ddbd2a-82f3-46fc-80df-6fcfa28d1c27": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_61_82843ca7-c8e5-40c6-843f-67fd56863397.png",
+            "title": "plant\/based 1",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "09b46ea2-d096-492f-827d-8bdbe330653d",
+        "d97a3790-387c-4913-9add-d015c9a95998",
+        "83a77f99-dff5-4830-bb63-e9e35c4bb0e5",
+        "89d09516-7100-40f6-aaa7-bf6c666f6abe",
+        "74daa806-8d4e-4745-a061-f846328f4ceb",
+        "ce69db82-7bdb-4bbc-b593-c4ecc276b7b5",
+        "8b2d798b-945d-45b8-a90d-cebc8335d331",
+        "46de412f-93ce-4b7b-87ed-c7581fa377cb",
+        "bca59405-1af7-4a24-b475-e8497797526b",
+        "d7ddbd2a-82f3-46fc-80df-6fcfa28d1c27"
+      ],
+      "settings": {
+        "heading_one": "Plant-based",
+        "heading_two": "Supplements"
+      }
+    },
+    "07fa6bb9-3775-4db6-bca8-65ff4ab900fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "08b6db0f-49b2-4f2d-bb83-ebf1addd81e0": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "image": "shopify:\/\/shop_images\/Rectangle_45_2.png",
+            "title": "Video Title 1",
+            "expspeaks": false
+          }
+        },
+        "ab01a6d7-a59b-49b7-8454-27035b41345c": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "image": "shopify:\/\/shop_images\/Rectangle_45_3.png",
+            "title": "Video Title 2",
+            "expspeaks": false
+          }
+        },
+        "4d866d64-036e-40c7-bb16-42b51275796d": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "image": "shopify:\/\/shop_images\/Rectangle_45_3.png",
+            "title": "Video Title 3",
+            "expspeaks": false
+          }
+        },
+        "192cd777-9aee-44a7-a82f-cd5b1e9359e8": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "image": "shopify:\/\/shop_images\/Rectangle_45_3.png",
+            "title": "Video Title 4",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "08b6db0f-49b2-4f2d-bb83-ebf1addd81e0",
+        "ab01a6d7-a59b-49b7-8454-27035b41345c",
+        "4d866d64-036e-40c7-bb16-42b51275796d",
+        "192cd777-9aee-44a7-a82f-cd5b1e9359e8"
+      ],
+      "settings": {
+        "video_background_image": "shopify:\/\/shop_images\/video-bg-mobile_1.png",
+        "video_title1": "Video",
+        "video_title2": "Blogs",
+        "btn_text": "View All",
+        "url_link": ""
+      }
+    },
+    "b387b023-6d3b-416e-a25e-bdd8b588c268": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "Brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/Rectangle_45_4.png",
+        "highlighted_brands": "shopify:\/\/shop_images\/Rectangle_45_1.png",
+        "title": "naturally yours",
+        "anchor_text": "Explore",
+        "url_link": ""
+      }
+    },
+    "19556145-ba4b-4a3e-98f6-0814820f2e95": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "b0335673-8123-4dff-aa08-05fb4f046636": {
+          "type": "block-5",
+          "settings": {
+            "fiveth_block_slider": "shopify:\/\/shop_images\/Ellipse_22_7cbc0338-315d-448d-814f-44bf564c5e60.png",
+            "expert_yours": "“ Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet”",
+            "title": "-Mala Barua 1",
+            "expert_desc": "<p>Health and wellness enthusiast<\/p><p>Mystic Asia owner<\/p>",
+            "anchor_text": "Explore the products",
+            "url_link": ""
+          }
+        },
+        "3c660eae-afae-4254-bdd3-6a9afd5c83a4": {
+          "type": "block-5",
+          "settings": {
+            "fiveth_block_slider": "shopify:\/\/shop_images\/Ellipse_22_7cbc0338-315d-448d-814f-44bf564c5e60.png",
+            "expert_yours": "“ Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet”",
+            "title": "-Mala Barua 2",
+            "expert_desc": "<p>Health and wellness enthusiast<\/p><p>Mystic Asia owner<\/p>",
+            "anchor_text": "Explore the products",
+            "url_link": ""
+          }
+        },
+        "47fe0028-db80-4190-8d54-ea6217cdf417": {
+          "type": "block-5",
+          "settings": {
+            "fiveth_block_slider": "shopify:\/\/shop_images\/Ellipse_22_7cbc0338-315d-448d-814f-44bf564c5e60.png",
+            "expert_yours": "“ Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet”",
+            "title": "-Mala Barua 3",
+            "expert_desc": "<p>Health and wellness enthusiast<\/p><p>Mystic Asia owner<\/p>",
+            "anchor_text": "Explore the products",
+            "url_link": ""
+          }
+        },
+        "83d5db4f-3461-404c-8401-a029677a71f2": {
+          "type": "block-5",
+          "settings": {
+            "fiveth_block_slider": "shopify:\/\/shop_images\/Ellipse_22_7cbc0338-315d-448d-814f-44bf564c5e60.png",
+            "expert_yours": "“ Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet”",
+            "title": "-Mala Barua 4",
+            "expert_desc": "<p>Health and wellness enthusiast<\/p><p>Mystic Asia owner<\/p>",
+            "anchor_text": "Explore the products",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0335673-8123-4dff-aa08-05fb4f046636",
+        "3c660eae-afae-4254-bdd3-6a9afd5c83a4",
+        "47fe0028-db80-4190-8d54-ea6217cdf417",
+        "83d5db4f-3461-404c-8401-a029677a71f2"
+      ],
+      "settings": {
+        "sub_heading": "Experts",
+        "heading": "Recommend",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "f66576bf-ff13-4d82-aa4f-c574e733c018": {
+      "type": "brands-we-love",
+      "blocks": {
+        "e9ee3101-a1f4-4464-954a-bc00ecd5243f": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/brand3.png",
+            "brands_link": ""
+          }
+        },
+        "06cd2976-bd5d-424c-b5ff-ed037ae7fb58": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/brand3.png",
+            "brands_link": ""
+          }
+        },
+        "892891eb-0821-410d-8470-d46219b054f5": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_link": ""
+          }
+        },
+        "ebca8bef-ef52-4bee-a115-30ea951239c0": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_link": ""
+          }
+        },
+        "c4f1796f-4099-41d7-90bf-d6876ce1ebe6": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_link": ""
+          }
+        },
+        "bdc5109a-5b1b-45ae-810f-255441a1529e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_link": ""
+          }
+        },
+        "c2cdb9ca-a833-4806-a36d-a330a15b7811": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/brand3.png",
+            "brands_link": ""
+          }
+        },
+        "0d861dd2-6c6d-4f29-810b-d4df99b3d25c": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/brand3.png",
+            "brands_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e9ee3101-a1f4-4464-954a-bc00ecd5243f",
+        "06cd2976-bd5d-424c-b5ff-ed037ae7fb58",
+        "892891eb-0821-410d-8470-d46219b054f5",
+        "ebca8bef-ef52-4bee-a115-30ea951239c0",
+        "c4f1796f-4099-41d7-90bf-d6876ce1ebe6",
+        "bdc5109a-5b1b-45ae-810f-255441a1529e",
+        "c2cdb9ca-a833-4806-a36d-a330a15b7811",
+        "0d861dd2-6c6d-4f29-810b-d4df99b3d25c"
+      ],
+      "settings": {
+        "background_image_desktop": "shopify:\/\/shop_images\/butterfly-bg-1440x330_1_277cb92a-b0d0-4dab-bfa2-ba9e705b5ef4.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/butterfly-480x258_1_f292dadb-3b7a-4bb2-95e0-aeceb3134f8d.png",
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "11a90fa1-8648-4d72-956b-00759b5888bd": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "5da2ba7a-a3b4-4528-bba7-ba9c96c712e0": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/ban.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/image_7.png",
+            "title": "Playful and comfortable 1",
+            "color_heading1": "#000000",
+            "curation_sub_heading": "festive wear for kids",
+            "color_heading2": "#000000",
+            "btn_text": "shop now",
+            "color_heading3": "#000000",
+            "button_background": "#ffffff",
+            "url_link": ""
+          }
+        },
+        "aca73d47-cf59-4e01-bf5b-00536e2f26a7": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Puja_essentials_JH_Banner2_1920x600_1800x_cb081686-a9fb-4099-b0d6-57d091d47b09.webp",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/karwachauth_v3_mobile_banner_1.png",
+            "title": "Playful and comfortable 2",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "53b001c0-83d6-45ce-9a97-5c8d4cbca13e": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/banner1_1800x_010d274b-a315-4227-871c-5326a3f98857.webp",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Khadi_gandhi_jayanti_v5_mobile_Banner_1_ae2dba5d-afd7-40bb-9dfc-f7986c935c75.png",
+            "title": "Playful and comfortable 3",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "c4333ee9-6fd9-41d9-8b8e-7008354f82bf": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Puja_essentials_JH_Banner2_1920x600_1800x_16c4f4aa-a990-46bd-bf5b-05d3e5bb7c7f.webp",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/karwachauth_v3_mobile_banner_1.png",
+            "title": "Playful and comfortable 4",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "5da2ba7a-a3b4-4528-bba7-ba9c96c712e0",
+        "aca73d47-cf59-4e01-bf5b-00536e2f26a7",
+        "53b001c0-83d6-45ce-9a97-5c8d4cbca13e",
+        "c4333ee9-6fd9-41d9-8b8e-7008354f82bf"
+      ],
+      "settings": {
+        "curation_heading1": "Amala Earth",
+        "curation_sub_heading2": "Curations"
+      }
+    },
+    "357ec621-23a1-4b98-a90b-c60089e523fd": {
+      "type": "consious-journey",
+      "blocks": {
+        "2cdff5eb-22de-4b35-ab25-7c476e787546": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_5_5496fe51-7e89-44d7-9c81-eb5c0b9e0e64.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/image_5_5496fe51-7e89-44d7-9c81-eb5c0b9e0e64.png",
+            "title": "ZERO-WASTE 1",
+            "url_link": ""
+          }
+        },
+        "0e69ae0e-953a-472f-b427-43de5efa70b4": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/Rectangle_64_2.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/Rectangle_64_2.png",
+            "title": "ZERO-WASTE 2",
+            "url_link": ""
+          }
+        },
+        "ee2f3d50-bc2f-4a7a-8985-f5c84a6843a6": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_7.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/image_7.png",
+            "title": "ZERO-WASTE 3",
+            "url_link": ""
+          }
+        },
+        "1250154a-93a0-4fcf-a477-b2004e8678a7": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_8.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/image_8.png",
+            "title": "ZERO-WASTE 4",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "2cdff5eb-22de-4b35-ab25-7c476e787546",
+        "0e69ae0e-953a-472f-b427-43de5efa70b4",
+        "ee2f3d50-bc2f-4a7a-8985-f5c84a6843a6",
+        "1250154a-93a0-4fcf-a477-b2004e8678a7"
+      ],
+      "settings": {
+        "consious_heading1": "Start your",
+        "consious_sub_heading2": "Conscious Journey"
+      }
+    },
+    "7fbb17e8-377f-49e7-afa2-e0e84f6f94a5": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "259b0e1b-f414-4732-bd37-c81d9b2d4b4b": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_64_1_1803f847-a56a-4400-87a1-a07a2df02166.png",
+            "recent_blog_post_link": "",
+            "title": "Make Quinoa A Part Of Your Diet For These 5 Reasons!"
+          }
+        },
+        "91a30f6f-94c6-4bcf-b5eb-1ca67b9d7b51": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_61_1_6bea34b0-5abb-4a8c-9cdc-bdc15d34af4e.png",
+            "recent_blog_post_link": "",
+            "title": "Make Quinoa A Part Of Your Diet For These 5 Reasons!"
+          }
+        },
+        "adb0f259-be00-4817-a89d-77a348b20f93": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_64_1_1803f847-a56a-4400-87a1-a07a2df02166.png",
+            "recent_blog_post_link": "",
+            "title": "Make Quinoa A Part Of Your Diet For These 5 Reasons!"
+          }
+        },
+        "d5c86585-07a1-42f6-9b24-973fb6eae960": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_64_1_1803f847-a56a-4400-87a1-a07a2df02166.png",
+            "recent_blog_post_link": "",
+            "title": "Make Quinoa A Part Of Your Diet For These 5 Reasons!"
+          }
+        }
+      },
+      "block_order": [
+        "259b0e1b-f414-4732-bd37-c81d9b2d4b4b",
+        "91a30f6f-94c6-4bcf-b5eb-1ca67b9d7b51",
+        "adb0f259-be00-4817-a89d-77a348b20f93",
+        "d5c86585-07a1-42f6-9b24-973fb6eae960"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "Blogposts",
+        "view_text": "View All",
+        "url_link": ""
+      }
+    },
+    "c9077275-48a2-42bb-81fc-fcbd523ba6dd": {
+      "type": "product-carousel",
+      "blocks": {
+        "da40cef3-480d-4cec-896e-a9455bd4aa5a": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/brand.png",
+            "combo_link": "",
+            "title": "Protien-rich  <br>diet"
+          }
+        },
+        "fe85c704-c671-4f01-bbd7-914d888d03e8": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/brand2.png",
+            "combo_link": "",
+            "title": "Protien-rich  <br>diet"
+          }
+        },
+        "8439c025-2b4c-4249-a03c-87a6ce528349": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/brand2.png",
+            "combo_link": "",
+            "title": "Protien-rich  <br>diet"
+          }
+        },
+        "b2344e3a-d899-4b4c-89ed-2958b0a03696": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/brand.png",
+            "combo_link": "",
+            "title": "Protien-rich  <br>diet"
+          }
+        },
+        "2d183f4a-8d62-4166-9b80-3127f559626f": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/brand.png",
+            "combo_link": "",
+            "title": "Protien-rich  <br>diet"
+          }
+        },
+        "f88875eb-7b4e-4ebe-ba75-56d0ddd512f8": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_472_1.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/brand2.png",
+            "combo_link": "",
+            "title": "Protien-rich  <br>diet"
+          }
+        }
+      },
+      "block_order": [
+        "da40cef3-480d-4cec-896e-a9455bd4aa5a",
+        "fe85c704-c671-4f01-bbd7-914d888d03e8",
+        "8439c025-2b4c-4249-a03c-87a6ce528349",
+        "b2344e3a-d899-4b4c-89ed-2958b0a03696",
+        "2d183f4a-8d62-4166-9b80-3127f559626f",
+        "f88875eb-7b4e-4ebe-ba75-56d0ddd512f8"
+      ],
+      "settings": {
+        "heading_one": "Curated",
+        "heading_two": "Combos",
+        "btn_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "festival-landings-page",
+    "2205d5ab-0f89-4601-a377-bcb2ada4443b",
+    "b9eb933f-f6f5-419d-a635-22a4ed1a0fad",
+    "603f6341-e9b1-4cba-88cb-c06df4b91aff",
+    "2b6e3093-77a8-43a7-b3ce-76dab50e0f22",
+    "d2b015a5-60e7-4897-81a2-b78a61b96d21",
+    "28235e47-af1d-46d9-9471-8f064c1131ef",
+    "1c658b50-352b-4c3b-8dc7-269ec2eb6f54",
+    "07fa6bb9-3775-4db6-bca8-65ff4ab900fe",
+    "b387b023-6d3b-416e-a25e-bdd8b588c268",
+    "19556145-ba4b-4a3e-98f6-0814820f2e95",
+    "f66576bf-ff13-4d82-aa4f-c574e733c018",
+    "11a90fa1-8648-4d72-956b-00759b5888bd",
+    "357ec621-23a1-4b98-a90b-c60089e523fd",
+    "7fbb17e8-377f-49e7-afa2-e0e84f6f94a5",
+    "c9077275-48a2-42bb-81fc-fcbd523ba6dd"
+  ]
+}

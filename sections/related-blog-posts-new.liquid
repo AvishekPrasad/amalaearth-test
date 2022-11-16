@@ -1,0 +1,112 @@
+{%- if section.settings.enable -%}
+    
+    {% assign product_articles = '' %}
+    {% for tag in product.tags %}
+          {% assign tag_name = tag %}
+          {% for article in blogs.amala-earth-blog.articles %}
+			 {% if article.tags contains tag_name %}
+    			{% if product_articles == '' %}
+    				{% assign product_articles = article.handle %}
+    			{% else %}
+    				{% assign product_articles = product_articles | append: ';' | append: article.handle %}
+    			{% endif %}
+    		 {% endif %}
+          {% endfor %}
+    {% endfor %}
+    
+    {% assign product_articles_all = product_articles | split: ';' %}
+
+	{% if product_articles_all.size > 0 %}
+      <div class="section-viewport section-viewport-{{ section.id }}">
+      	<section class="section section-lazy" data-section-id="{{ section.id }}" data-section-type="blog-posts">
+      		<div class="container">
+      			<div class="heading-bx">
+      				<h3 class="section__title">{{ section.settings.title | escape }}<span class="line-heading"></span></h3>
+      			</div>
+      			<div class="blog-wraper-slide">
+      				<div class="blog-slider slider-arrow">
+                        {%- for item in product_articles_all limit: section.settings.blog_posts_count -%}
+                          {% assign article = articles[item] %}
+                      
+      					<div class='blog-iteam'>
+      						<div class="blog-img">
+      							<img src="{{ article | img_url: '' }}">
+      						</div>
+      						<div class="blog-content">
+      							<p class="care-h">{% for tag in article.tags limit:1 %}{{ tag }}{% endfor %}</p>
+      							<a href="#" class="blog-heading">{{ article.title }}</a>
+      							<p>{{ article.excerpt }}</p>
+      							<div class="reading-btn">
+      								<a href="{{ article.url }}" class="view-all-videos" >Continue Reading</a>
+      							</div>
+      						</div>
+      					</div>
+      					{% endfor %}
+      				</div>
+      			</div>
+      		</div>
+      	</section>
+      </div>  
+      
+	{% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Blog posts Section",
+  "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Enable",
+	  "default": true
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+	  "default": "Related Blog posts"
+    },
+	{
+      "type": "range",
+      "id": "blog_posts_count",
+      "label": "Blog posts to show",
+      "min": 3,
+      "max": 9,
+      "step": 3,
+      "default": 3
+	},
+    {
+      "type": "checkbox",
+      "id": "show_category",
+      "label": "Show category",
+      "info": "The first article's tag will be shown as category.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show excerpt",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_mobile",
+      "label": "Stack on mobile",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

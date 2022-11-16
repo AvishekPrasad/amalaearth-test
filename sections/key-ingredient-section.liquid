@@ -1,0 +1,52 @@
+{% if product.metafields.custom.key_ingredients != blank %}
+<section class="key-ingredients">
+  <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/tree-branch3.png?v=1657391189" class="tree-branch-bottom">
+  <div class="container">
+    <div class="heading-bx">
+  {% assign key_ingredient_heading = section.settings.sec-head %}
+  
+  {% if product.metafields.custom.key_ingredients_heading != blank %}
+    {% assign key_ingredient_heading = product.metafields.custom.key_ingredients_heading %}
+  {% endif %}
+  
+      <h3 class="section__title">{{ key_ingredient_heading }} <span class="line-heading"></span></h3>
+    </div>
+  <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/tree-branch-2.png?v=1657391154" class="tree-branch-top">
+  <div class="ingredients-slider slider-arrow">
+    {% for ing in product.metafields.custom.key_ingredients.value %}
+   <div class="ingredients-cards-item">
+     <div class="ingredients-card-inner">
+      {% if ing.img != blank %}
+      <img src="{{ ing.img }}" alt="{{ ing.title }}" class="ingredients-img">
+        {% endif %}
+      <div class="ingredients-content">
+        <h3>{{ ing.title }}</h3>
+        <p>{{ ing.desc }}</p>
+      </div>
+     </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Key Ingredient",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sec-head",
+        "label" : "Section Heading",
+        "default" : "Key materials"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

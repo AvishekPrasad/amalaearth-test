@@ -1,0 +1,57 @@
+{% if product.metafields.custom.video_slides != blank %}
+<section class="videos-section">
+  <div class="container">
+    <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/tree5.png?v=1657531243" class="videos-tree">
+    <div class="heading-bx m-show">
+      <h3 class="section__title">{{ section.settings.sec-heading-video }} <span class="line-heading"></span></h3>
+    </div>
+    <div class="videos-slider slider-arrow">
+      {% for slides in product.metafields.custom.video_slides.value %}
+      <div class="videos-iteam">
+        <div class="videos-row">
+          <div class="videos-colm">
+            <div class="videos-content">
+				<div class="heading-bx">
+                  <h3 class="section__title">{{ section.settings.sec-heading-video }} <span class="line-heading"></span></h3>
+                </div>
+              <p class="xs-heading">{{ slides.title }}</p>
+              <h3 class="section__title2">{{ slides.subtitle }}</h3>
+              {% if slides.buttonurl != blank %}<a href="{{ slides.buttonurl }}" class="view-all-videos">View all Videos</a>{% endif %}
+            </div>
+          </div>
+          <div class="videos-colm videos-colm2">
+          {% if slides.videourl != blank %}
+            <div class="videos-bx">
+				<video width="100%" height="100%" controls>
+                  <source src="{{ slides.videourl }}#t=0.001" type="video/mp4">     
+                </video>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Video Slider",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sec-heading-video",
+        "label" : "Section heading",
+        "default" : "Videos"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

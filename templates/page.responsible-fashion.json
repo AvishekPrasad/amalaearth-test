@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "festival-landings-page": {
+      "type": "main-banner",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Banner_skewed_1.png",
+        "banner_mobile_image": "shopify:\/\/shop_images\/banner_skewed.png",
+        "desktop_banner_title": "HEDAING",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "Shop Now",
+        "color_button": "#ffffff",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/mindful-eating",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/mindful-eating"
+      }
+    }
+  },
+  "order": [
+    "festival-landings-page"
+  ]
+}
