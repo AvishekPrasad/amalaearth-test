@@ -1,3 +1,22 @@
+<style>
+  .desktop-view-title{
+    display: block;
+  }
+  .mobile-view-title{
+    display: none;
+  }
+
+  @media screen and (max-width: 767px){
+    .desktop-view-title{
+      display: none;
+    }
+
+    .mobile-view-title{
+      display: block;
+    }
+  }
+</style>
+
 <script>
   var sliderListShopByCollection = [];
  </script>
@@ -34,7 +53,7 @@
              </div>
  
              {%- if section.settings.show_collection_title -%}
-               <span class="collection-item__title text--strong">{{ block.settings.title }} {% render 'icon', icon: 'tail-right' %}</span>
+               <span class="collection-item__title"><span class="text--strong desktop-view-title">{{ block.settings.title }}</span> <span class="mobile-view-title" style="font-weight: 300;font-size: 13px;">{{block.settings.mob_title_primary_text}}</span><span class="mobile-view-title" style="font-weight: 500;font-size: 16px;">{{block.settings.mob_title_secondary_text}}</span> {% render 'icon', icon: 'tail-right' %}</span>
              {%- endif -%}
            {%- else -%}
              <div class="collection-item__image-wrapper">
@@ -117,6 +136,16 @@
            "type": "text",
            "id": "title",
            "label": "Title"
+         },
+         {
+            "type": "text",
+            "id": "mob_title_primary_text",
+            "label": "Mobile Title Primary Text"
+         },
+         {
+          "type": "text",
+          "id": "mob_title_secondary_text",
+          "label": "Mobile Title Secondary Text"
          },
          {
            "type": "url",
