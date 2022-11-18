@@ -1,19 +1,13 @@
 <style>
-  .desktop-view-title{
-    display: block;
-  }
-  .mobile-view-title{
-    display: none;
+  .mobile-view-title-primary{
+    font-weight: 300;
+    font-size: 13px; 
+    margin-bottom: 2px;
   }
 
-  @media screen and (max-width: 767px){
-    .desktop-view-title{
-      display: none;
-    }
-
-    .mobile-view-title{
-      display: block;
-    }
+  .mobile-view-title-secondary{
+    font-weight: 500;
+    font-size: 16px;
   }
 </style>
 
@@ -53,7 +47,11 @@
              </div>
  
              {%- if section.settings.show_collection_title -%}
-               <span class="collection-item__title"><span class="text--strong desktop-view-title">{{ block.settings.title }}</span> <span class="mobile-view-title" style="font-weight: 300;font-size: 13px;">{{block.settings.mob_title_primary_text}}</span><span class="mobile-view-title" style="font-weight: 500;font-size: 16px;">{{block.settings.mob_title_secondary_text}}</span> {% render 'icon', icon: 'tail-right' %}</span>
+                <span class="collection-item__title">
+                  {% if block.settings.mob_title_primary_text != blank %}<p class="mobile-view-title-primary">{{block.settings.mob_title_primary_text}}</p>{% endif %}
+                  {% if block.settings.mob_title_secondary_text != blank %}<p class="mobile-view-title-secondary">{{block.settings.mob_title_secondary_text}}</p>{% endif %} 
+                  {% render 'icon', icon: 'tail-right' %}
+                </span>
              {%- endif -%}
            {%- else -%}
              <div class="collection-item__image-wrapper">
