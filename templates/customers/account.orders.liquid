@@ -7,7 +7,7 @@
     	</div>    
     	<div class="container container--narrow">
             <div class="my-account__content">
-                <div class="my-orders__item-list">
+                <div class="test@123 my-orders__item-list">
                    {%- if customer.orders.size == 0 -%}
                         <div class="my-orders__empty-item">
                             <div class="empty-state__message-container">
@@ -48,9 +48,9 @@
                         </div>
                      
                           
-                           {%- for line_item in order.line_items -%}
+                        {%- for line_item in order.line_items -%}
      
-                         <div class="my-orders__content-wrapper">
+                          <div class="my-orders__content-wrapper">
                             <div class="my-orders__image-wrapper">
                                 <a href="javascript:void(0);">
                                     <div class="aspect-ratio" style="padding-bottom: 100.0%">
@@ -93,21 +93,48 @@
                                 </table>
                             </div>
                             </div>
-                      {% break %}
-                          {% endfor %}
-                      
+                          {% break %}
+                        {% endfor %}
+
+                        <!-- order review button custom -->
+                        <!-- <h3>{{order.fulfillment_status_label}}</h3> -->
+                        
+                        {% if order.fulfillment_status_label == "Fulfilled" %}
+
+                          {% if order.line_items.size > 1 %}
+                              {{order.line_items.size}}
+                              {% for order_items_cus in order.line_items %}
+
+                                <p>{{order_items_cus.product.id}}</p>
+
+                              {% endfor %}
+
+                            {% else %}
+
+                              {% assign order_product_cus = order.line_items[0].product %}
+                              <!--stamped.io code-->
+                              <span class="pdp-stamped-main-badge-wrap" style="display: inline-block;">
+                                <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ order_product_cus.id }}" data-product-sku="{{ order_product_cus.handle }}" data-product-type="{{order_product_cus.type}}" data-product-title="{{order_product_cus.title}}" style="display: inline-block;">{{ order_product_cus.metafields.stamped.badge }} </span> <span>{% assign review_count = order_product_cus.metafields.stamped.reviews_count | plus: 0 %}{% if review_count > 0 %} {% else %} {% comment %}{% if customer %} <a href="#shopify-section-more-from-seller">Add Review</a> {% endif %}{% endcomment %}{% endif %} </span>
+                              </span>
+                              <!--stamped.io code--> 
+
+                          {% endif %}
+
+                            order is fullfilled
+                             
+                        {% endif %}
                       
                       {% assign itemCount = 0 %}
 
-						{% for item in order.line_items %}
-							  {% assign itemCount = itemCount | plus: 1 %}
-						{% endfor %}
+                      {% for item in order.line_items %}
+                          {% assign itemCount = itemCount | plus: 1 %}
+                      {% endfor %}
                         <div class="my-orders__item-actions">
                             <a href="{{order.customer_url}}" class="my-orders__item-actions-link">
                               {% if itemCount > 1 %}
-                               Order Details ( {{itemCount}} items ) 
+                                Order Details ( {{itemCount}} items ) 
                               {% else %}
-								View Order Details
+								                View Order Details
                               {% endif %}
                                 <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
                             </a>

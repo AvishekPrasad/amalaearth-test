@@ -1,3 +1,16 @@
+<style>
+  .mobile-view-title-primary{
+    font-weight: 300;
+    font-size: 13px; 
+    margin-bottom: 2px;
+  }
+
+  .mobile-view-title-secondary{
+    font-weight: 500;
+    font-size: 16px;
+  }
+</style>
+
 <script>
   var sliderListShopByCollection = [];
  </script>
@@ -34,7 +47,11 @@
              </div>
  
              {%- if section.settings.show_collection_title -%}
-               <span class="collection-item__title text--strong">{{ block.settings.title }} {% render 'icon', icon: 'tail-right' %}</span>
+                <span class="collection-item__title">
+                  {% if block.settings.mob_title_primary_text != blank %}<p class="mobile-view-title-primary">{{block.settings.mob_title_primary_text}}</p>{% endif %}
+                  {% if block.settings.mob_title_secondary_text != blank %}<p class="mobile-view-title-secondary">{{block.settings.mob_title_secondary_text}}</p>{% endif %} 
+                  {% render 'icon', icon: 'tail-right' %}
+                </span>
              {%- endif -%}
            {%- else -%}
              <div class="collection-item__image-wrapper">
@@ -117,6 +134,16 @@
            "type": "text",
            "id": "title",
            "label": "Title"
+         },
+         {
+            "type": "text",
+            "id": "mob_title_primary_text",
+            "label": "Mobile Title Primary Text"
+         },
+         {
+          "type": "text",
+          "id": "mob_title_secondary_text",
+          "label": "Mobile Title Secondary Text"
          },
          {
            "type": "url",
