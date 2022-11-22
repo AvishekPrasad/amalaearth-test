@@ -347,7 +347,7 @@
                                         {% for order_items_cus in order.line_items %}
                                           <div data-product_review_to_display="{{order_items_cus.product.id}}" class="product-review_hide">
         
-                                                  <p>{{order_items_cus.product.id}}</p>
+                                                  <!-- <p>{{order_items_cus.product.id}}</p> -->
         
                                                   <div data-product-id="{{order_items_cus.product.id}}" item_price="{{order_items_cus.final_line_price | money_without_currency}}" item_name="{{order_items_cus.name}}" item-id="{{order_items_cus.id}}" handle="{{order_items_cus.product.handle}}" product-id="{{order_items_cus.product.id}}" class="my-orders__content-wrapper-popup my-orders__content-wrapper {% if order_items_cus.product.available %} {% else %} disabled {% endif %}" data-id="{{order_items_cus.product.selected_or_first_available_variant.id}}" data-qty="{{order_items_cus.quantity}}">
                                                     <div class="my-orders__image-wrapper">

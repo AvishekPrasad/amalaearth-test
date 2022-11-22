@@ -1,3 +1,14 @@
+<style>
+  .brand_score_img_cus{
+    height: 75px;
+  }
+
+  .display_offer_image{
+    align-items: center;
+    justify-content: space-evenly;
+  }
+</style>
+
 {%- assign selected_variant = product.selected_or_first_available_variant -%}
 {%- assign latest_products = "" -%}
 {%- if settings.new_arrivals_allowed_count != blank -%}
@@ -131,12 +142,12 @@
     <div class="product-form__info-item product-form__info-price">
       {%comment%}<span class="product-form__info-title text--strong">{{ 'product.form.price' | t }}:</span>{%endcomment%}
 
-      <div class="product-form__info-content" role="region" aria-live="polite">
+      <div class="product-form__info-content display_offer_image" role="region" aria-live="polite">
         <div class="price-list actual-product-price">
           {%- if selected_variant.compare_at_price > selected_variant.price -%}
           <span class="price price--highlight">
             <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
-            {{- selected_variant.price | money -}}  &nbsp;<small style="color:#777; font-size:18px;display:inline-block;margin-bottom:11px;">MRP </small>
+            <small style="color:#9a7058; font-size:23px;display:inline-block;margin-bottom:2px;">MRP: </small> &nbsp; {{- selected_variant.price | money -}}  
           </span>
 
           <span class="price price--compare">
@@ -146,7 +157,7 @@
           {%- else -%}
           <span class="price price--highlight">
             <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
-            {{- selected_variant.price | money -}} &nbsp;<small style="color:#777; font-size:18px;display:inline-block;margin-bottom:11px;">MRP </small>
+            <small style="color:#9a7058; font-size:23px;display:inline-block;margin-bottom:2px;">MRP: </small>{{- selected_variant.price | money -}} &nbsp;
           </span>
           {%- endif -%}
 
@@ -176,6 +187,19 @@
             <span class="unit-price-measurement__reference-unit">{{ selected_variant.unit_price_measurement.reference_unit }}</span>
           </div>
         </div>
+
+        <!-- implementation of brand Parameters -->
+        {% assign variableProduct = product.vendor | handleize %}
+        {% assign collectionNameCus = collections[variableProduct] %}
+        {% assign collectionNmaeBrandScore = collectionNameCus.metafields.custom.brand_score %}
+
+        {% if collectionNmaeBrandScore != blank%}
+          <a href="#shopify-section-recommend-section-pdp">
+            {% if collectionNmaeBrandScore == 6 %}
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/t/446/assets/brand_score_6.jpg" class="brand_score_img_cus">
+            {% endif %}
+          </a> 
+        {% endif %}
 
         {%- if section.settings.show_taxes_included -%}
         {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
