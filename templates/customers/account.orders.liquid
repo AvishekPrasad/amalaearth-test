@@ -1,3 +1,4 @@
+
 <!-- Modal button -->
 <!-- <button href="#" class="my-orders__item-actions-link popup-trigger" traget="#selectable-order-details-model">
   Reorder
@@ -30,10 +31,108 @@
     display: none !important;
   }
 
+  .my-account-cus .review-initiate{
+    width: 100%;
+  }
+
+  .review-initiate .my-orders__item-actions-link{
+    display: flex;
+    padding: 15px 15px;
+  }
+
+  .my-account-cus .productToShow{
+    display: block;
+  }
+
+  .my-account-cus .product-review_hide{
+    display: none;
+  }
+
+  .my-orders__item .my-orders__item-actions-link.popup-product-sele{
+    border: 0;
+    border-radius: 8px;
+    padding: 0px;
+  }
+
+  .popup-product-sele .my-orders__content-wrapper-popup{
+    margin-top: 0 !important;
+    width: 100%;
+  }
+
+  #selectable-order-details-modelsss .pop-up__container{
+    max-width: 100%;
+  }
+
+  #selectable-order-details-modelsss .stamped-summary{
+    display: none;
+  }
+
+  #selectable-order-details-modelsss .stamped-summary-actions{
+    display: none;
+  }
+
+  #selectable-order-details-modelsss .stamped-tab-container{
+    display: none !important;
+  }
+
+  #selectable-order-details-modelsss .stamped-messages{
+    display: none;
+  }
+
+  #selectable-order-details-modelsss .stamped-reviews-filter{
+    display: none;
+  }
+
+  #selectable-order-details-modelsss #stamped-reviews-tab{
+    display: none !important;
+  }
+
+  #selectable-order-details-modelsss .stamped-summary-actions-newreview{
+    display: none;
+  }
+
+  #selectable-order-details-modelsss .stamped-sort-select-wrapper{
+    display: none;
+  }
+
+  .order_with_one_item .stamped-summary{
+    display: none;
+  }
+
+  .order_with_one_item .stamped-tab-container{
+    display: none !important;
+  }
+
+  .order_with_one_item .stamped-messages{
+    display: none;
+  }
+
+  .order_with_one_item .stamped-reviews-filter{
+    display: none !important;
+  }
+
+  .order_with_one_item .stamped-reviews{
+    display: none !important;
+  }
+
+  .order_with_one_item .pdp-stamped-main-badge-wrap{
+    display: none !important;
+  }
+
+  /* .order_with_one_item {
+    display: none;
+  } */
+
+  
+
+  /* #selectable-order-details-modelsss {
+    display: none;
+  } */
+
 </style>
 
  
- <section class="my-account" data-section-id="account" data-section-type="account">
+ <section class="my-account my-account-cus" data-section-id="account" data-section-type="account">
     	<div class="my-account__header">
           <a href="/account/" class="back_link">
             <img src="{{ 'back_arrow.svg' | asset_url }}" alt="back">
@@ -83,9 +182,9 @@
                         </div>
                      
                           
-                           {%- for line_item in order.line_items -%}
+                        {%- for line_item in order.line_items -%}
      
-                         <div class="my-orders__content-wrapper">
+                          <div class="my-orders__content-wrapper">
                             <div class="my-orders__image-wrapper">
                                 <a href="javascript:void(0);">
                                     <div class="aspect-ratio" style="padding-bottom: 100.0%">
@@ -140,7 +239,17 @@
 
                           {% if order.line_items.size > 1 %}
                               <!-- {{order.line_items.size}} -->
-                              <button href="#" class="popup-trigger"  traget="#selectable-order-details-model">Button for Write a review</button>
+                              <button href="#" class="popup-trigger review-initiate"  traget="#selectable-order-details-model">
+                                <div class="my-orders__item-actions my-orders__item-actions-link" style="margin-bottom: 5px;">
+                                  
+                                  <div class="">
+                                    <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                  </div>
+                                  <p>Write a Review</p>
+                                  
+                                </div>
+                                
+                              </button>
                               <!-- Start modal for showing the product select option for review -->
                                 <div id="selectable-order-details-model" class="pop-up-modal my-account">
                                   <div class="pop-up__container">
@@ -152,9 +261,9 @@
                                       <div class="my_account_orders_list my-account__pop-up-content order-details_popup-content">        
                                         {% for order_items_cus in order.line_items %}
 
-                                          <!-- <p>{{order_items_cus.product.id}}</p> -->
+                                          <p>{{order_items_cus.product.id}}</p>
 
-                                          <div id="stamped-main-widget"
+                                          <!-- <div id="stamped-main-widget"
                                             data-widget-style="standard" 
                                             data-product-id="{{ order_items_cus.product.id }}"   
                                             data-name="{{ order_items_cus.product.title | escape }}"   
@@ -163,10 +272,10 @@
                                             data-product-sku="{{order_items_cus.product.handle}}"
                                             data-product-type="{{order_items_cus.product.type}}"
                                             data-offset="150">   
-                                          </div>
+                                          </div> -->
 
-
-                                          <div item_price="{{order_items_cus.final_line_price | money_without_currency}}" item_name="{{order_items_cus.name}}" item-id="{{order_items_cus.id}}" handle="{{order_items_cus.product.handle}}" product-id="{{order_items_cus.product.id}}" class="my-orders__content-wrapper-popup my-orders__content-wrapper {% if order_items_cus.product.available %} {% else %} disabled {% endif %}" data-id="{{order_items_cus.product.selected_or_first_available_variant.id}}" data-qty="{{order_items_cus.quantity}}">
+                                          <button href="#" class="my-orders__item-actions-link popup-trigger popup-product-sele" traget="#selectable-order-details-modelsss">
+                                          <div data-product-id-cus="{{order_items_cus.product.id}}" item_price="{{order_items_cus.final_line_price | money_without_currency}}" item_name="{{order_items_cus.name}}" item-id="{{order_items_cus.id}}" handle="{{order_items_cus.product.handle}}" product-id="{{order_items_cus.product.id}}" class="my-orders__content-wrapper-popup my-orders__content-wrapper {% if order_items_cus.product.available %} {% else %} disabled {% endif %}" data-id="{{order_items_cus.product.selected_or_first_available_variant.id}}" data-qty="{{order_items_cus.quantity}}">
                                             <div class="my-orders__image-wrapper">
                                                 <a href="javascript:void(0);">
                                                     <div class="aspect-ratio" style="padding-bottom: 100.0%">
@@ -207,25 +316,124 @@
                                                     </tr>
                                                 </table>
                                             </div>
-                                        </div>
-
+                                          </div>
+                                          </button>
                                         {% endfor %}
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               <!-- End modal for showing the product select option for review -->
+
+                              <!-- Full Add review part -->
+                              <!-- <button href="#" class="my-orders__item-actions-link popup-trigger" traget="#selectable-order-details-modelsss">
+                                Reorder
+                                <img src="//cdn.shopify.com/s/files/1/0523/3252/7770/t/445/assets/right_arrow.svg?v=9484046412203872561668607793" alt=">" class="arrow-icon">
+                              </button> -->
+
+                              <!-- Start modal for showing the product select option for review -->
+                              <div id="selectable-order-details-modelsss" class="pop-up-modal my-account">
+                                <!-- <script>
+                                  document.querySelector(".stamped-summary-actions-newreview").click();
+                                </script> -->
+                                <div class="pop-up__container">
+                                  <span class="close-button popup-close"><img src="//cdn.shopify.com/s/files/1/0523/3252/7770/t/445/assets/close-icon.svg?v=24910855207763092931668607793" alt="X"></span>
+                                  <div class="pop-up__content-wrapper">
+                                    <div class="my-account__pop-up-header">
+                                      <h1 class="heading">Select items to reorder</h1>
+                                    </div>
+                                    <div class="my-account__pop-up-content order-details_popup-content">        
+                                      <div class="add_review_entire_modal">
+                                        {% for order_items_cus in order.line_items %}
+                                          <div data-product_review_to_display="{{order_items_cus.product.id}}" class="product-review_hide">
+        
+                                                  <p>{{order_items_cus.product.id}}</p>
+        
+                                                  <div data-product-id="{{order_items_cus.product.id}}" item_price="{{order_items_cus.final_line_price | money_without_currency}}" item_name="{{order_items_cus.name}}" item-id="{{order_items_cus.id}}" handle="{{order_items_cus.product.handle}}" product-id="{{order_items_cus.product.id}}" class="my-orders__content-wrapper-popup my-orders__content-wrapper {% if order_items_cus.product.available %} {% else %} disabled {% endif %}" data-id="{{order_items_cus.product.selected_or_first_available_variant.id}}" data-qty="{{order_items_cus.quantity}}">
+                                                    <div class="my-orders__image-wrapper">
+                                                        <a href="javascript:void(0);">
+                                                            <div class="aspect-ratio" style="padding-bottom: 100.0%">
+                                                                <img src="{{ order_items_cus.image | img_url: '90x90', scale: 2 }}" alt="{{ order_items_cus.image.alt | escape }}">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                  
+                                                    <div class="my-orders__item-wrapper">
+                                                        <table class="my-orders__product-info">
+                                                            <tr>
+                                                                <td colspan="2"><a href="#" class="my-orders__product-title ">{{ order_items_cus.title }}</a></td>
+                                                            </tr>
+                                                            {%- unless order_items_cus.properties == blank -%}
+                                                       
+                                                          {%- for property in order_items_cus.properties -%}
+                                                            {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+                            
+                                                            {%- if property.last == blank or first_character_in_key == '_' -%}
+                                                              {%- continue -%}
+                                                            {%- endif -%}
+                            
+                                                              <tr>
+                                                                    <td class="product-info_label">{{ property.first }}</td>
+                                                                    <td> {{ property.last }}</td>
+                                                                </tr>
+                                                          {%- endfor -%}
+                                                  
+                                                      {%- endunless -%}
+                                                               
+                                                            <tr>
+                                                                <td class="product-info_label">Qty. </td>
+                                                                <td>{{order_items_cus.quantity}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="product-info_label">Amount</td>
+                                                                <td><span class="price price--highlight">&nbsp;{{ order_items_cus.final_line_price | money }}</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                  </div>
+                                                  <div id="stamped-main-widget"
+                                                    data-widget-style="standard" 
+                                                    data-product-id="{{ order_items_cus.product.id }}"   
+                                                    data-name="{{ order_items_cus.product.title | escape }}"   
+                                                    data-url="{{ shop.url }}{{ order_items_cus.product.url }}"   
+                                                    data-image-url="{{ order_items_cus.product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+                                                    data-product-sku="{{order_items_cus.product.handle}}"
+                                                    data-product-type="{{order_items_cus.product.type}}"
+                                                    data-offset="150">   
+                                                  </div>
+                                            </div>
+                                          {% endfor %}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- End modal for showing the product select option for review -->
+                              
                               
 
                             {% else %}
 
-                                Write a review
-                              {% assign order_product_cus = order.line_items[0].product %}
-                              <!--stamped.io code-->
-                              <span class="pdp-stamped-main-badge-wrap" style="display: inline-block;">
-                                <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ order_product_cus.id }}" data-product-sku="{{ order_product_cus.handle }}" data-product-type="{{order_product_cus.type}}" data-product-title="{{order_product_cus.title}}" style="display: inline-block;">{{ order_product_cus.metafields.stamped.badge }} </span> <span>{% assign review_count = order_product_cus.metafields.stamped.reviews_count | plus: 0 %}{% if review_count > 0 %} {% else %} {% comment %}{% if customer %} <a href="#shopify-section-more-from-seller">Add Review</a> {% endif %}{% endcomment %}{% endif %} </span>
-                              </span>
-                              <!--stamped.io code--> 
+                              <div class="order_with_one_item">
+                                {% assign order_product_cus = order.line_items[0] %}
+
+                                <div id="stamped-main-widget"
+                                  data-widget-style="standard" 
+                                  data-product-id="{{ order_product_cus.product.id }}"   
+                                  data-name="{{ order_product_cus.product.title | escape }}"   
+                                  data-url="{{ shop.url }}{{ order_product_cus.product.url }}"   
+                                  data-image-url="{{ order_product_cus.product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+                                  data-product-sku="{{order_product_cus.product.handle}}"
+                                  data-product-type="{{order_product_cus.product.type}}"
+                                  data-offset="150">   
+                                </div>
+
+                                <!--stamped.io code-->
+                                <span class="pdp-stamped-main-badge-wrap" style="display: inline-block;">
+                                  <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ order_product_cus.id }}" data-product-sku="{{ order_product_cus.handle }}" data-product-type="{{order_product_cus.type}}" data-product-title="{{order_product_cus.title}}" style="display: inline-block;">{{ order_product_cus.metafields.stamped.badge }} </span> <span>{% assign review_count = order_product_cus.metafields.stamped.reviews_count | plus: 0 %}{% if review_count > 0 %} {% else %} {% comment %}{% if customer %} <a href="#shopify-section-more-from-seller">Add Review</a> {% endif %}{% endcomment %}{% endif %} </span>
+                                </span>
+                                <!--stamped.io code--> 
+                              </div>
 
                           {% endif %}
 
@@ -237,22 +445,22 @@
                       
                       {% assign itemCount = 0 %}
 
-						{% for item in order.line_items %}
-							  {% assign itemCount = itemCount | plus: 1 %}
-						{% endfor %}
+                      {% for item in order.line_items %}
+                          {% assign itemCount = itemCount | plus: 1 %}
+                      {% endfor %}
                         <div class="my-orders__item-actions">
                             <a href="{{order.customer_url}}" class="my-orders__item-actions-link">
                               {% if itemCount > 1 %}
-                               Order Details ( {{itemCount}} items ) 
+                                Order Details ( {{itemCount}} items ) 
                               {% else %}
-								View Order Details
+								                View Order Details
                               {% endif %}
                                 <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
                             </a>
                             
                         </div>
                     </div>
-                 
+                  
                   
                 {% endfor %}
                   
@@ -263,6 +471,47 @@
             </div>
         </div>
     </section>
+
+    <script>
+      $(document).ready(function(){
+        console.log($("[data-product-id-cus]"), "review ele check")
+      
+        $("[data-product-id-cus]").on("click", function(){
+          // console.log($(this).data("product-id-cus"), "clicked product check");
+          let clickedElementId = $(this).data("product-id-cus");
+
+          // let targetElementId;
+
+          // $(`[data-product_review_to_display]`).attr("data-product_review_to_display");
+
+          // console.log($(`[data-product_review_to_display]`), "Element arr check");
+          // for(let i of $(`[data-product_review_to_display]`)){
+          //   console.log(typeof i, i, "Each ele check");
+          //   let allele = parseInt($(`[data-product_review_to_display]`).attr("data-product_review_to_display"));
+          //   // i.addClass("checkClassAdd"); 
+          // }
+
+          // console.log(parseInt($(`[data-product_review_to_display]`).attr("data-product_review_to_display")), "Element to be displayed")
+          $(`[data-product_review_to_display="${clickedElementId}"]`).addClass("productToShow").toggleClass("product-review_hide");
+
+          document.querySelector(".stamped-summary-actions-newreview").click();
+
+          // let allele = parseInt($(`[data-product_review_to_display]`).attr("data-product_review_to_display"));
+
+          // if(allele != clickedElementId){
+          //   $(`data-product_review_to_display`).addClass("productToHide");
+          //   console.log(allele, clickedElementId,"got the ele");
+          // }
+
+        });
+
+        $("#selectable-order-details-modelsss .new-review-form").unbind().submit(function(){
+          alert("Submitted");
+        });
+        
+      })
+      
+    </script>
 
 <script>
     
