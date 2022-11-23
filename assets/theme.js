@@ -22336,6 +22336,13 @@ $(document).on('submit','[action="/cart"]', function(e){
 
 //   });
 
-$('.template-product.cbb-product-page .brandImage').click(function(){
-  $('html, body').animate({scrollTop: $('#shopify-section-recommend-section-pdp').offset().top -100 }, 'slow')
+
+$('.template-product .brandImage').click(function(){
+
+  if($(document).width() > 768){
+    $('html, body').animate({scrollTop: $('#shopify-section-recommend-section-pdp').offset().top -100 }, 'slow')
+  } else {
+    $('html, body').animate({scrollTop: $('#shopify-section-recommend-section-pdp').offset().top -0 }, 'slow')
+  }
+  
 })
