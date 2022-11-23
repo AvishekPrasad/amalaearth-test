@@ -22335,3 +22335,7 @@ $(document).on('submit','[action="/cart"]', function(e){
 //     }
 
 //   });
+
+$('.template-product.cbb-product-page .brandImage').click(function(){
+  $('html, body').animate({scrollTop: $('#shopify-section-recommend-section-pdp').offset().top -100 }, 'slow')
+})
