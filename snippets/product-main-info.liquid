@@ -147,7 +147,7 @@
           {%- if selected_variant.compare_at_price > selected_variant.price -%}
           <span class="price price--highlight">
             <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
-            <small style="color:#9a7058; font-size:23px;display:inline-block;margin-bottom:2px;">MRP: </small> &nbsp; {{- selected_variant.price | money -}}  
+            {{- selected_variant.price | money -}} &nbsp;<small style="color:#777; font-size:18px;display:inline-block;margin-bottom:11px;">MRP </small>
           </span>
 
           <span class="price price--compare">
@@ -157,7 +157,7 @@
           {%- else -%}
           <span class="price price--highlight">
             <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
-            <small style="color:#9a7058; font-size:23px;display:inline-block;margin-bottom:2px;">MRP: </small>{{- selected_variant.price | money -}} &nbsp;
+            {{- selected_variant.price | money -}} &nbsp;<small style="color:#777; font-size:18px;display:inline-block;margin-bottom:11px;">MRP </small>
           </span>
           {%- endif -%}
 
@@ -194,11 +194,10 @@
         {% assign collectionNmaeBrandScore = collectionNameCus.metafields.custom.brand_score %}
 
         {% if collectionNmaeBrandScore != blank%}
-          <a href="#shopify-section-recommend-section-pdp">
-            {% if collectionNmaeBrandScore == 6 %}
-              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/t/446/assets/brand_score_6.jpg" class="brand_score_img_cus">
-            {% endif %}
-          </a> 
+          <div class="brandImage">
+            {% assign imageName = 'brand_score_' | append: collectionNmaeBrandScore %}
+            <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/t/446/assets/{{imageName}}.jpg" alt="Brand Score Image" class="brand_score_img_cus">
+          </div> 
         {% endif %}
 
         {%- if section.settings.show_taxes_included -%}
@@ -1142,6 +1141,7 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
+
         $('div.combo-product').click(function() {
             window.history.pushState('new-popup-state', null, '');
             $('.combo-product-modal').attr('aria-hidden', false);
