@@ -47,7 +47,7 @@
 <div class="scroll_banner_container" data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
     {% for block in section.blocks %}
 
-        <div class="scroll_card_ele">
+        <a href="{{block.settings.scroll-ele-link}}" class="scroll_card_ele">
             <!-- <div class="scroll_card_container" style="background-image: url({{block.settings.scroll-image-picker | img_url: 'master'}});"> -->
                 <img src="{{block.settings.scroll-image-picker | img_url: 'master'}}" alt="" class="min">
                 <div class="scroll_banner_content">
@@ -55,7 +55,7 @@
                 </div>
             <!-- </div> -->
             
-        </div>
+        </a>
         
     {% endfor %}
 </div>
