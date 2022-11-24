@@ -46,16 +46,18 @@
 
 <div class="scroll_banner_container" data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
     {% for block in section.blocks %}
-
-        <a href="{{block.settings.scroll-ele-link}}" class="scroll_card_ele">
-            <!-- <div class="scroll_card_container" style="background-image: url({{block.settings.scroll-image-picker | img_url: 'master'}});"> -->
-                <img src="{{block.settings.scroll-image-picker | img_url: 'master'}}" alt="" class="min">
-                <div class="scroll_banner_content">
-                    <h1>{{block.settings.scroll-text-picker}}</h1>
-                </div>
-            <!-- </div> -->
-            
-        </a>
+        {% if block.settings.scroll-ele-link %}
+            <a href="{{block.settings.scroll-ele-link}}" class="scroll_card_ele">
+        {% endif %}
+                {% if block.settings.scroll-image-picker %}
+                    <img src="{{block.settings.scroll-image-picker | img_url: 'master'}}" alt="" class="min">
+                    <div class="scroll_banner_content">
+                        <h1>{{block.settings.scroll-text-picker}}</h1>
+                    </div>
+                {% endif %}
+        {% if block.settings.scroll-ele-link %}
+            </a>
+        {% endif %} 
         
     {% endfor %}
 </div>
