@@ -195,8 +195,8 @@
 
         {% if collectionNmaeBrandScore != blank%}
           <div class="brandImage">
-            {% assign imageName = 'brand_score_' | append: collectionNmaeBrandScore %}
-            <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/t/446/assets/{{imageName}}.jpg" alt="Brand Score Image" class="brand_score_img_cus">
+            {% assign imageName = 'brand_score_' | append: collectionNmaeBrandScore | append: '.jpg' %}
+            <img src="{{imageName | asset_img_url}}" alt="Brand Score Image" class="brand_score_img_cus">
           </div> 
         {% endif %}
 

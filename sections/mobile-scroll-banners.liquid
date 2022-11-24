@@ -1,0 +1,53 @@
+<style>
+    
+</style>
+
+
+<div class="scroll-banner-container">
+    {% for block in section.blocks %}
+
+        <div class="scroll-card-ele">
+            <img src="{{block.settings.scroll-image-picker | img_url: 'master'}}" alt="">
+            <div class="scroll-banner-content">
+                <h1>{{block.settings.scroll-text-picker}}</h1>
+            </div>
+        </div>
+        
+    {% endfor %}
+</div>
+
+
+{% schema %}
+{
+    "name": "Srollable Banners",
+    "max_blocks": 10,
+    "blocks": [
+        {
+            "name": "Scroll",
+            "type": "scrollbanners",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "scroll-image-picker",
+                    "label": "Enter the Image"
+                },
+                {
+                    "type": "text",
+                    "id": "scroll-text-picker",
+                    "label": "Enter the Text"
+                },
+                {
+                    "type": "url",
+                    "id": "scroll-ele-link",
+                    "label": "Enter the link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Scrollable Home Page Banner"
+        }
+    ]
+}
+{% endschema %}
