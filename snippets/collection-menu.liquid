@@ -1,5 +1,5 @@
 {% assign coll = collection.url %}
-<ul class="collection-scrollabale-menu">
+<ul class="collection-scrollabale-menu" data-flickity='{ "cellAlign": "left", "contain": true, "freeScroll": true, "prevNextButtons": false, "pageDots": false }'>
 {% for link in linklists.main-menu.links %}
   {% assign semititle = link.title %}
   {% assign semiurl = link.url %}
@@ -18,21 +18,11 @@
           {% endif %}
       {% endfor %}
   {% endif %}
-  <li class="collection-menu-item {%if coll == semiurl %}show active {% endif %} {{ semititle | handle}}"><a href= "{{ semiurl }}">{{ semititle }}</a>
+  <li class="collection-menu-item {%if coll == semiurl %}show active {% endif %} {{ semititle | handle}}">
     <ul class="collection-scrollabale-submenu">
-  {% if link.links.size > 0 %}
-      {% for semi_link in link.links %}
-          {% if semi_link.url == coll or semi_link.url == 'https://amala.earth/pages/diwali' %}
-              {% for more_semi_link in semi_link.links %}
-                  <li class="collection-submenu-item {%if coll == more_semi_link.url %}active{% endif %}" data-title="{{ more_semi_link.title | handle}}"><a href="{{more_semi_link.url}}">{{more_semi_link.title}}</a></li>
-              {% endfor %}
-          {% endif %}
-      {% endfor %}
-  {% else %}
       {%- for sub_link in link.links -%}
           <li class="collection-submenu-item {%if coll == sub_link.url %}active{% endif %}" data-title="{{ link.title | handle}}"><a href="{{sub_link.url}}">{{sub_link.title}}</a></li>
       {% endfor %}
-  {% endif %}
     </ul>
     </li>
 {% endfor %}
