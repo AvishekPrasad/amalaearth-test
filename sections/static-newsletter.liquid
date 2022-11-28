@@ -13,14 +13,20 @@
 
       {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
 
-      <div class="newsletter">
+      <div class="newsletter newsletter-mod-changes">
         {%- form 'customer', id: newsletter_id, class: 'form newsletter__form' -%}
+
           {%- if form.posted_successfully? -%}
             <p class="alert alert--success">{{ 'home_page.newsletter.success' | t }}</p>
           {%- else -%}
             {%- if form.errors -%}
               <p class="alert alert--error">{{ form.errors.messages['email'] }}</p>
             {%- endif -%}
+            {% unless form.errors %}
+              {% if form.email %}
+                <p class="alert alert--error">This email address has been already Subscribed.</p>
+              {% endif %}
+            {% endunless %}
 
             <input type="hidden" name="contact[tags]" value="newsletter">
 
