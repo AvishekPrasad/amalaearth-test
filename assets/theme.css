@@ -15764,3 +15764,45 @@ body.no-upsell .remove-upsell {
 .rupee-symbol{
   font-family: 'Arial', sans-serif !important;
 }
+
+
+/* Modification of form */
+body .newsletter-mod-changes .form__input-row{
+  flex-direction: row;
+}
+
+body .newsletter-mod-changes .form__input-wrapper--labelled .form__field{
+  background: #f5f5f5;
+  height: 100%;
+}
+
+.newsletter-mod-changes .form__input-row .form__submit{
+  max-height: 48px;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.newsletter-mod-changes .form__floating-label{
+  top: 4px;
+}
+
+.newsletter-mod-changes .form__field{
+  border-radius: 30px 0px 0px 30px;
+}
+
+.section--isolated .newsletter-mod-changes .heading{
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#shopify-section-static-newsletter .newsletter-mod-changes .rte p{
+  color: black;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.newsletter-mod-changes .section--text-centered {
+  text-align: left;
+}
+

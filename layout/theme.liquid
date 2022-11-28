@@ -230,7 +230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       {% section 'reorder-items-popup' %}
     {% endif %}
 
-    {%- if request.page_type == 'blog' or request.page_type == 'article' or request.page_type == 'page' -%}
+    {%- if request.page_type == 'blog' or request.page_type == 'article' or request.page_type == 'page' or request.page_type == 'index' -%}
       {% section 'static-newsletter' %}
     {%- endif -%}
 
