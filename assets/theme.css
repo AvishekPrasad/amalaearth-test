@@ -15802,7 +15802,14 @@ body .newsletter-mod-changes .form__input-wrapper--labelled .form__field{
   font-size: 14px;
 }
 
-.newsletter-mod-changes .section--text-centered {
+body .section--text-centered {
   text-align: left;
 }
 
+.newsletter-mod-changes .form__input-row>*{
+  margin-right: 0px;
+}
+
+.newsletter-mod-changes .form__submit{
+  margin-left: 0px;
+}
