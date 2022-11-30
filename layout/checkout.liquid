@@ -855,6 +855,8 @@
 
     <script>
       let customer = "{{ customer.email }}";
+      var settings_ur = `{{settings.custom_api_url_change}}`;
+
       if(customer == '') {
         if(Shopify.Checkout.step == 'shipping_method' || Shopify.Checkout.step == 'payment_method'){
           window.location.href = "/checkout?step=contact_information";
@@ -974,7 +976,7 @@
             	data =  {'pincode':pincode};
                       $.ajax({
                           type: 'POST',
-                          url: "https://otp.amala.earth/checkpincode.php",
+                          url: `${settings_ur}/checkpincode.php`,
                           dataType: 'json',
                           data: data,
                           success: function(data, textStatus, xhr) {
@@ -1234,6 +1236,9 @@
     </script>
 
     <script>
+          
+          var settings_ur = `{{settings.custom_api_url_change}}`;
+
          	function addoverlay() {
                $('<div class="custom-overlay"><div class="overlay__inner"><div class="overlay__content"><span class="spinner"></span></div></div></div>').appendTo(document.body);
            };
@@ -1275,7 +1280,7 @@
 
              	addoverlay();
                $.ajax({
-                   url: {{otpApiUrl | json}},
+                   url: {{settings_ur | json}},
                    type: 'POST',
                    dataType: 'JSON',
                    data: {
@@ -1348,7 +1353,7 @@
                }
              	addoverlay();
                $.ajax({
-                   url: {{otpApiUrl | json}},
+                   url: {{settings_ur | json}},
                    type: 'POST',
                    dataType: 'JSON',
                    data: {
@@ -1463,7 +1468,7 @@
               }
               
                 $.ajax({
-                   url: {{otpApiUrl | json}},
+                   url: {{settings_ur | json}},
                    type: 'POST',
                    dataType: 'JSON',
                    data: data,
@@ -1776,7 +1781,7 @@
                    });
 
                    $.ajax({
-                       url: 'https://otp.amala.earth/peritemetd.php',
+                       url: `${settings_ur}/peritemetd.php`,
                        type: 'POST',
                        dataType: 'JSON',
                        data: {

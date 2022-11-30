@@ -204,6 +204,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTBQJDJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<script>
+  window.addEventListener("load", () => {
+    var settings_ur = `{{settings.custom_api_url_change}}`;
+    localStorage.setItem("customUrl", settings_ur);
+  });
+</script>
   
     <a href="#main" class="visually-hidden skip-to-content">{{ 'general.accessibility.skip_to_content' | t }}</a>
     <span class="loading-bar"></span>
@@ -459,13 +466,14 @@ white-space: pre-wrap;
     	{% endif %}
 	{% endif %}
     
-    
-    
      <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
      <script  type="text/javascript">
+
+        var settings_ur = `{{settings.custom_api_url_change}}`;
+
         function getAssuredResponse(skus, callback) {
           $.ajax({
-            url: 'https://otp.amala.earth/productDeliveryAssured.php',
+            url: `${settings_ur}/productDeliveryAssured.php`,
             type: 'POST',
             data: {
               sku : skus.toString()

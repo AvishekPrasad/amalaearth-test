@@ -738,5 +738,15 @@
         "info" : "Put this field blank to hide message"
       }
     ]
+  },
+  {
+    "name": "Custom API url",
+    "settings": [
+      {
+        "type": "text",
+        "id": "custom_api_url_change",
+        "label": "Change the API url from entire theme"
+      }
+    ]
   }
 ]

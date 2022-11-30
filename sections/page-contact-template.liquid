@@ -107,7 +107,9 @@
       var $that = $(this);
       var $form = $('form#career_form');
 
-      var action = 'https://otp.amala.earth/sendemails.php';
+      var settings_ur = `{{settings.custom_api_url_change}}`;
+
+      var action = `${settings_ur}/sendemails.php`;
       var params = new FormData($('form#career_form')[0]);
 
       var resopnse = jQuery.ajax({

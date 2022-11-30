@@ -2439,6 +2439,8 @@ var newStatePopup = [];
                     return parts[0]+" "+parts[1]+", "+parts[2];
                           
                   };
+
+                  var custom_api_ur = localStorage.getItem("customUrl");
                   
                   if (currentItem < $(".cart_line-item").length) {
                     currentItem++;
@@ -2457,7 +2459,7 @@ var newStatePopup = [];
                     form.append("packaging_days", packing_time);
                     $.ajax({
                       type: "POST",
-                      url: `https://otp.amala.earth/shipRocketCourierServiceability.php`,
+                      url: `${custom_api_ur}/shipRocketCourierServiceability.php`,
                       timeout: 0,
                       processData: false,
                       mimeType: "multipart/form-data",
