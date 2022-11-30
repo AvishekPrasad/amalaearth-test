@@ -341,6 +341,9 @@ $('.my-orders__content-wrapper-popup').on('click', function(){
 
 
 <script>
+
+    var settings_ur = `{{settings.custom_api_url_change}}`;
+
     function addoverlay() {
                 $('<div class="custom-overlay"><div class="overlay__inner"><div class="overlay__content"><span class="spinner"></span></div></div></div>').appendTo(document.body);
             };
@@ -353,7 +356,7 @@ $('.my-orders__content-wrapper-popup').on('click', function(){
  	let process = (formid, event) => {
       	event.preventDefault();
     	$.ajax({
-            url: 'https://otp.amala.earth/sendemails.php',
+            url: `${settings_ur}/sendemails.php`,
             type: 'POST',
             dataType: 'JSON',
             data: new FormData($('#'+formid)[0]),
@@ -379,9 +382,11 @@ $('.my-orders__content-wrapper-popup').on('click', function(){
 
 <script>
 
+var settings_ur = `{{settings.custom_api_url_change}}`;
+
   order_id = $('.my-orders__item-list').attr('data-id');
 var http_new = new XMLHttpRequest();
-  var url = 'https://otp.amala.earth/webetd.php';
+  var url = `${settings_ur}/webetd.php`;
   var params = 'order_id='+order_id+'&code=D0A8M2A1L5A*';
 http_new.open('POST', url, true);
 
@@ -414,7 +419,9 @@ http_new.send(params);
 <script>
 var finaltimeline = '';
 var http = new XMLHttpRequest();
-var url = 'https://otp.amala.earth/orderfetchstatus.php';
+
+var settings_ur = `{{settings.custom_api_url_change}}`;
+var url = `${settings_ur}/orderfetchstatus.php`;
 var params = 'order_id='+$('.my-orders__item-list').attr('data-id')+'&code=D0A8M2A1L5A*';
 http.open('POST', url, true);
 

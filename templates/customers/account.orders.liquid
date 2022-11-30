@@ -514,6 +514,7 @@
     </script>
 
 <script>
+  var settings_ur = `{{settings.custom_api_url_change}}`;
     
 elements = document.querySelectorAll('.order-item');
 
@@ -521,7 +522,7 @@ elements = document.querySelectorAll('.order-item');
   
   order_id = elements[i].getAttribute('data-id');
 var http = new XMLHttpRequest();
-  var url = 'https://otp.amala.earth/webetd.php';
+  var url = `${settings_ur}/webetd.php`;
   var params = 'order_id='+order_id+'&code=D0A8M2A1L5A*';
 http.open('POST', url, true);
 
@@ -594,11 +595,13 @@ http_new.onreadystatechange = function() {//Call a function when the state chang
 http_new.send(params);
 
 }*/
+
+var settings_ur = `{{settings.custom_api_url_change}}`;
   
   	var allorders = document.querySelectorAll('.order-item');
   	for(var i = 0; i < allorders.length; i++) {
         $.ajax({
-            url: 'https://otp.amala.earth/fetchorderstatus.php',
+            url: `${settings_ur}/fetchorderstatus.php`,
             type: 'POST',
             dataType: 'JSON',
             data: {

@@ -1,6 +1,9 @@
 {% assign wkShopName = shop.name | replace: '&amp;', '&' %}
 
 <script type="text/javascript">
+
+  var settings_ur = `{{settings.custom_api_url_change}}`;
+
   	function firewishlistsize(totalitem, productdata) {
       	webengage.track('Wishlist Size_N', {
             'totalItems': totalitem,
@@ -164,7 +167,7 @@
   
   	function wishlistaddeditem(productid, variantid) {
     	$.ajax({
-          	url: 'https://otp.amala.earth/getproductforwishlist.php',
+          	url: `${settings_ur}/getproductforwishlist.php`,
           	type: 'POST',
           	dataType: 'JSON',
           	data: {
@@ -183,7 +186,7 @@
   
   	function wishlistremoveditem(productid, variantid) {
     	$.ajax({
-          	url: 'https://otp.amala.earth/getproductforwishlist.php',
+          	url: `${settings_ur}/getproductforwishlist.php`,
           	type: 'POST',
           	dataType: 'JSON',
           	data: {

@@ -804,6 +804,9 @@ $(document).ready(function () {
 
 // Estimate delivery
 $(document).ready(function () {
+
+  var custom_api_url = localStorage.getItem("customUrl");
+
   //   setTimeout(function(){
   //     $('#estimate_delivery button').removeAttr("disabled");
   //   },2000);
@@ -878,7 +881,7 @@ $(document).ready(function () {
       
       $.ajax({
         type: "POST",
-        url: `https://otp.amala.earth/shipRocketCourierServiceability.php`,
+        url: `${custom_api_url}/shipRocketCourierServiceability.php`,
         timeout: 0,
         processData: false,
         mimeType: "multipart/form-data",
@@ -894,7 +897,7 @@ $(document).ready(function () {
               form.set('cod', '1');
               $.ajax({
                 type: "POST",
-                url: `https://otp.amala.earth/shipRocketCourierServiceability.php`,
+                url: `${custom_api_url}/shipRocketCourierServiceability.php`,
                 timeout: 0,
                 processData: false,
                 mimeType: "multipart/form-data",
