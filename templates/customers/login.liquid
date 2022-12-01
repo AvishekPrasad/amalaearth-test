@@ -1,4 +1,11 @@
 <section data-section-id="login" data-section-type="login">
+
+  {% if customer %}
+    <script>
+      window.location.replace("https://amala.earth");
+    </script>
+  {% endif %}
+
   {%- assign is_recover_active = false -%}
 
   {%- form 'recover_customer_password' -%}
